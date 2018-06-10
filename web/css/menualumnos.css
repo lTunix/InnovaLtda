@@ -1,0 +1,220 @@
+
+/*cuerpo + fondo menu*/
+body{
+    background:#e6eecc url(../images/beige_paper.png) repeat top left;
+	color: #333;
+	font-family: 'Terminal Dosis', Arial, sans-serif;
+	font-size: 13px;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
+.content{
+	position:relative;
+}
+h1{
+	margin:0px;
+	padding:20px;
+	font-size:32px;
+	color:#000;
+    text-shadow:1px 1px 1px rgba(255,255,255,0.9);
+	text-align:center;
+	font-weight:400;
+}
+h1 span{
+    display:block;
+	font-size:14px;
+	color:#666;
+    font-style:italic;
+    font-family:Georgia, serif;
+	padding-top:5px;
+}
+/* Cabezera*/
+.cabezerac{
+	font-family:'Arial Narrow', Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	background: #000;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+.cabezerac a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #2fdab8;
+	display: block;
+	float: left;
+}
+.cabezerac a:hover{
+	color: #fff;
+}
+.cabezerac span.right{
+	float: right;
+}
+.cabezerac span.right a{
+	float: none;
+	display: inline;
+}
+.more{
+	position:relative;
+	clear:both;
+    font-size: 11px;
+    padding: 20px 0px;
+    text-transform:uppercase;
+    width: 390px;
+    height:55px;
+    margin: 0 auto;
+}
+.more ul{
+	display:block;
+	text-align:center;
+}
+.more ul li{
+	display: block;
+    padding: 4px 2px;
+    float:left;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+	background:#0099c5;
+	color:#fff;
+	text-shadow:none;
+    font-weight:bold;
+}
+.more ul li a{
+	color:#555;
+    float:left;
+	background:#fff;
+    width:64px;
+	padding: 2px 5px;
+	-moz-box-shadow:1px 1px 2px #aaa;
+	-webkit-box-shadow:1px 1px 2px #aaa;
+	box-shadow:1px 1px 2px #aaa;
+}
+.more ul li a:hover{
+	background:#000;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+/* Fuentes de los Iconos */
+
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('../websymbols/websymbols-regular-webfont.eot');
+    src: url('../websymbols/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../websymbols/websymbols-regular-webfont.woff') format('woff'),
+        url('../websymbols/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../websymbols/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+
+
+}
+.menualumnos{
+    padding:0;
+    margin:20px auto;
+    width: 500px;
+}
+.menualumnos li{
+    width: 500px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 4px;
+    -webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.menualumnos li:last-child{
+    margin-bottom: 0px;
+}
+.menualumnos li a{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #333;
+    position: relative;
+}
+.iconosmenualumnos{
+    font-family: 'WebSymbolsRegular', cursive;
+    font-size: 40px;
+    color: #333;
+    text-shadow: 0px 0px 1px #333;
+    line-height: 90px;
+    position: absolute;
+    width: 90px;
+    left: 20px;
+    text-align: center;
+    -webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+.contenidomenualumnos{
+    position: absolute;
+    left: 120px;
+    width: 370px;
+    height: 60px;
+    top: 20px;
+}
+.nombremenualumnos{
+    font-size: 30px;
+    -webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+.nombremenualumnos{
+    font-size: 14px;
+    color: #666;
+}
+.menualumnos li:hover{
+    background-color: #2fdab8 ; /*Color Fondo */
+}
+.menualumnos li:hover .iconosmenualumnos{
+    color: #000; /*Color Iconos */
+    font-size: 120px;
+    opacity: 0.2;
+    left: -20px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+.menualumnos li:hover .nombremenualumnos{
+    color: #f900b0;
+    opacity: 0.8;
+}
+.menualumnos li:hover .nombremenualumnos{
+    color: #fff;
+    opacity: 0.8;
+}

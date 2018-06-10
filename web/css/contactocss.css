@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-05-2018, 23:32:54
+    Author     : ratedxpw
+*/
+
+
+/*titulo*/
+h3.titulo {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 1.3em;
+    position: relative;
+}
+
+h3.titulo:before, h3.titulo:after {
+    content: " ";
+    background: #1e98d1;
+    position: absolute;
+    width: 8%;
+    height: 2px;
+}
+h3.titulo:before {
+    left: 36%;
+}
+h3.titulo:after {
+    right: 36%;
+    top: 106%;
+}
+
+/*titulo*/
+/*--Contacto--*/
+.contact {
+    padding: 5em 0;
+}
+.contact-left h4,.contact-left h5{
+	text-align:left;
+}
+.phone{
+	margin:25px 0;
+}
+.address h4, .phone h4, .email h4 {
+    margin-bottom: .5em;
+    color: #1e98d1;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.address h4 i, .phone h4 i, .email h4 i {
+    color: #000;
+    padding-right: .8em;
+}
+.email p a{
+	color:#999;
+}
+.email p a:hover{
+	color:#000;
+}
+.contact input[type="text"], .contact input[type="email"] {
+    width: 47%;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 1em 1em 1em 0;
+    color: #000;
+    outline: none;
+    letter-spacing: 1px;
+}
+.contact textarea {
+    width: 96.3%;
+    border: none;
+    border-bottom: 1px solid #000;
+    resize: none;
+    padding: .8em;
+    height: 12em;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    outline: none;
+}
+.contact input[type="submit"] {
+    background: #1e98d1;
+    padding: .6em 3.5em;
+    outline: none;
+    margin-top: 1em;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+.contact input[type="submit"]:hover{
+	background:#000;
+}
+/*--//contact--*/

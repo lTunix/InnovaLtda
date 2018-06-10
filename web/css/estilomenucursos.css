@@ -1,0 +1,617 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21-05-2018, 17:42:50
+    Author     : ratedxpw
+*/
+
+
+
+
+body {
+	font-family: 'Lato', sans-serif;
+	color:#2C2C2C;
+	font-size:15px;
+	font-weight:300;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Open Sans', sans-serif;
+	color: #07090C;
+	font-weight:700;
+}
+
+h1 {
+	font-size:31.104px;
+}
+
+h2 {
+	font-size:25.92px;
+}
+
+h3 {
+	font-size:21.6px;
+}
+
+h4 {
+	font-size:18px;
+}
+
+h5 {
+	font-size:15px;
+}
+
+a {
+	font-weight:400;
+	color: #07090c;
+}
+
+a:hover,
+a:focus{
+	color: #1e98d1;
+    text-decoration: none;
+    outline: none;
+}
+
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+/*----------------------------*\
+	input BUSCAR 
+\*----------------------------*/
+.input {
+	width:100%;
+	height:40px;
+	padding:0px 15px;
+	border:1px solid #DDD;
+	background-color:transparent;
+}
+
+textarea.input {
+	padding:15px;
+}
+
+.input-btn {
+	display: inline-block;
+	padding: 12px 30px;
+	color: #FFF;
+	background-color: #1e98d1;
+	border: none;
+	text-transform: uppercase;
+	opacity: 1;
+	font-size: 12.5px;
+	font-weight: 400;
+}
+
+.input-btn:hover {
+	opacity:0.8;
+}
+
+/*=========================================================
+	cabezeramenucursos
+===========================================================*/
+/*----------------------------*\
+	 cabezeramenucursos
+\*----------------------------*/
+#cabezeramenucursos #top-cabezeramenucursos {
+	border-bottom: 1px solid #DDD;
+}
+
+.cabezeramenucursos-links {
+	float:left;
+}
+
+.cabezeramenucursos-links ul li {
+	display: inline-block;
+	border-left: 1px solid #DDD;
+}
+
+.cabezeramenucursos-links  ul li:last-child {
+	border-right:1px solid #DDD;
+}
+
+.cabezeramenucursos-links ul li a {
+	display: block;
+	padding: 0px 10px;
+	height: 30px;
+	line-height: 30px;
+	color: #222;
+	font-size: 12.5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.cabezeramenucursos-links ul li a:hover  {
+	color:#1e98d1;
+}
+
+.cabezeramenucursos-social {
+	float:right;
+}
+
+.cabezeramenucursos-social ul li {
+	display: inline-block;
+	border-left: 1px solid #DDD;
+}
+
+.cabezeramenucursos-social ul li:last-child {
+	border-right:1px solid #DDD;
+}
+
+.cabezeramenucursos-social ul li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #222;
+	text-align: center;
+}
+
+.cabezeramenucursos-social ul li a:hover {
+	color:#1e98d1;
+}
+
+/*----------------------------*\
+	Center cabezeramenucursos
+\*----------------------------*/
+#cabezeramenucursos #centrarmenucursos-cabezeramenucursos {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.cabezeramenucursos-logo { /*CENTRAR IMAGEN */
+	float:left;
+        margin-left: 390px;
+}
+
+.cabezeramenucursos-logo .logo {
+	display:inline-block;
+}
+
+.cabezeramenucursos-logo .logo > img { 
+	width: 350px;
+	max-height: 90px;
+	padding: 10px;
+}
+
+.cabezeramenucursos-ads {
+	float:right;
+}
+
+/*----------------------------*\
+	Nav cabezeramenucursos
+\*----------------------------*/
+#cabezeramenucursos #nav-cabezeramenucursos {
+	background: #07090c;
+}
+
+#nav-cabezeramenucursos .nav-logo {
+	display:none;
+	float:left;
+}
+
+#nav-cabezeramenucursos .nav-logo .logo {
+	display:inline-block;
+}
+
+#nav-cabezeramenucursos .nav-logo .logo > img {
+	width: 100%;
+	max-height: 90px;
+}
+
+#nav-cabezeramenucursos.fixed {
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	z-index:99;
+}
+
+.main-nav li {
+	border-left:1px solid #222;
+}
+
+.main-nav li:last-child {
+	border-right:1px solid #222;
+}
+
+.main-nav li a {
+	padding: 25px 15px;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.main-nav li.active a {
+	background-color:#1e98d1 !important;
+}
+
+.main-nav li a:hover, .main-nav li a:focus {
+	background-color:#222;
+}
+
+
+
+/*----------------------------*\
+	Responsive cabezeramenucursos
+\*----------------------------*/
+
+@media only screen and (max-width: 1201px) {
+	#cabezeramenucursos #centrarmenucursos-cabezeramenucursos .cabezeramenucursos-logo , #cabezeramenucursos #centrarmenucursos-cabezeramenucursos .cabezeramenucursos-ads {
+		float:none;
+		text-align:center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#cabezeramenucursos #top-cabezeramenucursos {
+		text-align:center;
+	}
+	
+	.cabezeramenucursos-links, .cabezeramenucursos-social {
+		float:none;
+	}
+	
+	.cabezeramenucursos-links ul li {
+		margin-right:-4px;
+		border-bottom:1px solid #DDD;
+	}
+	
+	.cabezeramenucursos-social {
+		margin-top:-1px;
+	}
+	
+	.cabezeramenucursos-social ul li {
+		margin-right:-4px;
+		border-top:1px solid #DDD;
+	}
+	
+	#cabezeramenucursos #centrarmenucursos-cabezeramenucursos {
+		padding:0px;
+	}
+	
+	.cabezeramenucursos-ads {
+		display:none;
+	}
+	
+	#nav-cabezeramenucursos  {
+		display:inline-block;
+	}
+	
+	#nav-cabezeramenucursos .nav-logo {
+		display:block;
+		float:none;
+		text-align:center;
+		margin-bottom:30px;
+	}
+	
+	#main-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		max-width: 300px;
+		width:0%;
+		padding-top:30px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background: #07090c;
+		-webkit-box-shadow: 5px 0px 6px -5px rgba(0, 0, 0, 0.4);
+		        box-shadow: 5px 0px 6px -5px rgba(0, 0, 0, 0.4);
+		-webkit-transform: translateX(-100%);
+		    -ms-transform: translateX(-100%);
+		        transform: translateX(-100%);
+		-webkit-transition: 0.2s all;
+		transition: 0.2s all;
+		z-index: 99;
+	}
+	
+	#main-nav.nav-collapse {
+		width:100%;
+		-webkit-transform: translateX(0%);
+		    -ms-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	
+	.main-nav {
+		margin:0px;
+		max-height:400px;
+		overflow-x:hidden;
+		overflow-y:scroll;
+	}
+}
+
+/*=========================================================
+	seccionmenucurso
+===========================================================*/
+.seccionmenucurso {
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.seccionmenucurso-title {
+	position:relative;
+	margin-bottom:30px;
+}
+
+.seccionmenucurso-title:after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color:#DDD;
+	z-index:-1;
+}
+
+.seccionmenucurso-title .title {
+	position:relative;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	line-height: 45px;
+	font-size:15px;
+	color:#FFF;
+	background-color:#222;
+	padding:0px 15px;
+}
+
+.seccionmenucurso-title .title:after {
+	content: "";
+	position: absolute;
+	right: -15px;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 0 0 15px;
+	border-color: transparent transparent transparent #DDD;
+	z-index: 0;
+}
+
+/*------------------------------------*\
+	Tab Nav
+\*------------------------------------*/
+.tab-nav li {
+	position:relative;
+	display: inline-block;
+	height: 45px;
+	line-height: 43px;
+	border-bottom: 1px solid #DDD;
+	border-top: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+	border-right:none;
+	margin-right:-4px;
+	z-index:2;
+}
+
+.tab-nav li:last-child {
+	border-right: 1px solid #DDD;
+	margin-right:0px;
+}
+
+.tab-nav li a {
+	display: block;
+	padding: 0 15px;
+	background: #FFF;
+	font-size: 12.5px;
+	text-transform: uppercase;
+}
+
+.tab-nav li.active {
+	border-color:#1e98d1;
+}
+
+.tab-nav li.active a {
+	background-color:#1e98d1;
+	color:#FFF;
+}
+
+.tab-nav li.active:after {
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 15px 0 15px;
+	border-color: #1e98d1 transparent transparent;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	z-index: 5;
+}
+
+/*=========================================================
+	articulo
+===========================================================*/
+/*------------------------------------*\
+	 articulo
+\*------------------------------------*/
+.articulo {
+	position:relative;
+	margin-bottom:30px;
+}
+
+.articulo .articulo-img > a {
+	display:block;
+}
+
+.articulo .articulo-img > a:after {
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background: #222;
+	opacity:0;
+	-webkit-transition:0.2s opacity;
+	transition:0.2s opacity;
+}
+
+.articulo:hover .articulo-img > a:after {
+	opacity:0.3;
+}
+
+.articulo .articulo-img {
+	position:relative;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+
+.articulo .articulo-img img {
+	width:100%;
+	-webkit-transition:0.5s -webkit-transform;
+	transition:0.5s -webkit-transform;
+	transition:0.5s transform;
+	transition:0.5s transform, 0.5s -webkit-transform;
+}
+
+.articulo:hover .articulo-img img {
+	-webkit-transform:scale(1.1);
+	    -ms-transform:scale(1.1);
+	        transform:scale(1.1);
+}
+
+.articulo .articulo-img  .articulo-info {
+	position:absolute;
+	bottom:15px;
+	left:15px;
+	z-index:22;
+}
+
+.articulo .articulo-cuerpo .articulo-info {
+	margin-bottom:15px;
+}
+
+.articulo .articulo-info li {
+	display:inline-block;
+	margin-right:-2px;
+}
+
+.articulo .articulo-info .articulo-type {
+	width:30px;
+	height: 30px;
+	line-height: 30px;
+	text-align:center;
+	background: #222;
+	color: #FFF;
+	font-size: 12.5px;
+}
+
+.articulo .articulo-info .articulo-category > a {
+	display:block;
+	padding: 0px 15px;
+	height: 30px;
+	line-height: 30px;
+	background: #1e98d1;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 12.5px;
+}
+
+.articulo .articulo-info .articulo-category > a:hover {
+	opacity:0.8;
+}
+
+.articulo .articulo-title {
+	text-transform: uppercase;
+	margin-top:0px;
+}
+
+.articulo .articulo-title > a {
+	font-weight:700;
+}
+
+.articulo .articulo-meta {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.articulo .articulo-meta li {
+	display:inline-block;
+	color:#DDD;
+	font-weight:400;
+	font-size:12.5px;
+	text-transform:uppercase;
+}
+
+.articulo .articulo-meta li + li {
+	margin-left:10px;
+}
+
+
+
+
+
+/*------------------------------------*\
+	Row articulo
+\*------------------------------------*/
+.articulo.row-articulo:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.articulo.row-articulo .articulo-img {
+	width:50%;
+	float:left;
+	margin-right:30px;
+	margin-bottom:0px;
+}
+
+@media only screen and (max-width: 767px) {
+	.articulo.row-articulo .articulo-img {
+		width:180px;
+	}
+	
+	.articulo.row-articulo .articulo-cuerpo p {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.articulo.row-articulo .articulo-img {
+		float:none;
+		margin-bottom:15px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*=========================================================
+	RESPONSIVE
+===========================================================*/
+@media only screen and (max-width: 1201px) {}
+
+@media only screen and (max-width: 991px) {
+	.seccionmenucurso-title .tab-nav {
+		float:none !important;
+	}
+	
+	.seccionmenucurso-title {
+		float:none !important;
+	}
+	
+	
+}
+
+
+
+	
