@@ -2,7 +2,6 @@
     Document   : registro
     Created on : 27-03-2018, 14:07:13
     Author     : Lyonel
-    HOLA MUNDO
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

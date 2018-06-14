@@ -17,7 +17,7 @@
     </head>
 <body>
 		
-    <h1>hola ctmreeeeee</h1>
+    
 <div class="contenedor">
   <div class="titulo">
     <h1>Inicio Sesion</h1>
