@@ -39,8 +39,8 @@
                         <li><a href="login.jsp"><i class="fa fa-sign-in"></i> Entrar</a></li>
                         <div class="dropdown-content">
                            <a href="login.jsp">Alumno</a>
-                           <a href="logindocente.jsp.jsp">Docente</a>
-                           <a href="logincoordinador.jsp.jsp">Coordinador</a>
+                           <a href="logindocente.jsp">Docente</a>
+                           <a href="logincoordinador.jsp">Coordinador</a>
                         </div>
                      </div>
                      <li><a href="FormularioRegistro.jsp"><i class="fa fa-sign-in"></i> Registro</a></li>
