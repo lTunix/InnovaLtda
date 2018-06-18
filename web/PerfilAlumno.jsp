@@ -34,44 +34,12 @@
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");%>
        <div class="container">
             <c:if test="${not empty user}">
-                <div class="row">
-                    <div class="col s12">
-                        <jsp:include page="navUsuarios.jsp" /> <!--se incluye la barra de navegacion para el usuario registrado -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-
-                    </div>
-                </div>
+           
                 <div class="row">
                     <div class="col s12">
                         <h2 class="center-align">Datos de usuario</h2>
                         <div class="col s6 offset-s3">
-                            <table border="1">
-                                <thead>
-                                    <tr>
-                                        <th>Rut</th>                                    
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
-                                        <th>Sueldo</th>
-                                        <th>User</th>
-                                        <th>Password</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <c:forEach items="${applicationScope.listaUser}" var="u">
-                                        <tr>
-                                            <td>${u.rut}</td>
-                                            <td>${u.nombre}</td>
-                                            <td>${u.apellido}</td>
-                                            <td>${u.sueldo}</td>
-                                            <td>${u.user}</td>
-                                            <td>${u.pass}</td>
-                                        </tr>
-                                    </c:forEach>
-                                </tbody>
-                            </table>
+                          
                         </div>
                     </div>
                 </div>
@@ -84,12 +52,7 @@
                     </div>
                 </div>
             </c:if>   
-          
-
-
         </div><!-- fin contenedor -->
-        
-        
         
         <h1>Perfil de Alumno</h1>
         <%
