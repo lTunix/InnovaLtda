@@ -1,6 +1,7 @@
 {
     "elements": {
-        "div": {}
+        "div": {},
+        "c:if": {}
     },
     "attributes": {}
 }

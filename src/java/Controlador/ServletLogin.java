@@ -41,23 +41,27 @@ public class ServletLogin extends HttpServlet {
                     if(usuarioValido.getId_tipo_user() == 1){
                         //Se genera una sesión para el usuario.
                         request.getSession().setAttribute("user", usuarioValido);
-                        request.getRequestDispatcher("BienvenidoAlumno.jsp").forward(request, response);         
+                        request.getRequestDispatcher("BienvenidoAlumno.jsp").forward(request, response);  
+                        
                         //response.sendRedirect("BienvenidoAlumno.jsp");                  
                     }else if(usuarioValido.getId_tipo_user() == 2){
                           //Se genera una sesión para el usuario.
                         request.getSession().setAttribute("user", usuarioValido);
                         request.getRequestDispatcher("BienvenidoDocente.jsp").forward(request, response);
                         //response.sendRedirect("BienvenidoDocente.jsp");
+                        
                     }else if(usuarioValido.getId_tipo_user()== 3){
                           //Se genera una sesión para el usuario.
                         request.getSession().setAttribute("user", usuarioValido);
                         request.getRequestDispatcher("BienvenidoCoordinador.jsp").forward(request, response);
                         //response.sendRedirect("BienvenidoCoordinador.jsp");
+                        
                     }else if(usuarioValido.getId_tipo_user()== 4){
                           //Se genera una sesión para el usuario.
                         request.getSession().setAttribute("user", usuarioValido);
                         request.getRequestDispatcher("BienvenidoParticular.jsp").forward(request, response);
                         //response.sendRedirect("BienvenidoParticular.jsp");
+                        
                     } else{
                         //se niega el acceso al usuarios
                         response.sendRedirect("ErrorLogin.jsp");
