@@ -9,33 +9,30 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
         <link rel="stylesheet" href="css/logincoordinador.css">
-          <link rel="stylesheet" href="css/piedepagina.css">
+        <link rel="stylesheet" href="css/piedepagina.css">
         <title>Bienvenido - Inicio de Sesion</title>
     </head>
-<body>
+    <body>
+        <div class="contenedor">
+            <div class="titulo">
+                <h1>Inicio Sesion</h1>
+            </div>
+        </div>
+        <div class="form">
+            <div class="imagen"><img src="http://www.easynotes.org/public/images/docente.png"/></div>
 
-					
-					
-<div class="contenedor">
-  <div class="titulo">
-    <h1>Inicio Sesion</h1>
-  </div>
-</div>
-<div class="form">
-  <div class="imagen"><img src="http://www.easynotes.org/public/images/docente.png"/></div>
+            <form class="login-form" action="ingreso.do" method="post">
+                <input type="email" placeholder="Correo Electronico" name="txt_correoUser" required/>
+                <input type="password" placeholder="Contraseña" name="txt_passUser" required/>
+                <button>Iniciar Sesion</button>
+                <p class="mensaje"> <a href="restaurarclave.jsp"> Restablecer Contraseña</a></p>
+                <p class="mensaje"> <a href="FormularioRegistro.jsp"> Registrarse</a></p>
+                <p class="mensaje"> <a href="index.jsp"> Volver</a></p>
+            </form>
+        </div>
 
-  <form class="login-form" action="ingreso.do" method="post">
-    <input type="email" placeholder="Correo Electronico" name="txt_correoUser" required/>
-    <input type="password" placeholder="Contraseña" name="txt_passUser" required/>
-    <button>Iniciar Sesion</button>
-    <p class="mensaje"> <a href="restaurarclave.jsp"> Restablecer Contraseña</a></p>
-    <p class="mensaje"> <a href="FormularioRegistro.jsp"> Registrarse</a></p>
-    <p class="mensaje"> <a href="index.jsp"> Volver</a></p>
-  </form>
-</div>
-    
-</body>
-       <script src="js/jquery-2.2.3.min.js"></script>
+    </body>
+    <script src="js/jquery-2.2.3.min.js"></script>
 </html>
