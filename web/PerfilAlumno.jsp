@@ -4,6 +4,7 @@
     Author     : ksandoval
 --%>
 
+<%@page import="BaseDatos.ConexionBD"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,6 +23,14 @@
     </head>
     <body>
         <h1>Perfil de Alumno</h1>
+           <%
+            ConexionBD conex = new ConexionBD();
+            if (conex.abrirConexion() != null) {
+        %>
+        Conexion exitosa!!!!
+        <%
+            }
+        %>
         <div class="contenedor" >
 
 
