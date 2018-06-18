@@ -14,6 +14,7 @@
         <meta name="keywords" content="" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
+        <link type="text/css" rel="stylesheet" href="css/piedepagina.css"/>
         <link rel="stylesheet" type="text/css" href="css/menualumnos.css" />
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
     </head>

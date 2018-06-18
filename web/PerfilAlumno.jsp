@@ -17,12 +17,19 @@
         <meta name="keywords" content="" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" href="css/bootstrap-theme.css" media="screen">
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+        <link href="css/estilo.css" type="text/css" rel="stylesheet" media="all">
         <link rel="stylesheet" type="text/css" href="css/menualumnos.css" />
+        <script src="js/bootstrap.js"></script>
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
     </head>
     <body>
         <h1>Perfil de Alumno</h1>
-           <%
+        <%
             ConexionBD conex = new ConexionBD();
             if (conex.abrirConexion() != null) {
         %>
@@ -30,8 +37,8 @@
         <%
             }
         %>
-        <div class="contenedor" >
-            <table border="1" cellspacing="1" cellpadding="1">
+        <div class="table-responsive" >
+            <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                 <thead>
                     <tr>
                         <th></th>
