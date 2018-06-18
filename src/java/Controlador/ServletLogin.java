@@ -43,7 +43,9 @@ public class ServletLogin extends HttpServlet {
                         response.sendRedirect("BienvenidoDocente.jsp");
                     }else if(u.getId_tipo_user()== 3){
                         response.sendRedirect("BienvenidoCoordinador.jsp");
-                    }else{
+                    }else if(u.getId_tipo_user()== 4){
+                        response.sendRedirect("BienvenidoParticular.jsp");
+                    } else{
                         response.sendRedirect("ErrorLogin.jsp");
                     }
                     //response.sendRedirect("BienvenidoAlumno.jsp");
