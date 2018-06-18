@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="PerfilAlumno.jsp">
                             <span class="iconosmenualumnos">&#85;</span>
                             <div class="contenidomenualumnos">
                                 <h2 class="nombremenualumnos">Mi Perfil Estudiantil</h2>

@@ -7,7 +7,7 @@ public class ConexionBD
 {
     private static String url = "jdbc:mysql://localhost:3306/mydb";
     private static String user= "root";
-    private static String pass= "12345";
+    private static String pass= "root";
     private static Connection conexion;
     
     public static Connection abrirConexion(){
