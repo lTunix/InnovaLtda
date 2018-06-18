@@ -1,10 +1,11 @@
 
 /*cuerpo + fondo menu*/
 body{
-    background:#e6eecc url(../images/beige_paper.png) repeat top left;
+    background:#e6eecc center  url(../images/beige_paper.jpg) ;
 	color: #333;
 	font-family: 'Terminal Dosis', Arial, sans-serif;
 	font-size: 13px;
+    
 }
 
 a{
@@ -21,7 +22,7 @@ h1{
 	margin:0px;
 	padding:20px;
 	font-size:32px;
-	color:#000;
+	color:#1e98d1;
     text-shadow:1px 1px 1px rgba(255,255,255,0.9);
 	text-align:center;
 	font-weight:400;
@@ -39,7 +40,7 @@ h1 span{
 	font-family:'Arial Narrow', Arial, sans-serif;
 	line-height: 24px;
 	font-size: 11px;
-	background: #000;
+	background: #1e98d1;
 	opacity: 0.9;
 	text-transform: uppercase;
 	z-index: 9999;
@@ -51,7 +52,7 @@ h1 span{
 .cabezerac a{
 	padding: 0px 10px;
 	letter-spacing: 1px;
-	color: #2fdab8;
+	color: white;
 	display: block;
 	float: left;
 }
@@ -102,7 +103,7 @@ h1 span{
 	box-shadow:1px 1px 2px #aaa;
 }
 .more ul li a:hover{
-	background:#000;
+	background:#1e98d1;
 	color:#fff;
 }
 
@@ -198,7 +199,7 @@ h1 span{
     color: #666;
 }
 .menualumnos li:hover{
-    background-color: #2fdab8 ; /*Color Fondo */
+    background-color: #e24040 ; /*Color Fondo */
 }
 .menualumnos li:hover .iconosmenualumnos{
     color: #000; /*Color Iconos */
