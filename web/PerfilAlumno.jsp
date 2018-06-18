@@ -37,49 +37,50 @@
         <%
             }
         %>
+        <h1> Bienvenido ${sessionScope.usuario} </h1>
         <div class="table-responsive" >
             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
+                        <th>Parametro</th>
+                        <th>Valor Actual</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>Rut: </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>Nombre: </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>Apellido Paterno: </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>Apellido Materno: </td>
                         <td></td>
                     </tr>
                     <tr>
+                        <td>Genero: </td>
                         <td></td>
+                    </tr>
+                    <tr>
+                        <td>Profesion: </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Contraseña: </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Telefono de contacto: </td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -200,16 +201,13 @@
             <div class="footer2">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-md-6 panel">
                             <div class="panel-body">
                                 <p class="simplenav">
-                                    <a href="index.html">Home</a> | 
-                                    <a href="about.html">Sobre Nosotros</a> |
-                                    <a href="courses.html">Cursos</a> |
-                                    <a href="price.html">Precios</a> |
-                                    <a href="videos.html">Videos</a> |
-                                    <a href="contact.html">Login</a>
+                                    <a href="index.jsp">Home</a> | 
+                                    <a href="SobreNosotros.jsp">Sobre Nosotros</a> |
+                                    <a href="cursos.jsp">Cursos</a> |
+                                    <a href="#">Precios</a> |
                                 </p>
                             </div>
                         </div>

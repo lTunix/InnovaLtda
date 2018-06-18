@@ -38,7 +38,13 @@ public class ServletLogin extends HttpServlet {
                     hs.setAttribute("Correo", u.getEmail());
                     hs.setAttribute("Tipo", u.getId_tipo_user());
                     if(u.getId_tipo_user() == 1){
-                        response.sendRedirect("BienvenidoAlumno.jsp");
+                        //Se genera una sesión para el usuario.
+                        request.getSession().setAttribute("user", u.getNombre());
+                        request.getRequestDispatcher("BienvenidoAlumno.jsp").forward(request, response);
+                        
+                        //response.sendRedirect("BienvenidoAlumno.jsp");
+                        
+                        
                     }else if(u.getId_tipo_user() == 2){
                         response.sendRedirect("BienvenidoDocente.jsp");
                     }else if(u.getId_tipo_user()== 3){
