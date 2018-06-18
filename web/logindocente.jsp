@@ -14,10 +14,7 @@
           <link rel="stylesheet" href="css/piedepagina.css">
         <title>Bienvenido - Inicio de Sesion</title>
     </head>
-<body>
-
-					
-					
+<body>				
 <div class="contenedor">
   <div class="titulo">
     <h1>Inicio Sesion</h1>
