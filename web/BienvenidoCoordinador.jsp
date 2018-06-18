@@ -16,7 +16,71 @@
         <%
             }
         %>
+         <div class="contenedor">
+            <div class="cabezerac">
+                <a href=""><strong></strong>Ver Mis Cursos</a>
+                <span class="right">
+                    <a href="">Bienvenido: </a>
+                    <a href="index.jsp"><strong>Cerrar Sesion</strong></a>
+                </span>
+                <div class="clr"></div>
+            </div>
+            <h1>Mi Curso</span></h1>
+            <div class="contenidogeneral">
+
+                <ul class="menualumnos">
+                    <li>
+                        <a href="#">
+                            <span class="iconosmenualumnos">A</span>
+                            <div class="contenidomenualumnos">
+                                <h2 class="nombremenualumnos">Mis Cursos</h2>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="iconosmenualumnos">&#64;</span>
+                            <div class="contenidomenualumnos">
+                                <h2 class="nombremenualumnos">Correo Electronico</h2>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="iconosmenualumnos">&#80;</span>
+                            <div class="contenidomenualumnos">
+                                <h2 class="nombremenualumnos">Mi Horario</h2>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="iconosmenualumnos">&#85;</span>
+                            <div class="contenidomenualumnos">
+                                <h2 class="nombremenualumnos">Mi Perfil Estudiantil</h2>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="iconosmenualumnos">S</span>
+                            <div class="contenidomenualumnos">
+                                <h2 class="nombremenualumnos">Centro de Ayuda</h2>
+                                <h3 class="subnombremenualumnos">24/7 para tus Problemas</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                
+                
+            </div>
+        </div>
         <footer id="footer">
+
             <div class="container">
                 <div class="row">
                     <div class="footerbottom">
@@ -155,5 +219,6 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     </body>
 </html>
