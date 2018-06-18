@@ -4,6 +4,7 @@
 <html>
     <head>
         <!--PROBANDO, PROBANDO-->
+        <!--AGREGANDO UNA SEGUNDA LÍNEA-->
         <title>Intranet Alumno</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
