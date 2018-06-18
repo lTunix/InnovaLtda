@@ -31,27 +31,35 @@ public class ServletLogin extends HttpServlet {
           try (PrintWriter out = response.getWriter()){
             String correousu = request.getParameter("txt_correoUser");
             String pass = request.getParameter("txt_passUser");            
-            Usuario u = Usuario.ValidarUsuario(correousu, pass);
-                if(u != null){
+            Usuario usuarioValido = Usuario.ValidarUsuario(correousu, pass);
+                if(usuarioValido != null){
                     HttpSession hs = request.getSession(true);
-                    hs.setAttribute("Usuario", u.getNombre());
-                    hs.setAttribute("Correo", u.getEmail());
-                    hs.setAttribute("Tipo", u.getId_tipo_user());
-                    if(u.getId_tipo_user() == 1){
+                    hs.setAttribute("Usuario", usuarioValido.getNombre());
+                    hs.setAttribute("Correo", usuarioValido.getEmail());
+                    hs.setAttribute("Tipo", usuarioValido.getId_tipo_user());
+                    
+                    if(usuarioValido.getId_tipo_user() == 1){
                         //Se genera una sesión para el usuario.
-                        request.getSession().setAttribute("user", u.getNombre());
-                        request.getRequestDispatcher("BienvenidoAlumno.jsp").forward(request, response);
-                        
-                        //response.sendRedirect("BienvenidoAlumno.jsp");
-                        
-                        
-                    }else if(u.getId_tipo_user() == 2){
-                        response.sendRedirect("BienvenidoDocente.jsp");
-                    }else if(u.getId_tipo_user()== 3){
-                        response.sendRedirect("BienvenidoCoordinador.jsp");
-                    }else if(u.getId_tipo_user()== 4){
-                        response.sendRedirect("BienvenidoParticular.jsp");
+                        request.getSession().setAttribute("user", usuarioValido);
+                        request.getRequestDispatcher("BienvenidoAlumno.jsp").forward(request, response);         
+                        //response.sendRedirect("BienvenidoAlumno.jsp");                  
+                    }else if(usuarioValido.getId_tipo_user() == 2){
+                          //Se genera una sesión para el usuario.
+                        request.getSession().setAttribute("user", usuarioValido);
+                        request.getRequestDispatcher("BienvenidoDocente.jsp").forward(request, response);
+                        //response.sendRedirect("BienvenidoDocente.jsp");
+                    }else if(usuarioValido.getId_tipo_user()== 3){
+                          //Se genera una sesión para el usuario.
+                        request.getSession().setAttribute("user", usuarioValido);
+                        request.getRequestDispatcher("BienvenidoCoordinador.jsp").forward(request, response);
+                        //response.sendRedirect("BienvenidoCoordinador.jsp");
+                    }else if(usuarioValido.getId_tipo_user()== 4){
+                          //Se genera una sesión para el usuario.
+                        request.getSession().setAttribute("user", usuarioValido);
+                        request.getRequestDispatcher("BienvenidoParticular.jsp").forward(request, response);
+                        //response.sendRedirect("BienvenidoParticular.jsp");
                     } else{
+                        //se niega el acceso al usuarios
                         response.sendRedirect("ErrorLogin.jsp");
                     }
                     //response.sendRedirect("BienvenidoAlumno.jsp");

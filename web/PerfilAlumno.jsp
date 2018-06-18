@@ -3,6 +3,7 @@
     Created on : 18-jun-2018, 16:30:36
     Author     : ksandoval
 --%>
+<%@page import="Modelo.Usuario"%>
 <%@page import="BaseDatos.ConexionBD"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,6 +29,11 @@
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
     </head>
     <body>
+        <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");%>
+        
+        
+        
+        
         <h1>Perfil de Alumno</h1>
         <%
             ConexionBD conex = new ConexionBD();
@@ -37,7 +43,6 @@
         <%
             }
         %>
-        <h1> Bienvenido ${sessionScope.usuario} </h1>
         <div class="table-responsive" >
             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                 <thead>
@@ -49,7 +54,7 @@
                 <tbody>
                     <tr>
                         <td>Rut: </td>
-                        <td></td>
+                        <td><% %></td>
                     </tr>
                     <tr>
                         <td>Nombre: </td>
