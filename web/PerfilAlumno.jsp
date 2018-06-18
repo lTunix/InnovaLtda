@@ -49,7 +49,6 @@
                 </div>
             </c:if>   
         </div><!-- fin contenedor -->
-        
         <h1>Perfil de Alumno</h1>
      
         <div class="table-responsive" >
