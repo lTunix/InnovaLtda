@@ -29,7 +29,7 @@
    </head>
    <body>
       <!-- CABEZERA -->
-      <cabezeramenucursos id="cabezeramenucursos">
+      <div class="cabezeramenucursos" id="cabezeramenucursos">
          <!-- cabezeramenucursos -->
          <div id="top-cabezeramenucursos">
             <div class="container">
@@ -39,8 +39,8 @@
                         <li><a href="login.jsp"><i class="fa fa-sign-in"></i> Entrar</a></li>
                         <div class="dropdown-content">
                            <a href="login.jsp">Alumno</a>
-                           <a href="login.jsp">Docente</a>
-                           <a href="login.jsp">Coordinador</a>
+                           <a href="logindocente.jsp.jsp">Docente</a>
+                           <a href="logincoordinador.jsp.jsp">Coordinador</a>
                         </div>
                      </div>
                      <li><a href="FormularioRegistro.jsp"><i class="fa fa-sign-in"></i> Registro</a></li>
