@@ -34,13 +34,9 @@
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");%>
        <div class="container">
             <c:if test="${not empty user}">
-           
                 <div class="row">
                     <div class="col s12">
-                        <h2 class="center-align">Datos de usuario</h2>
-                        <div class="col s6 offset-s3">
-                          
-                        </div>
+            
                     </div>
                 </div>
             </c:if>
@@ -55,14 +51,7 @@
         </div><!-- fin contenedor -->
         
         <h1>Perfil de Alumno</h1>
-        <%
-            ConexionBD conex = new ConexionBD();
-            if (conex.abrirConexion() != null) {
-        %>
-        Conexion exitosa!!!!
-        <%
-            }
-        %>
+     
         <div class="table-responsive" >
             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                 <thead>
@@ -74,7 +63,7 @@
                 <tbody>
                     <tr>
                         <td>Rut: </td>
-                        <td><% %></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>Nombre: </td>

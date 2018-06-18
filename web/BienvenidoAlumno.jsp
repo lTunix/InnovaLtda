@@ -1,5 +1,8 @@
+<%@page import="Modelo.Usuario"%>
 <%@page import="BaseDatos.ConexionBD"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +22,29 @@
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
     </head>
     <body>
+         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");%>
+         
+             <div class="container">
+            <c:if test="${not empty user}">
+                <div class="row">
+                    <div class="col s12">
+            
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${empty user}">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Acceso Restringuido</h2>
+                        <a href="index.jsp">Volver a la pagina principal</a> 
+                    </div>
+                </div>
+            </c:if>   
+        </div><!-- fin contenedor -->
+         
+         
+         
+        
         <%
             ConexionBD conex = new ConexionBD();
             if (conex.abrirConexion() != null) {
@@ -36,7 +62,7 @@
                 </span>
                 <div class="clr"></div>
             </div>
-            <h1>Mi Curso</span></h1>
+            <h1>Mi Curso</h1>
             <div class="contenidogeneral">
 
                 <ul class="menualumnos">
