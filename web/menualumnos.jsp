@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="centrodeayuda.jsp">
                             <span class="iconosmenualumnos">S</span>
                             <div class="contenidomenualumnos">
                                 <h2 class="nombremenualumnos">Centro de Ayuda</h2>
