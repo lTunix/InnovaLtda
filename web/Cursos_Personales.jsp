@@ -44,13 +44,13 @@
                         <tbody>
                             <c:forEach items="${requestScope.listaCursos}" var="c">
                                 <tr>
-                                    <td>${c.imagen}</td>
+                                    <td><img src="images/Intranet_Alumno/Cursos/${c.imagen}.png"</td>
                                     <td>${c.titulo}</td>
                                     <td>${c.descripcion}</td>
                                     <td>${c.fecha_inicio}</td>
                                     <td>${c.fecha_termino}</td>
                                     <td>
-                                        <a class="btn-floating red" href="trabajoBuscado.do?id_puerto=${c.id_curso}">INGRESAR</a>
+                                        <a class="btn-floating red" href="cursoBuscado.do?id_curso=${c.id_curso}">INGRESAR</a>
                                     </td>
                                 </tr>
                             </c:forEach>
