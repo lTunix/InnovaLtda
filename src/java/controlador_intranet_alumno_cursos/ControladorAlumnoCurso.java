@@ -57,15 +57,11 @@ public class ControladorAlumnoCurso extends HttpServlet {
             //Se obtiene rut del fulano del jsp de intranet
             String rut_alumno = String.valueOf(request.getParameter("rut_fulano"));
             //Se recuperan los registros de los cursos.
-            //listaSindicato = dao.listarSindicatos();
-            //listaComuna = dao.listarComunas();
-            //listaNacion = dao.listarNacion();
+            listaCursos = dao.listarCursos(rut_alumno);
             //Se envía información a jsp de salida.
-            //request.setAttribute("listaSindicato", listaSindicato);
-            //request.setAttribute("listaComuna", listaComuna);
-            //request.setAttribute("listaNacion", listaNacion);
-            //request.getRequestDispatcher("socios.jsp").forward(request, response);
-
+            request.setAttribute("listaCursos", listaCursos);
+            request.setAttribute("rut_alumno", rut_alumno);
+            request.getRequestDispatcher("Cursos_Personales.jsp").forward(request, response);
         }
     }
 
