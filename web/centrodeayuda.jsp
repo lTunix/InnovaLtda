@@ -117,10 +117,10 @@
                                 <img src="images/t01.jpg" alt="">
                                 <div class="team-caption"> 
                                     <h4>Contacto</h4>
-                                    <p class="fa fa-phone aria-hidden="true">
+                                    <p class="fa fa-phone" aria-hidden="true">
                                        <a href="tel:6006373737" > 600 637 3737</a>
                                     </p>
-                                    <p class="fa fa-mobile aria-hidden="true">
+                                    <p class="fa fa-mobile" aria-hidden="true">
                                        <a href="tel:226373737" > +56 2 26373737</a>
                                     </p>
 
