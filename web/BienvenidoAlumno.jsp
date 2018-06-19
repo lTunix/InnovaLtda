@@ -51,7 +51,7 @@
 
                                 <ul class="menualumnos">
                                     <li>
-                                        <a href="cursos.jsp">
+                                        <a href="#">
                                             <span class="iconosmenualumnos">A</span>
                                             <div class="contenidomenualumnos">
                                                 <h2 class="nombremenualumnos" href="cargaCursosPersonales.do?rut_fulano=${sessionScope.usuario.rut}">Mis Cursos</h2>
