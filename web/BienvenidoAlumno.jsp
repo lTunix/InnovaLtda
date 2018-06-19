@@ -42,7 +42,7 @@
                                 <a href=""><strong></strong>Ver Mis Cursos</a>
                                 <span class="right">
                                     <a href="">Bienvenido: <p> ${sessionScope.user.nombre} </p> </a>
-                                    <a href=""><strong>Cerrar Sesion </strong></a>
+                                    <a href="index.jsp"><strong>Cerrar Sesion </strong></a>
                                 </span>
                                 <div class="clr"></div>
                             </div>
