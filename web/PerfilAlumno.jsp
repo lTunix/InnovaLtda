@@ -49,8 +49,9 @@
                 </div>
             </c:if>   
         </div><!-- fin contenedor -->
+        
         <h1>Perfil de Alumno</h1>
-         &nbsp;${sessionScope.user.nombre} 
+         &nbsp;${sessionScope.user} 
 
         <div class="table-responsive" >
             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
@@ -63,39 +64,39 @@
                 <tbody>
                     <tr>
                         <td>Rut: </td>
-                        <td>${sessionScope.user.rut}</td>
+                        <td><p> ${sessionScope.user.rut} </p></td>
                     </tr>
                     <tr>
                         <td>Nombre: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.nombre} </p></td>
                     </tr>
                     <tr>
                         <td>Apellido Paterno: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.apellido_paterno} </p></td>
                     </tr>
                     <tr>
                         <td>Apellido Materno: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.apellido_materno} </p></td>
                     </tr>
                     <tr>
                         <td>Genero: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.genero} </p></td>
                     </tr>
                     <tr>
                         <td>Profesion: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.profesion} </p></td>
                     </tr>
                     <tr>
                         <td>Email: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.email} </p></td>
                     </tr>
                     <tr>
                         <td>Contraseña: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.pass} </p></td>
                     </tr>
                     <tr>
                         <td>Telefono de contacto: </td>
-                        <td></td>
+                        <td><p> ${sessionScope.user.telefono} </p></td>
                     </tr>
                 </tbody>
             </table>
