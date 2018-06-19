@@ -42,6 +42,10 @@ public class Usuario {
         return rut;
     }
 
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -135,7 +139,9 @@ public class Usuario {
             if (rs.next()) {
                 Usuario u = new Usuario();
                 u.setNombre(n);
+                u.setRut(rs.getString("rut"));
                 u.setPass(c);
+                
                 u.setId_tipo_user(rs.getInt(10)); //El tipo de Usuario corresponde a la columna nº 10 en la BD
                 return u;
             } else {

@@ -47,6 +47,8 @@
         
         <%
             ConexionBD conex = new ConexionBD();
+            Usuario usuario = (Usuario) session.getAttribute("user");
+            String rut = usuario.getRut();
             if (conex.abrirConexion() != null) {
         %>
         Conexion exitosa!!!!
@@ -70,7 +72,7 @@
                         <a href="#">
                             <span class="iconosmenualumnos">A</span>
                             <div class="contenidomenualumnos">
-                                <h2 class="nombremenualumnos">Mis Cursos</h2>
+                                <h2 class="nombremenualumnos" href="cargaCursosPersonales.do?rut_fulano=${sessionScope.usuario.rut}">Mis Cursos</h2>
 
                             </div>
                         </a>

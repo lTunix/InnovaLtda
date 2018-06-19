@@ -9,6 +9,9 @@ public class ConexionBD
     private static String user= "root";
     private static String pass= "root";
     private static Connection conexion;
+
+    public ConexionBD() {
+    }
     
     public static Connection abrirConexion(){
         try {
@@ -21,6 +24,15 @@ public class ConexionBD
             System.out.println("Excepcion en la conexion a la Base de Datos: " + e.toString());
             return null;
         }
+    }
+    
+    //En proceso
+    public Connection getConexion() 
+            throws ClassNotFoundException, SQLException{
+        //Registro del Driver.
+        Class.forName("com.mysql.jdbc.Driver");
+        //Retornar al conexión
+        return DriverManager.getConnection(url,user,pass);
     }
     
     public void cerrarConexion(){
