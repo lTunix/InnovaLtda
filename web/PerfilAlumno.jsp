@@ -50,7 +50,8 @@
             </c:if>   
         </div><!-- fin contenedor -->
         <h1>Perfil de Alumno</h1>
-     
+         &nbsp;${sessionScope.user.nombre} 
+
         <div class="table-responsive" >
             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                 <thead>
@@ -62,7 +63,7 @@
                 <tbody>
                     <tr>
                         <td>Rut: </td>
-                        <td></td>
+                        <td>${sessionScope.user.rut}</td>
                     </tr>
                     <tr>
                         <td>Nombre: </td>
