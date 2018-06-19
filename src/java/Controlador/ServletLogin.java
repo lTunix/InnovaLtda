@@ -32,11 +32,19 @@ public class ServletLogin extends HttpServlet {
             String correousu = request.getParameter("txt_correoUser");
             String pass = request.getParameter("txt_passUser");            
             Usuario usuarioValido = Usuario.ValidarUsuario(correousu, pass);
+            
                 if(usuarioValido != null){
                     HttpSession hs = request.getSession(true);
-                    hs.setAttribute("Usuario", usuarioValido.getNombre());
-                    hs.setAttribute("Correo", usuarioValido.getEmail());
-                    hs.setAttribute("Tipo", usuarioValido.getId_tipo_user());
+                    hs.setAttribute("rut", usuarioValido.getRut());
+                    hs.setAttribute("nombre", usuarioValido.getNombre());
+                    hs.setAttribute("ape_pat", usuarioValido.getApellido_paterno());
+                    hs.setAttribute("ape_mat", usuarioValido.getApellido_materno());
+                    hs.setAttribute("genero", usuarioValido.getGenero());
+                    hs.setAttribute("profesion", usuarioValido.getProfesion());
+                    hs.setAttribute("correo", usuarioValido.getEmail());
+                    hs.setAttribute("contraseña", usuarioValido.getPass());
+                     hs.setAttribute("telefono_contacto", usuarioValido.getTelefono());
+                    hs.setAttribute("tipo", usuarioValido.getId_tipo_user());
                     
                     if(usuarioValido.getId_tipo_user() == 1){
                         //Se genera una sesión para el usuario.

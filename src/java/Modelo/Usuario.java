@@ -138,10 +138,15 @@ public class Usuario {
 
             if (rs.next()) {
                 Usuario u = new Usuario();
-                u.setNombre(n);
                 u.setRut(rs.getString("rut"));
+                u.setNombre(n);
+                u.setApellido_paterno(rs.getString("ape_pat"));
+                u.setApellido_materno(rs.getString("ape_mat"));
+                u.setGenero(rs.getInt("genero"));
+                u.setProfesion(rs.getString("profesion"));
+                u.setEmail(rs.getString("correo"));
                 u.setPass(c);
-                
+                u.setTelefono(rs.getInt("telefono_contacto"));
                 u.setId_tipo_user(rs.getInt(10)); //El tipo de Usuario corresponde a la columna nº 10 en la BD
                 return u;
             } else {
