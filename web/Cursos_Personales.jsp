@@ -26,9 +26,6 @@
                     <p class="flow-text" align="justify">Para seleccionar el curso haga click 'INGRESAR'.</p>
                 </div>
                 
-                <br/>
-                <p class="flow-text">&nbsp;</p>
-                <br/>
                 <div class="col s10 offset-s1"> 
                     <table class="bordered">
                         <thead>
@@ -44,19 +41,13 @@
                         <tbody>
                             <c:forEach items="${requestScope.listaCursos}" var="c">
                                 <tr>
-                                    <td>
-                                        <a class="btn-floating red" href="cursoBuscado.do?id_curso=${c.id_curso}">
-                                            <img src="images/Intranet_Alumno/Cursos/${c.imagen}.png">
-                                        </a>
-                                    </td>
+                                    <td><img src="images/Intranet_Alumno/Cursos/${c.imagen}.png"</td>
                                     <td>${c.titulo}</td>
                                     <td>${c.descripcion}</td>
                                     <td>${c.fecha_inicio}</td>
                                     <td>${c.fecha_termino}</td>
                                     <td>
-                                        <a class="btn-floating red" href="cursoBuscado.do?id_curso=${c.id_curso}">
-                                            INGRESAR
-                                        </a>
+                                        <a class="btn-floating red" href="cursoSeleccionaado.do?id_curso=${c.id_curso}">INGRESAR</a>
                                     </td>
                                 </tr>
                             </c:forEach>

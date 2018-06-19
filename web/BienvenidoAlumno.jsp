@@ -104,8 +104,6 @@
             </c:if>   
         </div><!-- fin contenedor -->
         
-            </div>
-        </div>
         <footer id="footer">
 
             <div class="container">
