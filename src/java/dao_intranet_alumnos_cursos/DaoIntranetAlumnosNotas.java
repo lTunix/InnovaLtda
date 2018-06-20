@@ -22,9 +22,9 @@ public class DaoIntranetAlumnosNotas extends ConexionBD{
             Connection con = this.getConexion();
             
             //Se genera sentecia select
-            String strSQL = "select idEvaluacion, exigencia, puntaje_total, entrada.titulo_entrada, unidad.titulo_unidad, curso.titulo from \n" +
-                            "evaluacion, entrada, unidad, curso where `Entrada_idEntrada` = entrada.`idEntrada` and `Entrada_Unidad_idUnidad` = unidad.`idUnidad`\n" +
-                            "and `Entrada_Unidad_Curso_idCurso` = curso.`idCurso` and `Usuario_rut` = '"+rut+"'";
+            String strSQL = "select idEvaluacion, puntaje_total, entrada.titulo_entrada, unidad.titulo_unidad, curso.titulo, nota.calificacion from \n" +
+"                            evaluacion, entrada, unidad, curso, nota where `Entrada_idEntrada` = entrada.`idEntrada` and `Entrada_Unidad_idUnidad` = unidad.`idUnidad`\n" +
+"                            and `Entrada_Unidad_Curso_idCurso` = curso.`idCurso` and nota.`idNota` = `Nota_idNota` and `Usuario_rut` = '12345678-9'";
             //Se prepara la consulta.
             PreparedStatement ps = con.prepareStatement(strSQL);
             //ejecutar la consulta.

@@ -30,6 +30,7 @@
                                 <th>Entrada</th>
                                 <th>Unidad</th>
                                 <th>Curso</th>
+                                <th>Puntaje Total</th>
                                 <th>Nota Evaluación</th>
                                 <th> </th>
                             </tr>
@@ -41,6 +42,7 @@
                                     <td>${e.entrada}</td>
                                     <td>${e.unidad}</td>
                                     <td>${e.curso}</td>
+                                    <td>${e.puntaje_total}</td>
                                     <td>${e.nota}</td>                                                                 
                                 </tr>
                             </c:forEach>
