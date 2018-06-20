@@ -106,7 +106,7 @@
                                     <td class="column100 column3" data-column="column3">${c.descripcion}</td>
                                     <td class="column100 column4" data-column="column4">${c.fecha_inicio}</td>
                                     <td class="column100 column5" data-column="column5">${c.fecha_termino}</td>
-                                    <td <a class="btn-floating red" href="Curso_Unidades.jsp"> INGRESAR</a>
+                                    <td><a class="btn-floating red" href="Curso_Unidades.jsp"> INGRESAR</a>
                                         <!--Sacado del href -> cursoSeleccionaado.do?id_curso=${c.id_curso}--></td>
 
                                 </tr>
