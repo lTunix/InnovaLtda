@@ -21,12 +21,12 @@
     </head>
     <body> 
         <!-- banner -->
-        <div class="w3ls-banner">
-            <div class="w3lsbanner-info">
+        <div class="banner">
+            <div class="banner-info">
                 <div class="header">
                     <div class="container">
                         <div class="header-left">
-                            <div class="w3layouts-logo">
+                            <div class="logo">
                                 <h1>
                                     <a href="centrodeayuda.jsp">Bienvenido al </br>Centro de Ayuda Online</a>
                                 </h1>
@@ -221,7 +221,7 @@
         <!-- copy-right -->
         <div class="w3agile_copy_right">
             <div class="container">
-                <p>Â© 2018 Innova. All Rights Reserved </p>
+                <p>© 2018 Innova. All Rights Reserved </p>
             </div>
         </div>
         <!-- //copy-right --> 
