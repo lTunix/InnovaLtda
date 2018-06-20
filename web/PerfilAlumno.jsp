@@ -37,20 +37,7 @@
                 <div class="row">
                     <div class="col s12">
             
-                    </div>
-                </div>
-            </c:if>
-            <c:if test="${empty user}">
-                <div class="row">
-                    <div class="col s12">
-                        <h2>Acceso Restringuido</h2>
-                        <a href="index.jsp">Volver a la pagina principal</a> 
-                    </div>
-                </div>
-            </c:if>   
-        </div><!-- fin contenedor -->
-        
-        <h1>Perfil de Alumno</h1>
+                            <h1>Perfil de Alumno</h1>
          &nbsp;${sessionScope.user} 
 
         <div class="table-responsive" >
@@ -101,6 +88,26 @@
                 </tbody>
             </table>
         </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${empty user}">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Acceso Restringuido</h2>
+                        <a href="index.jsp">Volver a la pagina principal</a> 
+                    </div>
+                </div>
+            </c:if>   
+        </div><!-- fin contenedor -->
+        
+        
+        
+        
+    
 
      
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
