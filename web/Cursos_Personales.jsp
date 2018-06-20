@@ -30,54 +30,54 @@
         <link rel="stylesheet" type="text/css" href="cursospersonales/css/main.css">
         <!--===============================================================================================-->
         <link rel="stylesheet" type="text/css" href="cursospersonales/css/footer-distributed.css">
-        
-   
-        
+
+
+
     </head>
-    
-    
+
+
     <%
         Usuario usuario = (Usuario) session.getAttribute("user");
     %>
     <body>
-  
 
 
-<div class="example3">
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="images/cursosinscritos.png" alt="Cursos Inscritos">
-        </a>
-      </div>
-      <div id="navbar3" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Mi Cursos</a></li>
-          <li><a href="centrodeayuda.jsp">Ayuda</a></li>
-          <li><a href="contacto.jsp">Contacto</a></li>
-          
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-    <!--/.container-fluid -->
-  </nav>
-</div>
+
+        <div class="example3">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/cursosinscritos.png" alt="Cursos Inscritos">
+                        </a>
+                    </div>
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Mi Cursos</a></li>
+                            <li><a href="centrodeayuda.jsp">Ayuda</a></li>
+                            <li><a href="contacto.jsp">Contacto</a></li>
+
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </div>
 
 
-       
+
         <div class="container">
 
             <% if (usuario != null) {%>
             <div class="row">
                 <div class="col s10 offset-s1">
-                     
+
                     </br>  </br> </br> </br>  
                     <p class="flow-text" align="justify">En esta sección podrá acceder a los cursos en los cuales esté inscrito.</p>
                     <p class="flow-text" align="justify">Para seleccionar el curso haga click 'INGRESAR'.</p>
@@ -106,9 +106,9 @@
                                     <td class="column100 column3" data-column="column3">${c.descripcion}</td>
                                     <td class="column100 column4" data-column="column4">${c.fecha_inicio}</td>
                                     <td class="column100 column5" data-column="column5">${c.fecha_termino}</td>
-                                    <td><a class="btn-floating red" href="Curso_Unidades.jsp"> INGRESAR</a>
-                                        <!--Sacado del href -> cursoSeleccionaado.do?id_curso=${c.id_curso}--></td>
-
+                                    <td>
+                                        <a class="btn-floating red" href="cursoSeleccionaado.do?id_curso=${c.id_curso}"> INGRESAR</a>  
+                                    </td>
                                 </tr>
                             </c:forEach>
 
@@ -117,10 +117,11 @@
 
                     </table>
                     <br>
-                   
+
                 </div>
 
-
+                <br>
+                <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Volver</a>
 
             </div>
             <% } else { %>
@@ -134,29 +135,29 @@
         </div>
 
 
-<footer class="footer-distributed">
+        <footer class="footer-distributed">
 
-			<div class="footer-right">
+            <div class="footer-right">
 
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
 
-			</div>
+            </div>
 
-			<div class="footer-left">
+            <div class="footer-left">
 
-				<p class="footer-links">
-					 <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Mi Curso</a>
-					·
-					
-				</p>
+                <p class="footer-links">
+                    <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Mi Curso</a>
+                    ·
 
-				<p>Innova Capacitaciones &copy; 2018</p>
-			</div>
+                </p>
 
-		</footer>
+                <p>Innova Capacitaciones &copy; 2018</p>
+            </div>
+
+        </footer>
 
 
         <!--===============================================================================================-->	
