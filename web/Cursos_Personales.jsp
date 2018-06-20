@@ -53,6 +53,7 @@
                             </c:forEach>
                         </tbody>
                     </table>
+                    <br>
                     <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Volver</a>
                 </div>
             </div>

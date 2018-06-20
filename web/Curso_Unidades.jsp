@@ -60,6 +60,7 @@
                     </tbody>
                 </table>
             </div>
+            <br>
             <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}">Volver</a>
         </div>
     </body>

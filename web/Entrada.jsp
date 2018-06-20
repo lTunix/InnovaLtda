@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Entrada</title>
     </head>
     <%
         Usuario usuario = (Usuario) session.getAttribute("user");
@@ -59,6 +59,7 @@
                     </tbody>
                 </table>
             </div>
+            <br>
             <a href="Unidad_Entradas.jsp">Volver</a>
         </div>
     </body>
