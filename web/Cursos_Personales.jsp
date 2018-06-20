@@ -107,7 +107,7 @@
                                     <td class="column100 column4" data-column="column4">${c.fecha_inicio}</td>
                                     <td class="column100 column5" data-column="column5">${c.fecha_termino}</td>
                                     <td>
-                                        <a class="btn-floating red" href="cursoSeleccionaado.do?id_curso=${c.id_curso}"> INGRESAR</a>  
+                                        <a class="btn-floating red" href="cursoSeleccionado.do?id_curso=${c.id_curso}"> INGRESAR</a>  
                                     </td>
                                 </tr>
                             </c:forEach>

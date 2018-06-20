@@ -4,6 +4,7 @@
     Author     : Horacio
 --%>
 
+<%@page import="modelo_intranet_alumnos_curso.Curso"%>
 <%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -15,18 +16,19 @@
     </head>
     <%
         Usuario usuario = (Usuario) session.getAttribute("user");
+        Curso curso = (Curso) request.getAttribute("curso");
     %>
     <body>
         <div class="container">
-            
+
             <% if (usuario != null) {%>
-            
+
             <div>
                 <img src="images/Intranet_Alumno/Cursos/A1.png"/>
-                <h2>Este es el título del curso</h2>
-                <p><b>Esta es la descripción del curso</b></p>
-                <p><b>Fecha de Inicio:</b> 2018-02-12</p>
-                <p><b>Fecha de Término:</b> 2018-11-17</p>
+                <h2><%=curso.getTitulo()%></h2>
+                <p><b><%=curso.getDescripcion()%></b></p>
+                <p><b>Fecha de Inicio:</b> <%=curso.getFecha_inicio()%></p>
+                <p><b>Fecha de Término:</b> <%=curso.getFecha_termino()%></p>
             </div>
             <br>
             <div>
@@ -42,30 +44,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"/></td>
-                            <td>Este es el título</td>
-                            <td>Esta es la descripción</td>
-                            <td>50 horas</td>
-                            <td>
-                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/Intranet_Alumno/Cursos/Unidad/A2.png"/></td>
-                            <td>Este es el segundo título</td>
-                            <td>Esta es la segunda descripción</td>
-                            <td>80 horas</td>
-                            <td>
-                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
-                            </td>
-                        </tr>
+                        <c:forEach items="${requestScope.listaUnidades}" var="u">
+                            <tr class="row100">
+                                <td><img src="images/Intranet_Alumno/Cursos/Unidad/${u.imagen_unidad}.png"/></td>
+                                <td>${u.titulo_unidad}</td>
+                                <td>${u.descripcion}</td>
+                                <td>${u.duracion}</td>
+                                <td>
+                                    <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </div>
             <br>
             <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}">Volver</a>
-            
+
             <% } else { %>
             <div class="row">
                 <div class="col s12">
@@ -74,7 +69,7 @@
                 </div>
             </div>
             <% }%>
-            
+
         </div>
     </body>
 </html>
