@@ -44,7 +44,7 @@
                             <td>2018</td>
                             <td>Video</td>
                             <td>
-                                <a class="btn-floating red" href="Entrada.jsp">ABRIR</a>
+                                <a class="btn-floating red" href="Recurso.jsp">ABRIR</a>
                             </td>
                         </tr>
                         <tr>
@@ -53,13 +53,13 @@
                             <td>2018</td>
                             <td>Pdf</td>
                             <td>
-                                <a class="btn-floating red" href="Entrada.jsp">ABRIR</a>
+                                <a class="btn-floating red" href="Recurso.jsp">ABRIR</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <a href="Curso_Unidades.jsp">Volver</a>
+            <a href="Unidad_Entradas.jsp">Volver</a>
         </div>
     </body>
 </html>
