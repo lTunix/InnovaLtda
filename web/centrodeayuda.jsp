@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="" />
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-        <!-- Custom Theme files -->
+       
+        <!-- 
+        css-->
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="css/centrodeayuda.css" type="text/css" rel="stylesheet" media="all"> 
         <link href="css/font-awesome.css" rel="stylesheet">   <!-- font-awesome icons --> 
@@ -16,9 +17,7 @@
         <!-- js -->
         <script src="js/ayuda/jquery-2.2.3.min.js"></script> 
         <!-- //js -->
-        <!-- web-fonts --> 
         
-        <!-- //web-fonts --> 
     </head>
     <body> 
         <!-- banner -->
@@ -144,6 +143,20 @@
                                     <h4>Redes Sociales</h4>
                                     <p class="fa fa-twitter" aria-hidden="true">
                                         <a href="http://www.twitter.com/" >@InnovaCapacitaciones</a>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 agileits-team-grid">
+                            <div class="team-info">
+                                <img src="images/t4.jpg" alt="">
+                                <div class="team-caption"> 
+                                    <h4>Correo</h4>
+                                    <p class="fa fa-twitter" aria-hidden="true">
+                                        <a href="mailto:informacion@innovacapacitaciones.cl" >informacion@innovacapacitaciones.cl</a>
                                     </p>
 
 
