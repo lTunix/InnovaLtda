@@ -88,16 +88,14 @@
                 </tbody>
             </table>
         </div>
-                        
-                        
-                        
-                    </div>
+
+        </div>
                 </div>
             </c:if>
             <c:if test="${empty user}">
                 <div class="row">
                     <div class="col s12">
-                        <h2>Acceso Restringuido</h2>
+                        <h2>Acceso Restringido</h2>
                         <a href="index.jsp">Volver a la pagina principal</a> 
                     </div>
                 </div>
