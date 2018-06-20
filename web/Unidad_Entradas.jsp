@@ -26,6 +26,7 @@
             <br>
             <div>
                 <table class="bordered">
+                    <h3>Entradas</h3>
                     <thead>
                         <tr>
                             <th> </th>
@@ -40,24 +41,22 @@
                             <td><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"/></td>
                             <td>Este es el título</td>
                             <td>Esta es la descripción</td>
-                            <td>50 horas</td>
                             <td>
-                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
+                                <a class="btn-floating red" href="Entrada.jsp">INGRESAR</a>
                             </td>
                         </tr>
                         <tr>
                             <td><img src="images/Intranet_Alumno/Cursos/Unidad/A2.png"/></td>
                             <td>Este es el segundo título</td>
                             <td>Esta es la segunda descripción</td>
-                            <td>80 horas</td>
                             <td>
-                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
+                                <a class="btn-floating red" href="Entrada.jsp">INGRESAR</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}">Volver</a>
+            <a href="Curso_Unidades.jsp">Volver</a>
         </div>
     </body>
 </html>
