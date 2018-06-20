@@ -83,25 +83,25 @@
                 <p><b>Fecha de Término:</b> <%=curso.getFecha_termino()%></p>
             </div>
             <br>
-            <div>
-                <table class="bordered">
+            <div class="table100 ver2 m-b-110">
+                <table data-vertable="ver2">
                     <h3>Unidades</h3>
                     <thead>
-                        <tr>
-                            <th> </th>
-                            <th>Título</th>
-                            <th>Descripción</th>
-                            <th>Duración</th>
-                            <th> </th>
+                        <tr tr class="row100 head">
+                            <th class="column100 column1" data-column="column1"> </th>
+                            <th class="column100 column2" data-column="column2">Título</th>
+                            <th class="column100 column3" data-column="column3">Descripción</th>
+                            <th class="column100 column4" data-column="column4">Duración</th>
+                            <th class="column100 column5" data-column="column5">Ver Unidades</th>
                         </tr>
                     </thead>
                     <tbody>
                         <c:forEach items="${requestScope.listaUnidades}" var="u">
                             <tr class="row100">
-                                <td><img src="images/Intranet_Alumno/Cursos/Unidad/${u.imagen_unidad}.png"/></td>
-                                <td>${u.titulo_unidad}</td>
-                                <td>${u.descripcion}</td>
-                                <td>${u.duracion}</td>
+                                <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/${u.imagen_unidad}.png"/></td>
+                                <td class="column100 column2" data-column="column2">${u.titulo_unidad}</td>
+                                <td class="column100 column3" data-column="column3">${u.descripcion}</td>
+                                <td class="column100 column4" data-column="column4">${u.duracion}</td>
                                 <td>
                                     <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
                                 </td>

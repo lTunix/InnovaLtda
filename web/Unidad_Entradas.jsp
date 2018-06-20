@@ -71,10 +71,9 @@
         <div class="container">
             <div>
                 <img src="images/Intranet_Alumno/Cursos/A1.png"/>
-                <h2>Este es el título del curso</h2>
-                <p><b>Esta es la descripción del curso</b></p>
-                <p><b>Fecha de Inicio:</b> 2018-02-12</p>
-                <p><b>Fecha de Término:</b> 2018-11-17</p>
+                <h2>Este es el título de la unidad</h2>
+                <p><b>Esta es la descripción de la unidad</b></p>
+                <p><b>Duración:</b> 50 horas</p>
             </div>
             <br>
 

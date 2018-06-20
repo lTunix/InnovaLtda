@@ -94,7 +94,7 @@
                                 <th class="column100 column3" data-column="column3">Descripción</th>
                                 <th class="column100 column4" data-column="column4">Fecha de Inicio</th>
                                 <th class="column100 column5" data-column="column5">Fech de Término</th>
-                                <th class="column100 column5" data-column="column6">Ver Unidades</th>
+                                <th class="column100 column5" data-column="column6">Ver Cursos</th>
 
                             </tr>
                         </thead>
