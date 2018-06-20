@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col s12">
                     <h3>Debe iniciar sesión para acceder a los contenidos</h3>
-                    <a href="index.jsp">Ir al acceso</a>
+                    <a href="login.jsp">Ir al acceso</a>
                 </div>
             </div>
             <% }%>

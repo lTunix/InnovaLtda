@@ -183,7 +183,7 @@
                            <img src="images/d1.png" class="img-responsive" alt="img">
                         </div>
                         <div class="informacion">
-                           <p> <a href="login.jsp"> Docente    </a> </p>
+                           <p> <a href="logindocente.jsp"> Docente    </a> </p>
                         </div>
                      </div>
                   </div>
@@ -203,7 +203,7 @@
                            <img src="images/c1.png" class="img-responsive" alt="img">
                         </div>
                         <div class="informacion">
-                           <p><a href="login.jsp">Coordinador </a></p>
+                           <p><a href="logincoordinador.jsp">Coordinador </a></p>
                         </div>
                      </div>
                   </div>
