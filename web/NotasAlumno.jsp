@@ -24,8 +24,7 @@
                 <div class="col s10 offset-s1"> 
                     <table class="bordered">
                         <thead>
-                            <tr>
-                                <th> </th>
+                            <tr>                               
                                 <th>Id Evaluacion</th>
                                 <th>Entrada</th>
                                 <th>Unidad</th>
