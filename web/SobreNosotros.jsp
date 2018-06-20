@@ -50,7 +50,7 @@
 						<ul>
 							
 							<div class="dropdown">
-                        <li><a href="login.jsp"><i class="fa fa-sign-in"></i> Entrar</a></li>
+                        <li><a href=""><i class="fa fa-sign-in"></i> Entrar</a></li>
                         <div class="dropdown-content">
                            <a href="login.jsp">Alumno</a>
                            <a href="login.jsp">Docente</a>
