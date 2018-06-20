@@ -44,7 +44,7 @@
                             <td>Esta es la descripción</td>
                             <td>50 horas</td>
                             <td>
-                                <a class="btn-floating red" href="">INGRESAR</a>
+                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +53,7 @@
                             <td>Esta es la segunda descripción</td>
                             <td>80 horas</td>
                             <td>
-                                <a class="btn-floating red" href="">INGRESAR</a>
+                                <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
                             </td>
                         </tr>
                     </tbody>
