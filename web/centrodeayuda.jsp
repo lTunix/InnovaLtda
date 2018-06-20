@@ -56,7 +56,7 @@
                                             <li>
                                                 <div class="w3ls-text">
                                                     <div class="w3ls-text-info">
-                                                        <h2>¿En que podemos ayudarte?</h2>
+                                                        <h2>¿Necesitas Ayuda?</h2>
                                                     </div>
                                                 </div>
                                             </li>
