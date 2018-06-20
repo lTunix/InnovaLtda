@@ -1,12 +1,15 @@
 
 package controlador_intranet_alumno_cursos;
 
+import Modelo.Evaluacion;
+import dao_intranet_alumnos_cursos.DaoIntranetAlumnosNotas;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 
 public class CtrlNotasAlumno extends HttpServlet {
@@ -15,9 +18,26 @@ public class CtrlNotasAlumno extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        dao_intranet_alumnos_cursos.DaoIntranetAlumnosNotas dao = new DaoIntranetAlumnosNotas();
+        ArrayList<Evaluacion> listaEvaluaciones;
+        //Variables de mensajes
+        String errores = "", msg = "";
+        //Se identifica la petición realizada.
+        String userPath = request.getServletPath();
+        
+        
+        if (userPath.equals("/CtrlNotasAlumno.do")) {
+            //Se obtiene rut del fulano del jsp de intranet
+            String rut_alumno = String.valueOf(request.getParameter("rut_fulano"));
+            //Se recuperan los registros de los cursos.
+            listaEvaluaciones = dao.listarEvaluaciones(rut_alumno);
             
+            //Se envía información a jsp de salida.
+            request.setAttribute("rut_alumno", rut_alumno);
+            request.setAttribute("listaEvaluaciones", listaEvaluaciones);
+            request.getRequestDispatcher("NotasAlumno.jsp").forward(request, response);
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,5 +78,6 @@ public class CtrlNotasAlumno extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
 }
+

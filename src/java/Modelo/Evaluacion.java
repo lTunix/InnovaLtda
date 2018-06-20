@@ -8,12 +8,57 @@ import java.sql.Date;
  */
 public class Evaluacion {
     Boolean exigencia;
-    String puntaje_total;
-    int duracion, id_entrada, id_unidad, id_curso, id_nota;
+    String puntaje_total, entrada, unidad, curso;
+    int id, duracion, id_entrada, id_unidad, id_curso, id_nota;
+    float nota;
     Date fecha_inicio, fecha_termino;
 
     public Evaluacion() {
     }
+
+    public float getNota() {
+        return nota;
+    }
+
+    public void setNota(float nota) {
+        this.nota = nota;
+    }
+
+    
+    
+    public String getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(String entrada) {
+        this.entrada = entrada;
+    }
+
+    public String getUnidad() {
+        return unidad;
+    }
+
+    public void setUnidad(String unidad) {
+        this.unidad = unidad;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
 
     public Boolean getExigencia() {
         return exigencia;
