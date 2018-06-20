@@ -60,8 +60,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}">
-                                            <span class="iconosmenualumnos">A</span>
+                                        <a href="CtrlNotasAlumno.do?rut_fulano=${sessionScope.user.rut}">
+                                            <span class="iconosmenualumnos">p</span>
                                             <div class="contenidomenualumnos">
                                                 <h2 class="nombremenualumnos">Mis Notas</h2>
 
