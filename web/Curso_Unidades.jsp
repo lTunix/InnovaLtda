@@ -18,6 +18,9 @@
     %>
     <body>
         <div class="container">
+            
+            <% if (usuario != null) {%>
+            
             <div>
                 <img src="images/Intranet_Alumno/Cursos/A1.png"/>
                 <h2>Este es el título del curso</h2>
@@ -62,6 +65,16 @@
             </div>
             <br>
             <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}">Volver</a>
+            
+            <% } else { %>
+            <div class="row">
+                <div class="col s12">
+                    <h3>Debe iniciar sesión para acceder a los contenidos</h3>
+                    <a href="index.jsp">Ir al acceso</a>
+                </div>
+            </div>
+            <% }%>
+            
         </div>
     </body>
 </html>
