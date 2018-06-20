@@ -25,7 +25,7 @@ import Modelo.Usuario;
  *
  * @author Horacio
  */
-@WebServlet(name = "ControladorAlumnoCurso", urlPatterns = {"/cargaCursosPersonales.do"})
+@WebServlet(name = "ControladorAlumnoCurso", urlPatterns = {"/cargaCursosPersonales.do", "/cursoSeleccionaado.do"})
 public class ControladorAlumnoCurso extends HttpServlet {
 
     /**
@@ -48,6 +48,7 @@ public class ControladorAlumnoCurso extends HttpServlet {
         ArrayList<Recurso> listaRecursos;
         ArrayList<Unidad> listaUnidades;
         Usuario usuario;
+        Curso curso;
         //Variables de mensajes
         String errores = "", msg = "";
         //Se identifica la petición realizada.
@@ -61,6 +62,17 @@ public class ControladorAlumnoCurso extends HttpServlet {
             //Se envía información a jsp de salida.
             request.setAttribute("listaCursos", listaCursos);
             request.setAttribute("rut_alumno", rut_alumno);
+            request.getRequestDispatcher("Cursos_Personales.jsp").forward(request, response);
+        } else if (userPath.equals("/cargaCursosPersonales.do")) {
+            //Se obtiene id del curso jsp de intranet
+            int id_curso = Integer.parseInt(String.valueOf(request.getParameter("rut_alumno")));
+            //Se recupera el registro del curso
+            curso = dao.obtenerCurso(id_curso);
+            //Se obtiene lista de unidades según id del curso
+            listaUnidades = dao.listarUnidades(id_curso);
+            //Se envía información a jsp de salida.
+            request.setAttribute("listaUnidades", listaUnidades);
+            request.setAttribute("curso", curso);
             request.getRequestDispatcher("Cursos_Personales.jsp").forward(request, response);
         }
     }
