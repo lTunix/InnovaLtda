@@ -3,10 +3,13 @@
 <!DOCTYPE html>
 <%@page import="Modelo.Usuario"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <title>Notas del Alumno</title>
     </head>
     <%
@@ -22,7 +25,7 @@
                 </div>
                 
                 <div class="col s10 offset-s1"> 
-                    <table class="bordered">
+                    <table class="table">
                         <thead>
                             <tr>                               
                                 <th>Id Evaluacion</th>
