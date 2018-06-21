@@ -46,63 +46,7 @@
                     </div>
                 </div>
 
-                <div class="w3layouts-banner-info">
-                    <div class="container">
-                        <div class="w3layouts-banner-slider">
-                            <div class="w3layouts-banner-top-slider">
-                                <div class="slider">
-                                    <div class="callbacks_container">
-                                        <ul class="rslides callbacks callbacks1" id="slider4">
-                                            <li>
-                                                <div class="w3ls-text">
-                                                    <div class="w3ls-text-info">
-                                                        <h2>¿Necesitas Ayuda?</h2>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="w3ls-text">
-                                                    <div class="w3ls-text-info">
-                                                        <h2>Te Ayudamos 24/7</h2>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                    <script src="js/ayuda/responsiveslides.min.js"></script>
-                                    <script>
-                                        // You can also use "$(window).load(function() {"
-                                        $(function () {
-                                            // Slideshow 4
-                                            $("#slider4").responsiveSlides({
-                                                auto: true,
-                                                pager: true,
-                                                nav: true,
-                                                speed: 500,
-                                                namespace: "callbacks",
-                                                before: function () {
-                                                    $('.news').append("<li>before event fired.</li>");
-                                                },
-                                                after: function () {
-                                                    $('.news').append("<li>after event fired.</li>");
-                                                }
-                                            });
-
-                                        });
-                                    </script>
-                                    <!--banner Slider starts Here-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <!-- //banner -->
-
-
-        <!-- Contacto -->
+                 <!-- Contacto -->
         <div id="team" class="jarallax team">
             <div class="team-dot">
                 <div class="container"> 
@@ -169,7 +113,65 @@
                 </div>
             </div>
         </div>
-        <!-- //Contacto -->
+        <!-- //Contacto --
+                
+                <div class="w3layouts-banner-info">
+                    <div class="container">
+                        <div class="w3layouts-banner-slider">
+                            <div class="w3layouts-banner-top-slider">
+                                <div class="slider">
+                                    <div class="callbacks_container">
+                                        <ul class="rslides callbacks callbacks1" id="slider4">
+                                            <li>
+                                                <div class="w3ls-text">
+                                                    <div class="w3ls-text-info">
+                                                        <h2>¿Necesitas Ayuda?</h2>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="w3ls-text">
+                                                    <div class="w3ls-text-info">
+                                                        <h2>Te Ayudamos 24/7</h2>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                    <script src="js/ayuda/responsiveslides.min.js"></script>
+                                    <script>
+                                        // You can also use "$(window).load(function() {"
+                                        $(function () {
+                                            // Slideshow 4
+                                            $("#slider4").responsiveSlides({
+                                                auto: true,
+                                                pager: true,
+                                                nav: true,
+                                                speed: 500,
+                                                namespace: "callbacks",
+                                                before: function () {
+                                                    $('.news').append("<li>before event fired.</li>");
+                                                },
+                                                after: function () {
+                                                    $('.news').append("<li>after event fired.</li>");
+                                                }
+                                            });
+
+                                        });
+                                    </script>
+                                    <!--banner Slider starts Here-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- //banner -->
+
+
+       
 
 
 
