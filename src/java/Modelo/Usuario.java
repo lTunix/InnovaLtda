@@ -1,6 +1,7 @@
 package Modelo;
 
 import BaseDatos.ConexionBD;
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +11,7 @@ public class Usuario {
 
     String rut, nombre, apellido_paterno, apellido_materno, profesion, email, pass;
     int genero,telefono, id_tipo_user, id_tipo_cliente, estado;
+    FileInputStream imagen;
 
     public Usuario() {
     }
@@ -27,6 +29,7 @@ public class Usuario {
         this.id_tipo_user = id_tipo_user;
         this.id_tipo_cliente = id_tipo_cliente;
         this.estado = estado;
+        
     }
 
     public void setEstado(int estado) {
@@ -42,6 +45,15 @@ public class Usuario {
         return rut;
     }
 
+    public FileInputStream getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(FileInputStream imagen) {
+        this.imagen = imagen;
+    }
+
+    
     public void setRut(String rut) {
         this.rut = rut;
     }
@@ -230,6 +242,22 @@ public class Usuario {
             while (rs.next()) {
                 Usuario u = new Usuario();
                 this.pass = rs.getString("contraseña");
+            }
+        } catch (SQLException ex) {
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());           
+        }
+    }
+      
+    public void cambiarCorreo(String rut, String nCorreo) {
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "UPDATE mydb.usuario SET correo='"+nCorreo+"' WHERE rut='"+rut+"';"; 
+            PreparedStatement pst = conn.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                this.email = rs.getString("correo");
             }
         } catch (SQLException ex) {
             System.out.println("Excepción en ValidarUsuario:" + ex.toString());           
