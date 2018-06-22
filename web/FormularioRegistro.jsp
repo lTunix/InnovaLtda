@@ -12,18 +12,13 @@
 <html lang="es">
     <head>
         <title>Innova Registro</title>
-        <!-- Meta tag Keywords -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="" />
-
-        <!-- Meta tag Keywords -->
-        <!-- css files -->
         <link rel="stylesheet" href="css/registroCss.css" type="text/css" media="all" /> <!-- Style-CSS --> 
         <link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
         <link href="//fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
         <script src="js/validar.js"></script>
-        <!-- //css files -->
     </head>
     <body>
         <!-- main -->

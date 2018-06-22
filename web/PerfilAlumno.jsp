@@ -146,7 +146,7 @@
                 var miVentana;
                 //La función window_open crea el pop-up o ventana emergente
                 function window_open(){
-                  miVentana = window.open( "index.jsp", "nombrePop-Up", "width=380,height=500, top=85,left=50");
+                  miVentana = window.open( "FormularioCambioCorreo.jsp", "nombrePop-Up", "width=380,height=500, top=85,left=50");
                 }
                 //La función window_close cerrara el pop-up o ventana emergente
                 function window_close(){

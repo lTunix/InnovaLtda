@@ -248,20 +248,26 @@ public class Usuario {
         }
     }
       
-    public void cambiarCorreo(String rut, String nCorreo) {
+    public static Usuario cambiarCorreo(String rut, String nCorreo) {
         try {
             Connection conn = ConexionBD.abrirConexion();
             String sql = "UPDATE mydb.usuario SET correo='"+nCorreo+"' WHERE rut='"+rut+"';"; 
             PreparedStatement pst = conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
 
-            while (rs.next()) {
+            if (rs.next()) {
                 Usuario u = new Usuario();
-                this.email = rs.getString("correo");
+                u.setRut(rs.getString("rut"));
+                u.setEmail(rs.getString("correo"));
+                return u;
+                
+            } else {
+                return null;
             }
         } catch (SQLException ex) {
             System.out.println("Excepción en ValidarUsuario:" + ex.toString());           
         }
+        return null;
     }
 
 }
