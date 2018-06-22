@@ -66,9 +66,6 @@
                                         <option value="2">Femenino</option>
                                     </select>
                                 </div>
-
-
-
                                 <div class="icon1">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                     <input type="email" id="correo" name="correo" placeholder="Correo"  required>

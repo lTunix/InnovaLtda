@@ -63,9 +63,8 @@
                             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                                 <thead>
                                     <tr>
-                                        <th>Parametro</th>
-                                        <th>Valor Actual</th>
-
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -82,7 +81,6 @@
                                     <tr>
                                         <td>Apellido Paterno: </td>
                                         <td><p> ${sessionScope.user.apellido_paterno} </p></td>
-                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>Apellido Materno: </td>
@@ -155,7 +153,6 @@
                 // Llamo a la función window_open en el evento click del botón con id = "botonWindowOpen"
                 document.getElementById("botonEmail").onclick = function() {window_open()};
         </script>
+       
     </body>
-    
-    
 </html>

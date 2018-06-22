@@ -249,16 +249,19 @@ public class Usuario {
     }
       
     public static Usuario cambiarCorreo(String rut, String nCorreo) {
+              int filas = 0;
         try {
             Connection conn = ConexionBD.abrirConexion();
-            String sql = "UPDATE mydb.usuario SET correo='"+nCorreo+"' WHERE rut='"+rut+"';"; 
+            String sql = "UPDATE mydb.usuario SET correo=? WHERE rut=?"; 
             PreparedStatement pst = conn.prepareStatement(sql);
-            ResultSet rs = pst.executeQuery();
+            pst.setString(1, rut);
+            pst.setString(2, nCorreo);
+            filas = pst.executeUpdate();
 
-            if (rs.next()) {
+            if (filas > 0) {
                 Usuario u = new Usuario();
-                u.setRut(rs.getString("rut"));
-                u.setEmail(rs.getString("correo"));
+                u.setRut(rut);
+                u.setEmail(nCorreo);
                 return u;
                 
             } else {
