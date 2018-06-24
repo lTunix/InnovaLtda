@@ -123,22 +123,22 @@
 
                                     <tr>
                                         <td>Profesión: </td>
-                                        <td><p> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion">Cambiar Profesión</button></td>
+                                        <td><p> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
 
                                     </tr>
                                     <tr>
                                         <td>Email: </td>
-                                        <td><p> ${sessionScope.user.email} </p> <br> <button id="botonEmail">Cambiar Email</button></td>
+                                        <td><p> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
        
                                     </tr>
                                     <tr>
                                         <td>Contraseña: </td>
-                                        <td><p> ${sessionScope.user.pass} </p> <br> <button id="botonClave">Cambiar Contraseña</button></td>
+                                        <td><p> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
   
                                     </tr>
                                     <tr>
                                         <td>Telefono de contacto: </td>
-                                        <td><p> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono">Cambiar Telefono</button></td>
+                                        <td><p> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
 
                                     </tr>
                                 </tbody>
@@ -158,20 +158,6 @@
             </c:if>   
         </div><!-- fin contenedor -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-        <script>
-                //Variable que almacena el método window.open()
-                var miVentana;
-                //La función window_open crea el pop-up o ventana emergente
-                function window_open(){
-                  miVentana = window.open( "FormularioCambioCorreo.jsp", "nombrePop-Up", "width=380,height=500, top=85,left=50");
-                }
-                //La función window_close cerrara el pop-up o ventana emergente
-                function window_close(){
-                  miVentana.close();
-                }
-                // Llamo a la función window_open en el evento click del botón con id = "botonWindowOpen"
-                document.getElementById("botonEmail").onclick = function() {window_open()};
-        </script>
-       
+      
     </body>
 </html>
