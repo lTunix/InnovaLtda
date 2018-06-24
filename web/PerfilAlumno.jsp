@@ -20,6 +20,7 @@
         <meta name="keywords" content="" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
+        <link href="css/centrodeayuda.css" type="text/css" rel="stylesheet" media="all"> 
         <link rel="stylesheet" href="css/bootstrap-theme.css" media="screen">
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="css/estilo.css" type="text/css" rel="stylesheet" media="all">
@@ -31,52 +32,59 @@
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
         <script src="js/perfilAlumno.js"></script>
-        
+
     </head>
     <body>
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");
-            String genero = ""; %>
+            String genero = "";%>
         <div class="container">
             <c:if test="${not empty user}">
                 <div class="row">
                     <div class="col s12">
+                        <div class="header-right">
+                            <div class="agileinfo-social-grids">
+                                <ul>
+                                    <li><a style="color:black; font-size:150%" href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}"><i class="fa fa-address-book"></i> Mis Cursos</a></li>
+
+
+                                </ul>
+                            </div>
+                        </div>
                         <h1>Perfil de Alumno</h1>
+
                         <div class="table-responsive" >
 
                             <div id="subida">
                                 <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
-                                <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL (MÁX 64KB)</p>
-                                <div class="form-control">
-                                    <input id="imagen" name="imagen" type="file" />
-                                    <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
-                                </div>
-                                <div class="form-control">
-                                    <input type="submit" value="Subir imagen">
-                                </div>
-                                
+                                    <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL (MÁX 64KB)</p>
+                                    <div class="form-control">
+                                        <input id="imagen" name="imagen" type="file" />
+                                        <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="submit" value="Subir imagen">
+                                    </div>
+
                                 </form>
                             </div>
 
                             <div id="imagenPerfil" class="none">                               
-                                
-                                
-                                <% for(Usuario u: Usuario.RecuperarImagen(session.getAttribute("rut").toString())) { 
-                                    
-                                    
-                                
-                                    out.println("<td align='center'><img src='data:image/gif;base64,");
-                                    for (byte i : u.getEncodedImage()) 
-                                    {
-                                        out.print((char) i);
-                                    }  
-                                    
-                                    out.println("'/></td>");
-                                    
-                                }
+
+
+                                <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
+
+                                        out.println("<td align='center'><img src='data:image/gif;base64,");
+                                        for (byte i : u.getEncodedImage()) {
+                                            out.print((char) i);
+                                        }
+
+                                        out.println("'/></td>");
+
+                                    }
                                 %>
-                                
-                                
-                                
+
+
+
                             </div>
                             <br/>
                             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
@@ -90,12 +98,12 @@
                                     <tr>
                                         <td>Rut: </td>
                                         <td><p> ${sessionScope.user.rut} </p></td>
-                                 
+
                                     </tr>
                                     <tr>
                                         <td>Nombre: </td>
                                         <td><p> ${sessionScope.user.nombre} </p></td>
-                              
+
                                     </tr>
                                     <tr>
                                         <td>Apellido Paterno: </td>
@@ -104,7 +112,7 @@
                                     <tr>
                                         <td>Apellido Materno: </td>
                                         <td><p> ${sessionScope.user.apellido_materno} </p></td>
-                                   
+
                                     </tr>
 
                                     <tr>
@@ -118,7 +126,7 @@
                                                 genero = "Otro";
                                             }
                                         %><td><p> <% out.print(genero);%> </p></td>
-                                 
+
                                     </tr>
 
                                     <tr>
@@ -129,12 +137,12 @@
                                     <tr>
                                         <td>Email: </td>
                                         <td><p> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
-       
+
                                     </tr>
                                     <tr>
                                         <td>Contraseña: </td>
                                         <td><p> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
-  
+
                                     </tr>
                                     <tr>
                                         <td>Telefono de contacto: </td>
@@ -158,6 +166,6 @@
             </c:if>   
         </div><!-- fin contenedor -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-      
+
     </body>
 </html>

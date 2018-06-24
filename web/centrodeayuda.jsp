@@ -35,7 +35,7 @@
                         <div class="header-right">
                             <div class="agileinfo-social-grids">
                                 <ul>
-                                    <li><a style="color:white" href="menualumnos.jsp"><i class="fa fa-address-book"></i> Mis Cursos</a></li>
+                                    <li><a style="color:white" href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}"><i class="fa fa-address-book"></i> Mis Cursos</a></li>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-rss"></i></a></li>
