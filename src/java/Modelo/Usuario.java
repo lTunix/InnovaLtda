@@ -1,17 +1,23 @@
 package Modelo;
 
 import BaseDatos.ConexionBD;
-import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import org.apache.tomcat.util.codec.binary.Base64;
 
 public class Usuario {
 
     String rut, nombre, apellido_paterno, apellido_materno, profesion, email, pass;
     int genero,telefono, id_tipo_user, id_tipo_cliente, estado;
-    FileInputStream imagen;
+    Blob imagen;
+    byte[] encodedImage;
+    InputStream file;
 
     public Usuario() {
     }
@@ -32,6 +38,32 @@ public class Usuario {
         
     }
 
+    public Blob getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Blob imagen) {
+        this.imagen = imagen;
+    }
+
+    public byte[] getEncodedImage() {
+        return encodedImage;
+    }
+
+    public void setEncodedImage(byte[] encodedImage) {
+        this.encodedImage = encodedImage;
+    }
+
+    public InputStream getFile() {
+        return file;
+    }
+
+    public void setFile(InputStream file) {
+        this.file = file;
+    }
+    
+    
+
     public void setEstado(int estado) {
         this.estado = estado;
     }
@@ -43,14 +75,6 @@ public class Usuario {
 
     public String getRut() {
         return rut;
-    }
-
-    public FileInputStream getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(FileInputStream imagen) {
-        this.imagen = imagen;
     }
 
     
@@ -272,5 +296,50 @@ public class Usuario {
         }
         return null;
     }
+    
+    public void ActualizarImagen(String rut)
+        {
+           try
+           {
+               Connection conn = ConexionBD.abrirConexion();
+               String sql = "update usuario set imagen=? where rut='"+rut+"'";
+               PreparedStatement pst = conn.prepareStatement(sql);
+               pst.setBlob(1, getFile());
+               pst.execute();         
+           }
+           catch(SQLException e)
+           {
+               System.err.println("Excepción en ActualizarImagen: " +e);
+           }
+        }
 
+    public static LinkedList<Usuario> RecuperarImagen(String rut) throws IOException{
+        try
+        {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "select * from usuario where rut='"+rut+"'";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            
+            LinkedList<Usuario> listaADevolver = new LinkedList<>();
+            
+            while( rs.next() )
+            {
+                Usuario u = new Usuario();                
+                u.setImagen(rs.getBlob("imagen"));
+                byte[] buffer = u.getImagen().getBytes(1, (int)u.getImagen().length());
+                u.setEncodedImage(Base64.encodeBase64(buffer));                  
+                
+                listaADevolver.add( u );
+            }
+            
+            return listaADevolver;
+        }
+        catch(SQLException e)
+        {
+            System.err.println("Excepción en RecuperarImagen " + e);
+            return null;
+        }      
+    }
+    
 }

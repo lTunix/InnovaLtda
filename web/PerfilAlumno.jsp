@@ -44,20 +44,39 @@
                         <div class="table-responsive" >
 
                             <div id="subida">
+                                <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
                                 <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL</p>
                                 <div class="form-control">
-                                    <input id="imagen" type="file" />
+                                    <input id="imagen" name="imagen" type="file" />
+                                    <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
                                 </div>
                                 <div class="form-control">
-                                    <button id="subir" onclick="SubirImagen();">Subir Imagen</button>
+                                    <input type="submit" value="Subir imagen">
                                 </div>
+                                
+                                </form>
                             </div>
 
-                            <div id="imagenPerfil" class="none">
-                                <div class="form-control">
-
-                                </div>
-                                <canvas id="canvas"></canvas>  
+                            <div id="imagenPerfil" class="none">                               
+                                
+                                
+                                <% for(Usuario u: Usuario.RecuperarImagen(session.getAttribute("rut").toString())) { 
+                                    
+                                    
+                                
+                                    out.println("<td align='center'><img src='data:image/gif;base64,");
+                                    for (byte i : u.getEncodedImage()) 
+                                    {
+                                        out.print((char) i);
+                                    }  
+                                    out.print("' width='250' height='150'/>");
+                                    out.println("</td>");
+                                    
+                                }
+                                %>
+                                
+                                
+                                
                             </div>
                             <br/>
                             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >

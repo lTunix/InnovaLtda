@@ -4,9 +4,17 @@
         <servlet-name>CtrlNotasAlumno</servlet-name>
         <servlet-class>controlador_intranet_alumno_cursos.CtrlNotasAlumno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CambiarImagenPerfil</servlet-name>
+        <servlet-class>Controlador.CambiarImagenPerfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CtrlNotasAlumno</servlet-name>
         <url-pattern>/CtrlNotasAlumno.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CambiarImagenPerfil</servlet-name>
+        <url-pattern>/CambiarImagenPerfil.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
