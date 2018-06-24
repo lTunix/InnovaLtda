@@ -10,7 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <link rel="stylesheet" type="text/css" href="css/errorlogin.css">
-                <link rel="stylesheet" type="text/css" href="cursospersonales/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
         <title>Error</title>
     </head>
@@ -23,6 +22,6 @@
   <span><span>4</span></span>
 </section>
 <div class="link-container">
-  <a target="_blank" href="login.jsp" class="more-link" class="fa fa-home">Volver</a>
+  <a target="_blank" href="login.jsp" class="more-link">Volver</a>
 </div>
 </html>
