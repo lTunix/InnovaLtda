@@ -45,7 +45,7 @@
 
                             <div id="subida">
                                 <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
-                                <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL</p>
+                                <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL (MÁX 64KB)</p>
                                 <div class="form-control">
                                     <input id="imagen" name="imagen" type="file" />
                                     <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
@@ -69,8 +69,8 @@
                                     {
                                         out.print((char) i);
                                     }  
-                                    out.print("' width='250' height='150'/>");
-                                    out.println("</td>");
+                                    
+                                    out.println("'/></td>");
                                     
                                 }
                                 %>
