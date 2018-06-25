@@ -83,8 +83,8 @@
                 <p><b>Fecha de Término:</b> <%=curso.getFecha_termino()%></p>
             </div>
             <br>
-            <div class="table100 ver2 m-b-110">
-                <table data-vertable="ver2">
+            <div class="table100 ver4 m-b-110">
+                <table data-vertable="ver4">
                     <h3>Unidades</h3>
                     <thead>
                         <tr tr class="row100 head">
