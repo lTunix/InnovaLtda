@@ -276,10 +276,10 @@ public class Usuario {
               int filas = 0;
         try {
             Connection conn = ConexionBD.abrirConexion();
-            String sql = "UPDATE mydb.usuario SET correo=? WHERE rut=?"; 
+            String sql = "UPDATE mydb.usuario SET correo='"+nCorreo +"' WHERE rut='"+rut+"'"; 
             PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, rut);
-            pst.setString(2, nCorreo);
+//            pst.setString(1, rut);
+//            pst.setString(2, nCorreo);
             filas = pst.executeUpdate();
 
             if (filas > 0) {
