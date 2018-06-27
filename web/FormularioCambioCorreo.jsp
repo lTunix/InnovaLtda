@@ -27,6 +27,7 @@
             <c:if test="${not empty user}">
                 <div class="row">
                     <div class="col s12">
+                        
                         <div class="w3ls-header">
                             <h1><br></h1>
                             <div class="header-main">
