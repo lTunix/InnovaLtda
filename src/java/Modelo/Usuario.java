@@ -14,7 +14,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
 public class Usuario {
 
     String rut, nombre, apellido_paterno, apellido_materno, profesion, email, pass;
-    int genero,telefono, id_tipo_user, id_tipo_cliente, estado;
+    int genero, telefono, id_tipo_user, id_tipo_cliente, estado;
     Blob imagen;
     byte[] encodedImage;
     InputStream file;
@@ -35,7 +35,7 @@ public class Usuario {
         this.id_tipo_user = id_tipo_user;
         this.id_tipo_cliente = id_tipo_cliente;
         this.estado = estado;
-        
+
     }
 
     public Blob getImagen() {
@@ -61,8 +61,6 @@ public class Usuario {
     public void setFile(InputStream file) {
         this.file = file;
     }
-    
-    
 
     public void setEstado(int estado) {
         this.estado = estado;
@@ -71,13 +69,11 @@ public class Usuario {
     public int getEstado() {
         return estado;
     }
-    
 
     public String getRut() {
         return rut;
     }
 
-    
     public void setRut(String rut) {
         this.rut = rut;
     }
@@ -197,7 +193,7 @@ public class Usuario {
     public static Usuario InsertarUsuario(String rut, String nombre, String ape_pat, String ape_mat,
             int genero, String profesion, String email, String pass,
             int cel, int tipo_user, int tipo_cliente, int estado) {
-            int filas = 0;
+        int filas = 0;
         try {
             Connection conn = ConexionBD.abrirConexion();
             String sql = "INSERT INTO Usuario (rut,nombre,ape_pat,ape_mat,genero,profesion,correo,"
@@ -242,24 +238,23 @@ public class Usuario {
         }
         return null;
     }
-    
+
     //Para bloquear la Cuenta del Usuario
-    public static Usuario BloquearUsuario(String correo, String pass){
-        try{
-        
-        }catch(Exception ex){
+    public static Usuario BloquearUsuario(String correo, String pass) {
+        try {
+
+        } catch (Exception ex) {
             System.out.println("Se ha producido una Excepcion al bloquear el Usuario : " + ex.toString());
         }
         return null;
     }
-    
-    
-      public void ConsultarContraseña(String correoRecuperacion) {
+
+    public void ConsultarContraseña(String correoRecuperacion) {
         try {
             Connection conn = ConexionBD.abrirConexion();
-            String sql = "select contraseña from Usuario where correo='"+correoRecuperacion+"'";
+            String sql = "select contraseña from Usuario where correo='" + correoRecuperacion + "'";
             PreparedStatement pst = conn.prepareStatement(sql);
-            
+
             ResultSet rs = pst.executeQuery();
 
             String mensaje = "Hola";
@@ -268,15 +263,15 @@ public class Usuario {
                 this.pass = rs.getString("contraseña");
             }
         } catch (SQLException ex) {
-            System.out.println("Excepción en ValidarUsuario:" + ex.toString());           
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());
         }
     }
-      
+
     public static Usuario cambiarCorreo(String rut, String nCorreo) {
-              int filas = 0;
+        int filas = 0;
         try {
             Connection conn = ConexionBD.abrirConexion();
-            String sql = "UPDATE mydb.usuario SET correo='"+nCorreo +"' WHERE rut='"+rut+"'"; 
+            String sql = "UPDATE mydb.usuario SET correo='" + nCorreo + "' WHERE rut='" + rut + "'";
             PreparedStatement pst = conn.prepareStatement(sql);
 //            pst.setString(1, rut);
 //            pst.setString(2, nCorreo);
@@ -287,59 +282,120 @@ public class Usuario {
                 u.setRut(rut);
                 u.setEmail(nCorreo);
                 return u;
-                
+
             } else {
                 return null;
             }
         } catch (SQLException ex) {
-            System.out.println("Excepción en ValidarUsuario:" + ex.toString());           
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());
         }
         return null;
     }
-    
-    public void ActualizarImagen(String rut)
-        {
-           try
-           {
-               Connection conn = ConexionBD.abrirConexion();
-               String sql = "update usuario set imagen=? where rut='"+rut+"'";
-               PreparedStatement pst = conn.prepareStatement(sql);
-               pst.setBlob(1, getFile());
-               pst.execute();         
-           }
-           catch(SQLException e)
-           {
-               System.err.println("Excepción en ActualizarImagen: " +e);
-           }
-        }
 
-    public static LinkedList<Usuario> RecuperarImagen(String rut) throws IOException{
-        try
-        {
+    public static Usuario cambiarProfesion(String rut, String nProf) {
+        int filas = 0;
+        try {
             Connection conn = ConexionBD.abrirConexion();
-            String sql = "select * from usuario where rut='"+rut+"'";
+            String sql = "UPDATE mydb.usuario SET profesion='" + nProf + "' WHERE rut='" + rut + "'";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            filas = pst.executeUpdate();
+
+            if (filas > 0) {
+                Usuario u = new Usuario();
+                u.setRut(rut);
+                u.setEmail(nProf);
+                return u;
+
+            } else {
+                return null;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());
+        }
+        return null;
+    }
+
+    public static Usuario cambiarClave(String rut, String nClave) {
+        int filas = 0;
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "UPDATE mydb.usuario SET contraseña='" + nClave + "' WHERE rut='" + rut + "'";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            filas = pst.executeUpdate();
+
+            if (filas > 0) {
+                Usuario u = new Usuario();
+                u.setRut(rut);
+                u.setEmail(nClave);
+                return u;
+
+            } else {
+                return null;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());
+        }
+        return null;
+    }
+
+    public static Usuario cambiarTelefono(String rut, String nTel) {
+        int filas = 0;
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "UPDATE mydb.usuario SET correo='" + nTel + "' WHERE rut='" + rut + "'";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            filas = pst.executeUpdate();
+
+            if (filas > 0) {
+                Usuario u = new Usuario();
+                u.setRut(rut);
+                u.setEmail(nTel);
+                return u;
+
+            } else {
+                return null;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Excepción en ValidarUsuario:" + ex.toString());
+        }
+        return null;
+    }
+
+    public void ActualizarImagen(String rut) {
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "update usuario set imagen=? where rut='" + rut + "'";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setBlob(1, getFile());
+            pst.execute();
+        } catch (SQLException e) {
+            System.err.println("Excepción en ActualizarImagen: " + e);
+        }
+    }
+
+    public static LinkedList<Usuario> RecuperarImagen(String rut) throws IOException {
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "select * from usuario where rut='" + rut + "'";
             PreparedStatement pst = conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
-            
+
             LinkedList<Usuario> listaADevolver = new LinkedList<>();
-            
-            while( rs.next() )
-            {
-                Usuario u = new Usuario();                
+
+            while (rs.next()) {
+                Usuario u = new Usuario();
                 u.setImagen(rs.getBlob("imagen"));
-                byte[] buffer = u.getImagen().getBytes(1, (int)u.getImagen().length());
-                u.setEncodedImage(Base64.encodeBase64(buffer));                  
-                
-                listaADevolver.add( u );
+                byte[] buffer = u.getImagen().getBytes(1, (int) u.getImagen().length());
+                u.setEncodedImage(Base64.encodeBase64(buffer));
+
+                listaADevolver.add(u);
             }
-            
+
             return listaADevolver;
-        }
-        catch(SQLException e)
-        {
+        } catch (SQLException e) {
             System.err.println("Excepción en RecuperarImagen " + e);
             return null;
-        }      
+        }
     }
-    
+
 }
