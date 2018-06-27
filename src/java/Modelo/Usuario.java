@@ -382,16 +382,18 @@ public class Usuario {
 
             LinkedList<Usuario> listaADevolver = new LinkedList<>();
 
-            while (rs.next()) {
+            if (rs.next()) {
                 Usuario u = new Usuario();
                 u.setImagen(rs.getBlob("imagen"));
                 byte[] buffer = u.getImagen().getBytes(1, (int) u.getImagen().length());
                 u.setEncodedImage(Base64.encodeBase64(buffer));
 
                 listaADevolver.add(u);
+                return listaADevolver;
+            }else{
+                return null;
             }
-
-            return listaADevolver;
+            
         } catch (SQLException e) {
             System.err.println("Excepción en RecuperarImagen " + e);
             return null;
