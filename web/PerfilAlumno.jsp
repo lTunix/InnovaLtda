@@ -21,6 +21,7 @@
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link href="css/centrodeayuda.css" type="text/css" rel="stylesheet" media="all"> 
+        <link href="css/perfilalumno.css" type="text/css" rel="stylesheet" media="all">
         <link rel="stylesheet" href="css/bootstrap-theme.css" media="screen">
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="css/estilo.css" type="text/css" rel="stylesheet" media="all">
@@ -68,7 +69,7 @@
                                 </form>
                             </div>
 
-                            <div id="imagenPerfil" class="none">                               
+                                    <table border="1" class="table" style="text-align: center"  ><div id="imagenPerfil" class="none">                               
 
 
                                 <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
@@ -84,8 +85,7 @@
                                 %>
 
 
-
-                            </div>
+                                        </div> </table>
                             <br/>
                             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                                 <thead>
@@ -97,21 +97,21 @@
                                 <tbody>
                                     <tr>
                                         <td>Rut: </td>
-                                        <td><p> ${sessionScope.user.rut} </p></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.rut} </p></td>
 
                                     </tr>
                                     <tr>
                                         <td>Nombre: </td>
-                                        <td><p> ${sessionScope.user.nombre} </p></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.nombre} </p></td>
 
                                     </tr>
                                     <tr>
                                         <td>Apellido Paterno: </td>
-                                        <td><p> ${sessionScope.user.apellido_paterno} </p></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.apellido_paterno} </p></td>
                                     </tr>
                                     <tr>
                                         <td>Apellido Materno: </td>
-                                        <td><p> ${sessionScope.user.apellido_materno} </p></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.apellido_materno} </p></td>
 
                                     </tr>
 
@@ -125,28 +125,28 @@
                                             } else {
                                                 genero = "Otro";
                                             }
-                                        %><td><p> <% out.print(genero);%> </p></td>
+                                        %><td><p style="color:#1e98d1"> <% out.print(genero);%> </p></td>
 
                                     </tr>
 
                                     <tr>
                                         <td>Profesión: </td>
-                                        <td><p> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
 
                                     </tr>
                                     <tr>
                                         <td>Email: </td>
-                                        <td><p> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
 
                                     </tr>
                                     <tr>
                                         <td>Contraseña: </td>
-                                        <td><p> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
 
                                     </tr>
                                     <tr>
                                         <td>Telefono de contacto: </td>
-                                        <td><p> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
+                                        <td><p style="color: #1e98d1;"> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
 
                                     </tr>
                                 </tbody>
@@ -160,7 +160,7 @@
                 <div class="row">
                     <div class="col s12">
                         <h2>Acceso Restringido</h2>
-                        <a href="index.jsp">Volver a la pagina principal</a> 
+                        <a href="index.jsp" style="color: black">Volver a la pagina principal</a> 
                     </div>
                 </div>
             </c:if>   

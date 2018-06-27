@@ -1,10 +1,13 @@
 
 /*cuerpo + fondo menu*/
 body{
-    background:#e6eecc center  url(../images/beige_paper.jpg) ;
+    background:#e6eecc  url(../images/beige_paper.jpg) no-repeat center center fixed ;
+
+ 
 	color: #333;
 	font-family: 'Terminal Dosis', Arial, sans-serif;
 	font-size: 13px;
+        
     
 }
 
