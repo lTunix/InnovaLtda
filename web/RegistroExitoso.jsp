@@ -11,11 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <link rel="stylesheet" type="text/css" href="css/errorlogin.css">
 
-        <title>Error</title>
+        <title>Cuenta Creada</title>
     </head>
     <body>
-        <h1>Cuenta Creada Correctamente</h1>
-<p class="zoom-area"><b></b> </p>
+        <h1 style="color:black">Cuenta Creada Correctamente</h1>
+        <p class="zoom-area"><b></b> <img src="images/listo.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
   <a target="_blank" href="login.jsp" class="more-link">Volver</a>
