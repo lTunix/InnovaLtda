@@ -43,8 +43,8 @@
                                 </div>
                                 <div class="clear"></div>
                                 <script src="js/validaRUT.js"></script>
-                        </div>
                         </form>	
+                            </div>
                     </div>
                 </div>
             </div>

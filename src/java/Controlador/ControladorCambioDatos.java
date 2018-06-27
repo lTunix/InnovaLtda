@@ -51,18 +51,50 @@ public class ControladorCambioDatos extends HttpServlet {
                 hs.setAttribute("Correo", user.getEmail());
                 response.sendRedirect("RegistroExitoso.jsp");
             }else{
-                response.sendRedirect("ErrorRegistro.jsp");
+                response.sendRedirect("Error404.jsp");
             }
         }else if(userPath.equals("/cambiarClave.do")){
-            
+              //Se obtiene rut del fulano del jsp de intranet
+            String rut = String.valueOf(request.getParameter("rutUsuario"));
+            String nuevoClave = request.getParameter("nuevaClave");
+            Usuario user = Usuario.cambiarClave(rut, nuevoClave);
+          if(user != null){
+                HttpSession hs = request.getSession(true);
+                hs.setAttribute("Usuario", user.getNombre());
+                hs.setAttribute("Contraseña", user.getPass());
+                response.sendRedirect("RegistroExitoso.jsp");
+            }else{
+                response.sendRedirect("Error404.jsp");
+            }
         
             
         }else if(userPath.equals("/cambiarTelefono.do")){
-            
-        
+              //Se obtiene rut del fulano del jsp de intranet
+            String rut = String.valueOf(request.getParameter("rutUsuario"));
+            String nuevoTel = request.getParameter("nuevoTelefono");
+            Usuario user = Usuario.cambiarTelefono(rut, nuevoTel);
+          if(user != null){
+                HttpSession hs = request.getSession(true);
+                hs.setAttribute("Usuario", user.getNombre());
+                hs.setAttribute("Telefono", user.getTelefono());
+                response.sendRedirect("RegistroExitoso.jsp");
+            }else{
+                response.sendRedirect("Error404.jsp");
+            }
         
         }else if(userPath.equals("/cambiarProfesion.do")){
-        
+          //Se obtiene rut del fulano del jsp de intranet
+            String rut = String.valueOf(request.getParameter("rutUsuario"));
+            String nuevoProf = request.getParameter("nuevaProfesion");
+            Usuario user = Usuario.cambiarProfesion(rut, nuevoProf);
+          if(user != null){
+                HttpSession hs = request.getSession(true);
+                hs.setAttribute("Usuario", user.getNombre());
+                hs.setAttribute("Profesion", user.getProfesion());
+                response.sendRedirect("RegistroExitoso.jsp");
+            }else{
+                response.sendRedirect("Error404.jsp");
+            }
         }
         
         }

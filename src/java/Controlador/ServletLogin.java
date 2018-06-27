@@ -72,12 +72,12 @@ public class ServletLogin extends HttpServlet {
                         
                     } else{
                         //se niega el acceso al usuarios
-                        response.sendRedirect("ErrorLogin.jsp");
+                        response.sendRedirect("Error404.jsp");
                     }
                     //response.sendRedirect("BienvenidoAlumno.jsp");
                 }
                 else{
-                    response.sendRedirect("ErrorLogin.jsp");
+                    response.sendRedirect("Error404.jsp");
             }
         }  
     }
