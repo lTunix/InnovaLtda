@@ -55,7 +55,7 @@ public class ServletRegistro extends HttpServlet {
                 hs.setAttribute("Tipo", user.getId_tipo_user());
                 response.sendRedirect("RegistroExitoso.jsp");
             }else{
-                response.sendRedirect("Error404.jsp");
+                response.sendRedirect("ErrorRegistro.jsp");
             }
             
             
