@@ -60,7 +60,7 @@
 
                                 <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
 
-                                        out.println("<td class='avatar';  align='center'> <center><img  style='width:210px;height:210px;' src='data:image/gif;base64,");
+                                       out.println("<td   align='center'> <center><img  style='width:210px;height:210px;  background-repeat: no-repeat; background-position: 50%; border-radius: 50%; background-size: 100% auto; ' src='data:image/gif;base64,");
                                         for (byte i : u.getEncodedImage()) {
                                             out.print((char) i);
                                         }
