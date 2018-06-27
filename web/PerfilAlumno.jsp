@@ -75,7 +75,7 @@
                             </div>
                             <div id="subida">
                                 <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
-                                    <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL (MÁX 64KB)</p>
+                                    <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL</p>
                                     <div class="form-control">
                                         <input id="imagen" name="imagen" type="file" />
                                         <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
