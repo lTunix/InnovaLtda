@@ -8,16 +8,16 @@ and open the template in the editor.
     Author     : ratedxpw
 */
 
-.avatar {
-    /* cambia estos dos valores para definir el tamaño de tu círculo */
+/* .avatar {  codigo cirlo avatar Alumnos
+    /* cambia estos dos valores para definir el tamaño de tu círculo 
     height: 100px;
     width: 100px;
-    /* los siguientes valores son independientes del tamaño del círculo */
+    /* los siguientes valores son independientes del tamaño del círculo 
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 50%;
     background-size: 100% auto;
-}
+} */
 
 
 strong {
@@ -94,11 +94,11 @@ td:last-child {
 }	
 
 tr {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+	background: url("");	
 }
 
 tr:nth-child(odd) td {
-	background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+	background: #f1f1f1 url("");	
 }
 
 tr:last-of-type td {
