@@ -71,7 +71,8 @@
                             <div id="imagenPerfil" class="none">                               
 
 
-                                <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
+                                <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) 
+                                {
 
                                         out.println("<td align='center'><img src='data:image/gif;base64,");
                                         for (byte i : u.getEncodedImage()) {

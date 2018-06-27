@@ -26,10 +26,10 @@
                 <div class="header">
                     <div class="container">
                         <div class="header-left">
-                            <div class="logo">
-                                <h1>
-                                    <a href="centrodeayuda.jsp">Bienvenido al </br>Centro de Ayuda Online</a>
-                                </h1>
+                            <div class="logo"></br>
+                                <h2 >
+                                    <a href="centrodeayuda.jsp"> Bienvenido al Centro de Ayuda Online </br> <p style="color:white" align="center" >Innova Capacitaciones<p></a>
+                                </h2>
                             </div>
                         </div>
                         <div class="header-right">

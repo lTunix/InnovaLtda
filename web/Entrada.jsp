@@ -96,7 +96,7 @@
                         <tbody>
                             
                                 <tr class="row100">
-                                    <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"/></td>
+                                    <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"  /></td>
                                     <td class="column100 column2" data-column="column2">Este es el título</td>
                                     <td class="column100 column3" data-column="column3">Esta es la descripción</td>
                                 
