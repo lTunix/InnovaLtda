@@ -18,7 +18,7 @@
         <p class="zoom-area"><b></b> <img src="images/listo.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
-  <a target="_blank" href="login.jsp" class="more-link">Volver</a>
+  <a target="_blank" href="login.jsp" onclick="window.close();" class="more-link ">Volver</a>
 </div>
 </html>
 
