@@ -37,11 +37,11 @@
                                             <form action="cambiarCorreo.do" method="post" class="form-register" onsubmit="return validar();">
                                                 <div class="icon1">
                                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
-                                                    <input oninput="checkRut(this)" type="text" id="rut" name="rutUsuario" placeholder="Ingrese su RUT" class="input-48" required>
+                                                    <input oninput="checkRut(this)" type="text" id="rut" name="rutUsuario" placeholder="Ingrese su RUT" class="input-48" value="<%= request.getSession().getAttribute("rut")%>" readonly="readonly"  required>
                                                 </div>
                                                 <div class="icon1">
                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                    <input type="email" id="correo" name="nuevoCorreo" placeholder="Nuevo Correo"  required>
+                                                    <input type="email" id="correo" name="nuevoCorreo" placeholder="Nuevo Correo" value="<%= request.getSession().getAttribute("correo") %>" required>
                                                 </div>
                                                 <div class="bottom" >
                                                     <input type="submit" value="Aceptar" />
