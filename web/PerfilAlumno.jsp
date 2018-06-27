@@ -45,7 +45,7 @@
                         <div class="header-right">
                             <div class="agileinfo-social-grids">
                                 <ul>
-                                    <li><a style="color:black; font-size:150%" href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}"><i class="fa fa-address-book"></i> Mis Cursos</a></li>
+                                    <li><a style="color:black; font-size:150%" href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}"><i style="color:black"class="fa fa-address-book"></i> Mis Cursos</a></li>
 
 
                                 </ul>
@@ -97,27 +97,27 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Rut: </td>
-                                        <td><p> ${sessionScope.user.rut} </p></td>
+                                        <td style="font-weight: bold">Rut: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.rut} </p></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Nombre: </td>
-                                        <td><p> ${sessionScope.user.nombre} </p></td>
+                                        <td style="font-weight: bold">Nombre: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.nombre} </p></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Apellido Paterno: </td>
-                                        <td><p> ${sessionScope.user.apellido_paterno} </p></td>
+                                        <td style="font-weight: bold">Apellido Paterno: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.apellido_paterno} </p></td>
                                     </tr>
                                     <tr>
-                                        <td>Apellido Materno: </td>
-                                        <td><p> ${sessionScope.user.apellido_materno} </p></td>
+                                        <td style="font-weight: bold">Apellido Materno: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.apellido_materno} </p></td>
 
                                     </tr>
 
                                     <tr>
-                                        <td>Genero: </td>
+                                        <td style="font-weight: bold">Genero: </td>
 
                                         <% if (usuarioActual.getGenero() == 1) {
                                                 genero = "Masculino";
@@ -126,28 +126,28 @@
                                             } else {
                                                 genero = "Otro";
                                             }
-                                        %><td><p> <% out.print(genero);%> </p></td>
+                                        %><td><p  style="color:red"> <% out.print(genero);%> </p></td>
 
                                     </tr>
 
                                     <tr>
-                                        <td>Profesión: </td>
-                                        <td><p> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
+                                        <td style="font-weight: bold">Profesión: </td>
+                                        <td><p style="color:red; "> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Email: </td>
-                                        <td><p> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
+                                        <td style="font-weight: bold">Email: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Contraseña: </td>
-                                        <td><p> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
+                                        <td style="font-weight: bold">Contraseña: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Telefono de contacto: </td>
-                                        <td><p> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
+                                        <td style="font-weight: bold">Telefono de contacto: </td>
+                                        <td><p style="color:red"> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
 
                                     </tr>
                                 </tbody>
