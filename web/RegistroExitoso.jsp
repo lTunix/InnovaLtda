@@ -14,7 +14,7 @@
         <title>Cuenta Creada</title>
     </head>
     <body>
-        <h1 style="color:black">Cuenta Creada Correctamente</h1>
+        <h1 style="color:black">Datos Ingresados Correctamente</h1>
         <p class="zoom-area"><b></b> <img src="images/listo.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
