@@ -25,6 +25,7 @@
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="css/estilo.css" type="text/css" rel="stylesheet" media="all">
         <link rel="stylesheet" type="text/css" href="css/menualumnos.css" />
+        <link rel="stylesheet" type="text/css" href="css/perfilalumno.css" />
         <script src="js/bootstrap.js"></script>
         <script src="js/subirImagen.js"></script>
         <link href="css/font-awesome.css" rel="stylesheet">
@@ -53,7 +54,24 @@
                         <h1>Perfil de Alumno</h1>
 
                         <div class="table-responsive" >
+                            <div id="imagenPerfil" class="none">                               
 
+
+                                <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
+
+                                        out.println("<td align='center'> <center><img  style='width:210px;height:210px;' src='data:image/gif;base64,");
+                                        for (byte i : u.getEncodedImage()) {
+                                            out.print((char) i);
+                                        }
+
+                                        out.println("'/></center></td>");
+
+                                    }
+                                %> 
+
+
+
+                            </div>
                             <div id="subida">
                                 <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
                                     <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL (MÁX 64KB)</p>
@@ -68,25 +86,7 @@
                                 </form>
                             </div>
 
-                            <div id="imagenPerfil" class="none">                               
 
-
-                                <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) 
-                                {
-
-                                        out.println("<td align='center'><img src='data:image/gif;base64,");
-                                        for (byte i : u.getEncodedImage()) {
-                                            out.print((char) i);
-                                        }
-
-                                        out.println("'/></td>");
-
-                                    }
-                                %>
-
-
-
-                            </div>
                             <br/>
                             <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
                                 <thead>
@@ -161,7 +161,7 @@
                 <div class="row">
                     <div class="col s12">
                         <h2>Acceso Restringido</h2>
-                        <a href="index.jsp">Volver a la pagina principal</a> 
+                        <a style="color:black"href="index.jsp">Volver a la pagina principal</a> 
                     </div>
                 </div>
             </c:if>   
