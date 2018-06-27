@@ -171,7 +171,7 @@ public class Usuario {
             if (rs.next()) {
                 Usuario u = new Usuario();
                 u.setRut(rs.getString("rut"));
-                u.setNombre(n);
+                u.setNombre(rs.getString("nombre"));
                 u.setApellido_paterno(rs.getString("ape_pat"));
                 u.setApellido_materno(rs.getString("ape_mat"));
                 u.setGenero(rs.getInt("genero"));
