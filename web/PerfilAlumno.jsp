@@ -54,12 +54,13 @@
                         <h1>Perfil de Alumno</h1>
 
                         <div class="table-responsive" >
+                            
                             <div id="imagenPerfil" class="none">                               
 
 
                                 <% for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
 
-                                        out.println("<td align='center'> <center><img  style='width:210px;height:210px;' src='data:image/gif;base64,");
+                                        out.println("<td class='avatar';  align='center'> <center><img  style='width:210px;height:210px;' src='data:image/gif;base64,");
                                         for (byte i : u.getEncodedImage()) {
                                             out.print((char) i);
                                         }
