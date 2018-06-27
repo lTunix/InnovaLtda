@@ -14,8 +14,8 @@
         <title>Error</title>
     </head>
     <body>
-        <h1>Error al Crear la Cuenta</h1>
-<p class="zoom-area"><b></b> </p>
+        <h1 style="color:black">Error al Crear la Cuenta</h1>
+<p class="zoom-area"><b></b> <img src="images/error.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
   <a target="_blank" href="login.jsp" class="more-link">Volver</a>
