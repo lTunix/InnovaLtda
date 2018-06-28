@@ -33,152 +33,197 @@
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
         <script src="js/perfilAlumno.js"></script>
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        
+        
+        
 
     </head>
     <body>
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");
             String genero = "";%>
+
+<div class="example3">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/perfilalumno.png" alt="Cursos Inscritos">
+                        </a>
+                    </div>
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Mi Cursos</a></li>
+                            <li><a href="centrodeayuda.jsp">Ayuda</a></li>
+                            <li><a href="contacto.jsp">Contacto</a></li>
+
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </div>
+       
+
         <div class="container">
+           
+
             <c:if test="${not empty user}">
                 <div class="row">
-                    <div class="col s12">
-                        <div class="header-right">
-                            <div class="agileinfo-social-grids">
-                                <ul>
-                                    <li><a style="color:black; font-size:150%" href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}"><i style="color:black"class="fa fa-address-book"></i> Mis Cursos</a></li>
+                    </br> </br> </br> </br> </br> 
+                    <h2> </h2>
 
 
-                                </ul>
-                            </div>
-                        </div>
-                        <h1>Perfil de Alumno</h1>
+                    <div class="col-md-7 ">
 
-                        <div class="table-responsive" >
-                            
-                            <div id="imagenPerfil" class="none">                               
+                        <div class="panel panel-default">
+                            <div class="panel-heading">  <h4 >Mi Perfil</h4></div>
+                            <div class="panel-body">
 
+                                <div class="box box-info">
 
-                                <%  
-                                    try{
-                                        
-                                        for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {                                       
-                                        
-                                       out.println("<td   align='center'> <center><img  style='width:210px;height:210px;  background-repeat: no-repeat; background-position: 50%; border-radius: 50%; background-size: 100% auto; ' src='data:image/gif;base64,");
-                                        for (byte i : u.getEncodedImage()) {
-                                            out.print((char) i);
-                                        }
+                                    <div class="box-body">
+                                        <div class="col-sm-6">
+                                            <%
+                                                try {
 
-                                        out.println("'/></center></td>");
-                                } 
-                                        
-                                        
-                                    }catch(NullPointerException ex){
-                                        
-                                        out.println("<td   align='center'> <center><img  style='width:210px;height:210px;  background-repeat: no-repeat; background-position: 50%; border-radius: 50%; background-size: 100% auto; ' src='images/userdefault.png'/> </center></td>");
-                                        
-                                    }  
-                                    
-                                    
-                                %> 
+                                                    for (Usuario u : Usuario.RecuperarImagen(session.getAttribute("rut").toString())) {
+
+                                                        out.println("<td   align='center'> <center><img  style='width:210px;height:210px;  background-repeat: no-repeat; background-position: 50%; border-radius: 50%; background-size: 100% auto; ' src='data:image/gif;base64,");
+                                                        for (byte i : u.getEncodedImage()) {
+                                                            out.print((char) i);
+                                                        }
+
+                                                        out.println("'/></center></td>");
+                                                    }
+
+                                                } catch (NullPointerException ex) {
+
+                                                    out.println("<td   align='center'> <center><img  style='width:210px;height:210px;  background-repeat: no-repeat; background-position: 50%; border-radius: 50%; background-size: 100% auto; ' src='images/userdefault.png'/> </center></td>");
+
+                                                }
 
 
+                                            %>                 
 
-                            </div>
-                            <div id="subida">
-                                <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
-                                    <p id="elija">SELECCIONE UNA IMAGEN DE PERFIL</p>
-                                    <div class="form-control">
-                                        <input id="imagen" name="imagen" type="file" />
-                                        <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
+
+                                            <form method="post" action="CambiarImagenPerfil.do" enctype="multipart/form-data">
+                                                <p id="elija">Seleccione una Imagen de Perfil</p>
+                                                <div class="form-inline">
+                                                    <input id="imagen" name="imagen" type="file" />
+                                                    <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
+                                                </div>
+                                                <div class="form-inline">
+                                                    <input type="submit" value="Subir imagen">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <!--Upload Image Js And Css-->
+
+
+
+
+
+
+
                                     </div>
-                                    <div class="form-control">
-                                        <input type="submit" value="Subir imagen">
-                                    </div>
 
-                                </form>
+                                    <br>
+
+                                    <!-- /input-group -->
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 style="color:#00b1b1;"> ${sessionScope.user.nombre} ${sessionScope.user.apellido_paterno} </h4></span>
+                                    <span><p>Curso</p></span>            
+                                </div>
+                                <div class="clearfix"></div>
+                                <hr style="margin:5px 0 5px 0;"> </br>
+
+
+                                <div class="col-sm-5 col-xs-6 tital " >Rut:</div><div class="col-sm-7 col-xs-6 ">${sessionScope.user.rut}</div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Nombre:</div><div class="col-sm-7"> ${sessionScope.user.nombre}</div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Apellido Paterno:</div><div class="col-sm-7"> ${sessionScope.user.apellido_paterno}</div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Apellido Materno:</div><div class="col-sm-7">${sessionScope.user.apellido_materno}</div>
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Genero:</div><div class="col-sm-7">  <% if (usuarioActual.getGenero() == 1) { genero = "Masculino";} else if (usuarioActual.getGenero() == 2) {genero = "Femenino";} else {genero = "Otro";}%> <% out.print(genero);%></div> 
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Profesion:</div><div class="col-sm-7">${sessionScope.user.profesion}   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" id="botonProfesion" onclick="cambiaProf()" class="btn btn-success">Cambiar Profesion</button></div>
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Email:</div><div class="col-sm-7">${sessionScope.user.email} &nbsp; <button class="btn btn-info" type="button" id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></div>
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Contraseña: </div><div class="col-sm-7">${sessionScope.user.pass} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<button  class="btn btn-warning" type="button" id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></div>
+
+                                <div class="bot-border"></div> </br> </br>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Telefono Contacto:</div><div class="col-sm-7">${sessionScope.user.telefono} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<button class="btn btn-danger" type="button" id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></div>
+
+                                <div class="clearfix"></div> 
+
+                                <!-- /.box-body -->
                             </div>
+                            <!-- /.box -->
 
-
-                            <br/>
-                            <table class="table table-hover" border="1" cellspacing="1" cellpadding="1" >
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="font-weight: bold">Rut: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.rut} </p></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Nombre: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.nombre} </p></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Apellido Paterno: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.apellido_paterno} </p></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Apellido Materno: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.apellido_materno} </p></td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-weight: bold">Genero: </td>
-
-                                        <% if (usuarioActual.getGenero() == 1) {
-                                                genero = "Masculino";
-                                            } else if (usuarioActual.getGenero() == 2) {
-                                                genero = "Femenino";
-                                            } else {
-                                                genero = "Otro";
-                                            }
-                                        %><td><p  style="color:red"> <% out.print(genero);%> </p></td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-weight: bold">Profesión: </td>
-                                        <td><p style="color:red; "> ${sessionScope.user.profesion} </p> <br> <button id="botonProfesion" onclick="cambiaProf()">Cambiar Profesión</button></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Email: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.email} </p> <br> <button id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Contraseña: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.pass} </p> <br> <button id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td style="font-weight: bold">Telefono de contacto: </td>
-                                        <td><p style="color:red"> ${sessionScope.user.telefono} </p> <br> <button id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
 
-                    </div>
-                </div>
-            </c:if>
-            <c:if test="${empty user}">
-                <div class="row">
-                    <div class="col s12">
-                        <h2>Acceso Restringido</h2>
-                        <a style="color:black"href="index.jsp">Volver a la pagina principal</a> 
-                    </div>
-                </div>
-            </c:if>   
-        </div><!-- fin contenedor -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
-    </body>
+                    </div> 
+                </div>
+            </div>  
+        </c:if>
+        <c:if test="${empty user}">
+            <div class="row">
+                <div class="col s12">
+                    <h2>Acceso Restringido</h2>
+                    <a style="color:black"href="index.jsp">Volver a la pagina principal</a> 
+                </div>
+            </div>
+        </c:if>   
+   <!-- fin contenedor -->
+    <script>
+        $(function () {
+            $('#profile-image1').on('click', function () {
+                $('#profile-image-upload').click();
+            });
+        });
+    </script> 
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
