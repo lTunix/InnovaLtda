@@ -33,18 +33,16 @@
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
         <script src="js/perfilAlumno.js"></script>
-        
+
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        
-        
-        
+
 
     </head>
     <body>
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");
             String genero = "";%>
 
-<div class="example3">
+        <div class="example3">
             <nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -70,10 +68,10 @@
                 <!--/.container-fluid -->
             </nav>
         </div>
-       
+
 
         <div class="container">
-           
+
 
             <c:if test="${not empty user}">
                 <div class="row">
@@ -165,7 +163,13 @@
                                 <div class="clearfix"></div>
                                 <div class="bot-border"></div> </br>
 
-                                <div class="col-sm-5 col-xs-6 tital " >Genero:</div><div class="col-sm-7">  <% if (usuarioActual.getGenero() == 1) { genero = "Masculino";} else if (usuarioActual.getGenero() == 2) {genero = "Femenino";} else {genero = "Otro";}%> <% out.print(genero);%></div> 
+                                <div class="col-sm-5 col-xs-6 tital " >Genero:</div><div class="col-sm-7">  <% if (usuarioActual.getGenero() == 1) {
+                                        genero = "Masculino";
+                                    } else if (usuarioActual.getGenero() == 2) {
+                                        genero = "Femenino";
+                                    } else {
+                                        genero = "Otro";
+                                    }%> <% out.print(genero);%></div> 
 
                                 <div class="clearfix"></div>
                                 <div class="bot-border"></div> </br>
@@ -185,16 +189,11 @@
                                 <div class="bot-border"></div> </br> </br>
 
                                 <div class="col-sm-5 col-xs-6 tital " >Telefono Contacto:</div><div class="col-sm-7">${sessionScope.user.telefono} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<button class="btn btn-danger" type="button" id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></div>
-
                                 <div class="clearfix"></div> 
-
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
-
                         </div>
-
-
                     </div> 
                 </div>
             </div>  
@@ -207,23 +206,14 @@
                 </div>
             </div>
         </c:if>   
-   <!-- fin contenedor -->
-    <script>
-        $(function () {
-            $('#profile-image1').on('click', function () {
-                $('#profile-image-upload').click();
+        <!-- fin contenedor -->
+        <script>
+            $(function () {
+                $('#profile-image1').on('click', function () {
+                    $('#profile-image-upload').click();
+                });
             });
-        });
-    </script> 
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-
-
-
-
-
-
-
-
-</body>
+        </script> 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    </body>
 </html>

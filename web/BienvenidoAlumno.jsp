@@ -69,21 +69,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <span class="iconosmenualumnos">&#64;</span>
-                                            <div class="contenidomenualumnos">
-                                                <h2 class="nombremenualumnos">Correo Electronico</h2>
-
-                                            </div>
-                                        </a>
-                                    </li>
-                               
-                                    <li>
                                         <a href="PerfilAlumno.jsp">
                                             <span class="iconosmenualumnos">&#85;</span>
                                             <div class="contenidomenualumnos">
                                                 <h2 class="nombremenualumnos">Mi Perfil Estudiantil</h2>
-
                                             </div>
                                         </a>
                                     </li>
