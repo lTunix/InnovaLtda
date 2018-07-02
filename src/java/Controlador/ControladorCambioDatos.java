@@ -78,6 +78,7 @@ public class ControladorCambioDatos extends HttpServlet {
                 hs.setAttribute("Usuario", user.getNombre());
                 hs.setAttribute("Telefono", user.getTelefono());
                 response.sendRedirect("RegistroExitoso.jsp");
+                
             }else{
                 response.sendRedirect("Error404.jsp");
             }
@@ -91,7 +92,9 @@ public class ControladorCambioDatos extends HttpServlet {
                 HttpSession hs = request.getSession(true);
                 hs.setAttribute("Usuario", user.getNombre());
                 hs.setAttribute("Profesion", user.getProfesion());
+                request.getRequestDispatcher("PerfilAlumno.jsp").forward(request, response);
                 response.sendRedirect("RegistroExitoso.jsp");
+                
             }else{
                 response.sendRedirect("Error404.jsp");
             }

@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import org.apache.tomcat.util.codec.binary.Base64;
 
@@ -281,11 +282,15 @@ public class Usuario {
                 Usuario u = new Usuario();
                 u.setRut(rut);
                 u.setEmail(nCorreo);
+                
+                
                 return u;
 
             } else {
                 return null;
             }
+            
+            
         } catch (SQLException ex) {
             System.out.println("Excepción en ValidarUsuario:" + ex.toString());
         }
@@ -309,9 +314,11 @@ public class Usuario {
             } else {
                 return null;
             }
+            
         } catch (SQLException ex) {
             System.out.println("Excepción en ValidarUsuario:" + ex.toString());
         }
+        
         return null;
     }
 
@@ -398,6 +405,37 @@ public class Usuario {
             System.err.println("Excepción en RecuperarImagen " + e);
             return null;
         }
+        
+        
+        
+    }
+    
+    
+    public ArrayList<Usuario> listarUsuarios(){
+        ArrayList<Usuario> listaU = new ArrayList<>();
+        try {
+            Connection conn = ConexionBD.abrirConexion();
+            String sql = "select * from usuario where tipoUsuario_idtipoUsuario=1";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                u.setNombre(rs.getString("nombre"));
+                u.setApellido_paterno(rs.getString("ape_pat"));
+                u.setApellido_materno(rs.getString("ape_mat"));
+                listaU.add(u);
+            
+            }
+            
+        } catch (SQLException e) {
+            System.err.println("Excepción en RecuperarImagen " + e);
+            return null;
+            
+        }
+        
+        return listaU;
+        
     }
 
 }
