@@ -421,6 +421,7 @@ public class Usuario {
 
             while (rs.next()) {
                 Usuario u = new Usuario();
+                u.setRut(rs.getString("rut"));
                 u.setNombre(rs.getString("nombre"));
                 u.setApellido_paterno(rs.getString("ape_pat"));
                 u.setApellido_materno(rs.getString("ape_mat"));

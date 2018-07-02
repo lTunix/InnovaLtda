@@ -53,12 +53,15 @@
                 </div>
                 
                 <div class="col s10 offset-s1"> 
+                    <form action="AgregarNota.do" method="post">
                     <table class="table">
                         <thead>
-                            <tr>                               
+                            <tr> 
+                                <th>Rut</th>
                                 <th>Nombre</th>
                                 <th>Apellido Paterno</th>
                                 <th>Apellido Paterno</th>
+                                <th>Nota de evaluacion</th>
                                 
                                 <th> </th>
                             </tr>
@@ -66,14 +69,17 @@
                         <tbody>
                             <c:forEach items="${requestScope.ListaAlumnos}" var="a">
                                 <tr>                                    
+                                    <td>${a.rut}</td>
                                     <td>${a.nombre}</td>
                                     <td>${a.apellido_paterno}</td>
                                     <td>${a.apellido_materno}</td>
+                                    <td><input type="number" min="1" max="7" step="0.1"></td>
                                                                                                    
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
+                        </form>
                     <br>
                     <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Volver</a>
                 </div>
