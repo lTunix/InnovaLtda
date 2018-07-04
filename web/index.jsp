@@ -61,7 +61,7 @@
          <!-- menu-->
          <div class="barraMenu-figures">
             <div class="barraMenu">
-               <div class="contenedorMenunav barraMenu-drop">
+               <div class="contenedorMenunav -drop">
                   <div class="cabezeraMenunav">
                      <div class="cabezeraMenunav-left">
                      </div>
@@ -226,7 +226,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue
                      eset nec lacus elit dor broma.
                   </p>
-                  <p><a href="#"><em>Ver más</em></a></p>
+                  <p><a href="cursos.jsp"><em>Ver más</em></a></p>
                </div>
                <!--grey box -->
             </div>
@@ -241,7 +241,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue
                      eset nec lacus elit dor broma.
                   </p>
-                  <p><a href="#"><em>Ver más</em></a></p>
+                  <p><a href="SobreNosotros.jsp"><em>Ver más</em></a></p>
                </div>
                <!--grey box -->
             </div>

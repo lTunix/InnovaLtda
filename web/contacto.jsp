@@ -183,9 +183,10 @@
         <p class="pie-copyright">© 2018 Innova </p>
         </div>
         <div class="pie-social">
-            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+            <li><a href="index.jsp">Inicio</a></li>
+                <li><a href="SobreNosotros.jsp">Nosotros</a></li>
+                <li><a href="cursos.jsp">Cursos</a></li>
+                <li><a href="contacto.jsp">Contacto</a></li>
         </div>
     </footer>
 
