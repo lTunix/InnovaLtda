@@ -61,7 +61,7 @@
                                 <th>Nombre</th>
                                 <th>Apellido Paterno</th>
                                 <th>Apellido Paterno</th>
-                                <th>Nota de evaluacion</th>
+                                <th>Nota de evaluación</th>
                                 
                                 <th> </th>
                             </tr>
@@ -74,10 +74,11 @@
                                     <td>${a.apellido_paterno}</td>
                                     <td>${a.apellido_materno}</td>
                                     <td><input type="number" min="1" max="7" step="0.1"></td>
-                                                                                                   
+                                    <td><button class="btn btn-info" type="button" id="botonEval" onclick="evaluar();">Evaluar</button></td>                                                               
                                 </tr>
                             </c:forEach>
                         </tbody>
+                        
                     </table>
                         </form>
                     <br>

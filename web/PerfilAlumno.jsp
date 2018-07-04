@@ -75,7 +75,7 @@
 
             <c:if test="${not empty user}">
                 <div class="row">
-                    </br> </br> </br> </br> </br> 
+                    </br>
                     <h2> </h2>
 
 
@@ -202,7 +202,7 @@
             <div class="row">
                 <div class="col s12">
                     <h2>Acceso Restringido</h2>
-                    <a style="color:black"href="index.jsp">Volver a la pagina principal</a> 
+                    <a style="color:black" href="index.jsp">Volver a la pagina principal</a> 
                 </div>
             </div>
         </c:if>   
