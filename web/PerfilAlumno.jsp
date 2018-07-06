@@ -38,7 +38,7 @@
 
 
     </head>
-    <body>
+     <body>
         <%  Usuario usuarioActual = (Usuario) request.getSession().getAttribute("user");
             String genero = "";%>
 
@@ -79,7 +79,7 @@
                     <h2> </h2>
 
 
-                    <div class="col-md-7 ">
+                    <div class="col-md-7" style="margin-right:30px ">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">  <h4 >Mi Perfil</h4></div>
@@ -117,7 +117,7 @@
                                                 <div class="form-inline">
                                                     <input id="imagen" name="imagen" type="file" />
                                                     <input type="hidden" name="rutUsuario" value="<%= session.getAttribute("rut").toString()%>"/> 
-                                                </div>
+                                                </div> </br>
                                                 <div class="form-inline">
                                                     <input type="submit" value="Subir imagen">
                                                 </div>
@@ -135,6 +135,7 @@
                                     </div>
 
                                     <br>
+                                    
 
                                     <!-- /input-group -->
                                 </div>
@@ -174,25 +175,41 @@
                                 <div class="clearfix"></div>
                                 <div class="bot-border"></div> </br>
 
-                                <div class="col-sm-5 col-xs-6 tital " >Profesion:</div><div class="col-sm-7">${sessionScope.user.profesion}   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" id="botonProfesion" onclick="cambiaProf()" class="btn btn-success">Cambiar Profesion</button></div>
+                                <div class="col-sm-5 col-xs-6 tital " >Profesion:</div><div class="col-sm-7">${sessionScope.user.profesion}   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
 
                                 <div class="clearfix"></div>
                                 <div class="bot-border"></div> </br>
 
-                                <div class="col-sm-5 col-xs-6 tital " >Email:</div><div class="col-sm-7">${sessionScope.user.email} &nbsp; <button class="btn btn-info" type="button" id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button></div>
+                                <div class="col-sm-5 col-xs-6 tital " >Email:</div><div class="col-sm-7">${sessionScope.user.email} &nbsp; </div>
 
                                 <div class="clearfix"></div>
                                 <div class="bot-border"></div> </br>
 
-                                <div class="col-sm-5 col-xs-6 tital " >Contraseña: </div><div class="col-sm-7">${sessionScope.user.pass} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<button  class="btn btn-warning" type="button" id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button></div>
+                                <div class="col-sm-5 col-xs-6 tital " >Contraseña: </div><div class="col-sm-7">${sessionScope.user.pass} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</div>
 
                                 <div class="bot-border"></div> </br> </br>
 
-                                <div class="col-sm-5 col-xs-6 tital " >Telefono Contacto:</div><div class="col-sm-7">${sessionScope.user.telefono} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<button class="btn btn-danger" type="button" id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button></div>
+                                <div class="col-sm-5 col-xs-6 tital " >Telefono Contacto:</div><div class="col-sm-7">${sessionScope.user.telefono} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</div>
                                 <div class="clearfix"></div> 
                                 <!-- /.box-body -->
+
+                                </br> </br> 
+                                <CENTER><button type="button" id="botonProfesion" onclick="cambiaProf()" class="btn btn-success">Cambiar Profesion</button>
+
+
+                                <button class="btn btn-info" type="button" id="botonEmail" onclick="cambiaCorreo()">Cambiar Email</button>
+
+
+                                <button  class="btn btn-warning" type="button" id="botonClave" onclick="cambiaClave()">Cambiar Contraseña</button>
+
+
+                                <button class="btn btn-danger" type="button" id="botonTelefono" onclick="cambiaTel()">Cambiar Telefono</button> </CENTER>
+
+                                
                             </div>
+
                             <!-- /.box -->
+
                         </div>
                     </div> 
                 </div>
@@ -215,5 +232,5 @@
             });
         </script> 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    </body>
+        </body> 
 </html>
