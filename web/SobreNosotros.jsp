@@ -203,34 +203,34 @@
 			<div class="col-md-3 teamgrid1">
 				<img src="images/t1.jpg" alt="" />
 				<div class="teaminfo">
-					<h3>Horacio</h3>
+					<h3>Horacio Valdes</h3>
 					<div class="team-social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						
 					</div>
-					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Kris</p>
+					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Jefe TI</p>
 					<p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4567</p>
-					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example.com</a></p>
+					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
 				</div>
 			</div>
 			<div class="col-md-3 teamgrid1">
 				<img src="images/t1.jpg" alt="" />
 				<div class="teaminfo">
-					<h3>Marcos</h3>
+					<h3>Juan Gomez</h3>
 					<div class="team-social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 					
 					</div>
-					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Leandro</p>
+					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Chape</p>
 					<p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4568</p>
-					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example1.com</a></p>
+					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
 				</div>
 			</div>
-			<div class="col-md-3 teamgrid1">
+			<!--<div class="col-md-3 teamgrid1">
 				<img src="images/t1.jpg" alt="" />
 				<div class="teaminfo">
 					<h3>Fenix</h3>
@@ -244,36 +244,36 @@
 					<p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
 					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example2.com</a></p>
 				</div>
-			</div> 
+			</div> -->
 			<div class="col-md-3 teamgrid1">
-				<img src="images/t1.jpg" alt="" />
+				<img src="images/e.jpg" alt="" />
 				<div class="teaminfo">
-					<h3>Esteban</h3>
+					<h3>Esteban Jofre</h3>
 					<div class="team-social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 				
 					</div>
-					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Maths Teacher</p>
+					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Diseñador</p>
 					<p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
-					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example2.com</a></p>
+					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@capacitate.com</a></p>
 				</div>
 			</div>  
 
 			<div class="col-md-3 teamgrid1">
-				<img src="images/t1.jpg" alt="" />
+				<img src="images/k.jpg" alt="" />
 				<div class="teaminfo">
-					<h3>Leandro</h3>
+					<h3>Kris Sandoval</h3>
 					<div class="team-social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						
 					</div>
-					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Maths Teacher</p>
+					<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Programador</p>
 					<p><i class="fa fa-phone" aria-hidden="true"></i> +02 133 4569</p>
-					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example2.com</a></p>
+					<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@capacitate.com</a></p>
 				</div>
 			</div>
 			

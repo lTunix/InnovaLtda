@@ -175,19 +175,19 @@
     <footer id="pie">
         <div class="containerpie">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.jsp">Inicio</a></li>
+                <li><a href="SobreNosotros.jsp">Nosotros</a></li>
+                <li><a href="cursos.jsp">Cursos</a></li>
+                <li><a href="contacto.jsp">Contacto</a></li>
             </ul>
         <p class="pie-copyright">© 2018 Innova </p>
         </div>
         <div class="pie-social">
-            <li><a href="index.jsp">Inicio</a></li>
-                <li><a href="SobreNosotros.jsp">Nosotros</a></li>
-                <li><a href="cursos.jsp">Cursos</a></li>
-                <li><a href="contacto.jsp">Contacto</a></li>
+            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
         </div>
+        
     </footer>
 
  <!-- PIE DE PAGINA -->

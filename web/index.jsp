@@ -165,7 +165,7 @@
                <h3>Cursos a Distancia </h3>
                <p>Innova + que Una solucion </p>
                <!--FIN TEXTO ENSIMA DE LAS IMAGENES PRINCIPALES CON ZOOM.CSS -->
-               <a class="recprincipal forma" href="#"> Promociones</a> 
+               <a class="recprincipal forma" href="promociones.jsp"> Promociones</a> 
             </div>
             </br> </br></br> </br></br> </br></br> </br></br>
          </div>
@@ -256,7 +256,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue
                      eset nec lacus elit dor broma.
                   </p>
-                  <p><a href="#"><em>Read More</em></a></p>
+                  <p><a href="#"><em>Ver más</em></a></p>
                </div>
                <!--grey box -->
             </div>
@@ -271,7 +271,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue
                      eset nec lacus elit dor broma.
                   </p>
-                  <p><a href="#"><em>Read More →</em></a></p>
+                  <p><a href="#"><em>Ver más</em></a></p>
                </div>
                <!--grey box -->
             </div>
