@@ -79,7 +79,7 @@
                     <h2> </h2>
 
 
-                    <div class="col-md-7" style="margin-right:30px ">
+                    <div class="col-md-7" style="margin-left: 240px; ">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">  <h4 >Mi Perfil</h4></div>
