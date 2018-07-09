@@ -35,8 +35,6 @@
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
                                     <input oninput="checkRut(this)" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" required>
                                 </div>
-
-
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                     <input type="text" id="nombre" name="nombre" placeholder="Nombre"  required>

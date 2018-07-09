@@ -37,10 +37,7 @@
                   <h2 class="text-center">Olvidaste la Contraseña?</h2>
                   <p>Recuperala Aqui!</p>
                   <div class="panel-body">
-                      
-    
-                    <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-    
+                    <form action="recuperar.do" id="register-form" role="form" autocomplete="off" class="form" method="post">
                       <div class="form-group">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
@@ -50,7 +47,6 @@
                       <div class="form-group">
                         <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Restablecer Contraseña" type="submit">
                       </div>
-                      
                       <input type="hidden" class="hide" name="token" id="token" value=""> 
                        <p class="mensaje"> <a href="login.jsp"> Volver</a></p>
                     </form>
