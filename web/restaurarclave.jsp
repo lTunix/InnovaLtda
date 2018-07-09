@@ -50,7 +50,6 @@
                       <input type="hidden" class="hide" name="token" id="token" value=""> 
                        <p class="mensaje"> <a href="login.jsp"> Volver</a></p>
                     </form>
-    
                   </div>
                 </div>
               </div>
