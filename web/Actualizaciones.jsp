@@ -55,6 +55,7 @@
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=56945077534"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
