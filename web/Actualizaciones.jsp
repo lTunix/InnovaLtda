@@ -27,6 +27,8 @@
         <link href="css/font-awesome.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="buscadorinterno/css/estilos.css">
+        <script src="buscadorinterno/js/jquery.dataTables.min.js"></script>
     </head>
     <body>
     <cabezeramenucursos id="cabezeramenucursos">
@@ -86,15 +88,97 @@
                             </nav>
                             <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
 
+                            <!-- start search-->
                             <div class="search-box">
                                 <div id="sb-search" class="sb-search">
                                     <form action="#" method="post">
-                                        <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="search">
+                                        <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="input-search">
+                                        <div class="content-search">
+                                            <div class="content-table">
+                                                <table id="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Cursos</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="promociones.jsp">Promociones</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Iniciar sesion</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Iniciar sesion Alumno</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="logindocente.jsp">Iniciar sesion Docente</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="logincoordinador.jsp">Iniciar sesion Coordinador</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Mesa de Ayuda</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="contacto.jsp">Ayuda</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="contacto.jsp">Contacto</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="foro.jsp">foro</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="Actualizaciones.jsp">Actualizaciones</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Carreras</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Informatica</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="curso1.jsp">Contabilidad</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="FormularioRegistro.jsp">Registro Usuario</a></td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                         <input class="sb-search-submit" type="submit" value="">
                                         <span class="sb-icon-search"> </span>
                                     </form>
                                 </div>
-                            </div>	
+                            </div>
+
+
+
+                            <!--  FIN BUSCADOR    -->
+
+
+
+
                         </div>
                         <div class="clearfix"> </div>
 
@@ -136,11 +220,17 @@
                     <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
                 </div>
             </footer>
+
+
+
+            <!--BUSCADOR scripts-->
             <script src="js/buscador/classie.js"></script>
             <script src="js/buscador/uisearch.js"></script>
             <script>
                 new UISearch(document.getElementById('sb-search'));
             </script>
+
+
             <script>
                 (function ($) {
                     $(".menu-icon").on("click", function () {
@@ -151,5 +241,6 @@
 
                 })(jQuery);
             </script>
+            <script src="buscadorinterno/js/search.js"></script>
             </body>
             </html>

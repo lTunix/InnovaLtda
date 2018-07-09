@@ -36,6 +36,8 @@
 
         <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="buscadorinterno/css/estilos.css">
+        <script src="buscadorinterno/js/jquery.dataTables.min.js"></script>
     </head>
 
     <!-- Body -->
@@ -105,241 +107,311 @@
                             </nav>
                             <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
 
-
-                            <!-- start search-->
+                             <!-- start search-->
                             <div class="search-box">
                                 <div id="sb-search" class="sb-search">
                                     <form action="#" method="post">
-                                        <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="search">
+                                        <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="input-search">
+                                        <div class="content-search">
+                                            <div class="content-table">
+                                                <table id="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Cursos</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="promociones.jsp">Promociones</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Iniciar sesion</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Iniciar sesion Alumno</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="logindocente.jsp">Iniciar sesion Docente</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="logincoordinador.jsp">Iniciar sesion Coordinador</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="login.jsp">Mesa de Ayuda</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="contacto.jsp">Ayuda</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="contacto.jsp">Contacto</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="foro.jsp">foro</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="Actualizaciones.jsp">Actualizaciones</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Carreras</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="cursos.jsp">Informatica</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="curso1.jsp">Contabilidad</a></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td><a href="FormularioRegistro.jsp">Registro Usuario</a></td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                         <input class="sb-search-submit" type="submit" value="">
                                         <span class="sb-icon-search"> </span>
                                     </form>
                                 </div>
-                            </div>	
-                        </div>
-                        <div class="clearfix"> </div>
+                            </div>
+                            <!--  FIN BUSCADOR    -->
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Cabezera LOGO -->
-    <div id="centrarmenucursos-cabezeramenucursos">
-        <div class="container">
-            <div class="cabezeramenucursos-logo">
-                <a href="index.jsp" class="logo"><img src="images/logo02.png" alt=""></a>
-            </div>
-            <!--<div class="cabezeramenucursos-ads">
-                    <img class="centrarmenucursos-block" src="images/ad-.jpg" alt=""> 
-            </div>-->
-        </div>
-    </div>
-
-    <!-- Cabezera LOGO -->
-
-
-    <!-- //MENU -->
-
-    <!-- about --> </br> </br></br>
-    <div class="about">
-        <div class="container">
-            <h3 class="titulo">Nosotros</h3>
-            <div class="col-md-6 aboutleft">
-                <h3>Bienvenidos a Innova </h3>
-                <p class="para1">Los cursos e-Learning son programas que aprovechan las ventajas que ofrecen las tecnologías de la comunicación e información. Se desarrollan completamente a distancia (a través de Internet), permitiendo llegar a todo el territorio nacional. Existen cursos e-Learning con tutoría, es decir, aquellos que se ejecutan con apoyo de un mediador experto denominado tutor, y cursos autoinstruccionales, los cuales apelan a la autonomía del docente participante.. </p>
-                <p><i class="fa fa-check" aria-hidden="true"></i> Cursos E-learning </p>
-                <p><i class="fa fa-check" aria-hidden="true"></i> Aula Virtual </p>
-                <p><i class="fa fa-check" aria-hidden="true"></i> 24/7 </p>
-                <p><i class="fa fa-check" aria-hidden="true"></i> Desarrollo Personal </p>
-            </div>
-            <div class="col-md-6 aboutright">
-                <img src="images/about.jpg" alt="" />
-            </div> </br>
-            <div class="clearfix"></div>	
-        </div>
-    </div>
-    <!-- //about -->
-
-    <!-- services -->
-    <div class="services jarallax">
-        <div class="container">
-            <div class="col-md-3 servicegrid1">
-                <h3>Certificaciones</h3>
-                <h3></h3>
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <p>  </p>
-            </div>
-            <div class="col-md-3 servicegrid1">
-                <h3> Cursos</h3>
-                <h3></h3>
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <p>  </p>
-            </div>
-            <div class="col-md-3 servicegrid1">
-                <h3>24/7</h3>
-                <h3></h3>
-                <i class="fa fa-desktop" aria-hidden="true"></i>
-                <p>  </p>
-            </div>
-            <div class="col-md-3 servicegrid1">
-                <h3>no + trasnporte</h3>
-                <h3></h3>
-                <i class="fa fa-bus" aria-hidden="true"></i>
-                <p> </p>
-            </div>
-            <div class="clearfix"></div>	
-        </div>
-    </div>
-    <!-- //services -->
-
-    <!-- team -->
-    <div class="team">
-        <div class="container"> </br> </br> </br>
-            <h3 class="heading">Equipo</h3>
-            <div class="teamgrids">
-                <div class="col-md-3 teamgrid1">
-                    <img src="images/h.jpg" alt="" />
-                    <div class="teaminfo">
-                        <h3>Horacio Valdes</h3>
-                        <div class="team-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-
-                        </div>
-                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Jefe TI</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4567</p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
-                    </div>
+        <!-- Cabezera LOGO -->
+        <div id="centrarmenucursos-cabezeramenucursos">
+            <div class="container">
+                <div class="cabezeramenucursos-logo">
+                    <a href="index.jsp" class="logo"><img src="images/logo02.png" alt=""></a>
                 </div>
-                <div class="col-md-3 teamgrid1">
-                    <img src="images/j1.jpg" alt="" />
-                    <div class="teaminfo"> 
-                        <h3>Juan Pablo</h3>
-                        <div class="team-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                <!--<div class="cabezeramenucursos-ads">
+                        <img class="centrarmenucursos-block" src="images/ad-.jpg" alt=""> 
+                </div>-->
+            </div>
+        </div>
 
-                        </div>
-                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Programador</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4568</p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
-                    </div>
+        <!-- Cabezera LOGO -->
+
+
+        <!-- //MENU -->
+
+        <!-- about --> </br> </br></br>
+        <div class="about">
+            <div class="container">
+                <h3 class="titulo">Nosotros</h3>
+                <div class="col-md-6 aboutleft">
+                    <h3>Bienvenidos a Innova </h3>
+                    <p class="para1">Los cursos e-Learning son programas que aprovechan las ventajas que ofrecen las tecnologías de la comunicación e información. Se desarrollan completamente a distancia (a través de Internet), permitiendo llegar a todo el territorio nacional. Existen cursos e-Learning con tutoría, es decir, aquellos que se ejecutan con apoyo de un mediador experto denominado tutor, y cursos autoinstruccionales, los cuales apelan a la autonomía del docente participante.. </p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Cursos E-learning </p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Aula Virtual </p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> 24/7 </p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Desarrollo Personal </p>
                 </div>
-                <!--<div class="col-md-3 teamgrid1">
-                        <img src="images/t1.jpg" alt="" />
+                <div class="col-md-6 aboutright">
+                    <img src="images/about.jpg" alt="" />
+                </div> </br>
+                <div class="clearfix"></div>	
+            </div>
+        </div>
+        <!-- //about -->
+
+        <!-- services -->
+        <div class="services jarallax">
+            <div class="container">
+                <div class="col-md-3 servicegrid1">
+                    <h3>Certificaciones</h3>
+                    <h3></h3>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    <p>  </p>
+                </div>
+                <div class="col-md-3 servicegrid1">
+                    <h3> Cursos</h3>
+                    <h3></h3>
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <p>  </p>
+                </div>
+                <div class="col-md-3 servicegrid1">
+                    <h3>24/7</h3>
+                    <h3></h3>
+                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <p>  </p>
+                </div>
+                <div class="col-md-3 servicegrid1">
+                    <h3>no + trasnporte</h3>
+                    <h3></h3>
+                    <i class="fa fa-bus" aria-hidden="true"></i>
+                    <p> </p>
+                </div>
+                <div class="clearfix"></div>	
+            </div>
+        </div>
+        <!-- //services -->
+
+        <!-- team -->
+        <div class="team">
+            <div class="container"> </br> </br> </br>
+                <h3 class="heading">Equipo</h3>
+                <div class="teamgrids">
+                    <div class="col-md-3 teamgrid1">
+                        <img src="images/h.jpg" alt="" />
                         <div class="teaminfo">
-                                <h3>Fenix</h3>
-                                <div class="team-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                
-                                </div>
-                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Maths Teacher</p>
-                                <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example2.com</a></p>
-                        </div>
-                </div> -->
-                <div class="col-md-3 teamgrid1">
-                    <img src="images/e1.jpg" alt="" />
-                    <div class="teaminfo">
-                        <h3>Esteban Jofre</h3>
-                        <div class="team-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <h3>Horacio Valdes</h3>
+                            <div class="team-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
 
+                            </div>
+                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Jefe TI</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4567</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
                         </div>
-                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Diseñador</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>				</div>
-                </div>  
+                    </div>
+                    <div class="col-md-3 teamgrid1">
+                        <img src="images/j1.jpg" alt="" />
+                        <div class="teaminfo"> 
+                            <h3>Juan Pablo</h3>
+                            <div class="team-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
 
-                <div class="col-md-3 teamgrid1">
-                    <img src="images/k1.jpg" alt="" />
-                    <div class="teaminfo">
-                        <h3>Kris Sandoval</h3>
-                        <div class="team-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-
+                            </div>
+                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Programador</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4568</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>
                         </div>
-                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Programador</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> +02 133 4569</p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>				</div>
+                    </div>
+                    <!--<div class="col-md-3 teamgrid1">
+                            <img src="images/t1.jpg" alt="" />
+                            <div class="teaminfo">
+                                    <h3>Fenix</h3>
+                                    <div class="team-social">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    
+                                    </div>
+                                    <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Maths Teacher</p>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
+                                    <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example2.com</a></p>
+                            </div>
+                    </div> -->
+                    <div class="col-md-3 teamgrid1">
+                        <img src="images/e1.jpg" alt="" />
+                        <div class="teaminfo">
+                            <h3>Esteban Jofre</h3>
+                            <div class="team-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+
+                            </div>
+                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Diseñador</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +22 133 4569</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>				</div>
+                    </div>  
+
+                    <div class="col-md-3 teamgrid1">
+                        <img src="images/k1.jpg" alt="" />
+                        <div class="teaminfo">
+                            <h3>Kris Sandoval</h3>
+                            <div class="team-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+
+                            </div>
+                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Programador</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +02 133 4569</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@capacitate.com</a></p>				</div>
+                    </div>
+
                 </div>
-
             </div>
         </div>
-    </div>
-    <!-- //team -->
+        <!-- //team -->
 
-    <!-- Footer -->
+        <!-- Footer -->
 
-    <!-- PIE DE PAGINA -->
-
+        <!-- PIE DE PAGINA -->
 
 
-    <div class="contenedorpie">
-    </div>
-    <footer id="pie">
-        <div class="containerpie">
-            <ul>
-                <li><a href="index.jsp">Inicio</a></li>
-                <li><a href="SobreNosotros.jsp">Nosotros</a></li>
-                <li><a href="cursos.jsp">Cursos</a></li>
-                <li><a href="contacto.jsp">Contacto</a></li>
-            </ul>
-            <p class="pie-copyright">© 2018 Innova </p>
+
+        <div class="contenedorpie">
         </div>
-        <div class="pie-social">
-            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
-        </div>
-    </footer>
+        <footer id="pie">
+            <div class="containerpie">
+                <ul>
+                    <li><a href="index.jsp">Inicio</a></li>
+                    <li><a href="SobreNosotros.jsp">Nosotros</a></li>
+                    <li><a href="cursos.jsp">Cursos</a></li>
+                    <li><a href="contacto.jsp">Contacto</a></li>
+                </ul>
+                <p class="pie-copyright">© 2018 Innova </p>
+            </div>
+            <div class="pie-social">
+                <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+            </div>
+        </footer>
 
-    <!-- PIE DE PAGINA -->
+        <!-- PIE DE PAGINA -->
 
-    <!--BUSCADOR scripts-->
-    <script src="js/buscador/classie.js"></script>
-    <script src="js/buscador/uisearch.js"></script>
-    <script>
-        new UISearch(document.getElementById('sb-search'));
-    </script>
-    <!--//BUSCADOR-scripts-->
+        <!--BUSCADOR scripts-->
+        <script src="js/buscador/classie.js"></script>
+        <script src="js/buscador/uisearch.js"></script>
+        <script>
+            new UISearch(document.getElementById('sb-search'));
+        </script>
 
-    <!-- //Footer -->
+        <!-- //Footer -->
 
-    <!-- Default-JavaScript-File -->
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <!-- //Default-JavaScript-File -->
+        <!-- Default-JavaScript-File -->
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <!-- //Default-JavaScript-File -->
 
-    <!-- js MENU DESPLEGABLE-->
-
-
-    <script>
-(function ($) {
-$(".menu-icon").on("click", function () {
-$(this).toggleClass("open");
-$(".contenedorMenunav").toggleClass("nav-open");
-$("nav ul li").toggleClass("animate");
-});
-
-})(jQuery);
-    </script>
-    <!-- js MENU DESPLEGABLE-->
+        <!-- js MENU DESPLEGABLE-->
 
 
+        <script>
+            (function ($) {
+                $(".menu-icon").on("click", function () {
+                    $(this).toggleClass("open");
+                    $(".contenedorMenunav").toggleClass("nav-open");
+                    $("nav ul li").toggleClass("animate");
+                });
+
+            })(jQuery);
+        </script>
+        <!-- js MENU DESPLEGABLE-->
 
 
-</body>
-<!-- //Body -->
+
+        <script src="buscadorinterno/js/search.js"></script>
+    </body>
+    <!-- //Body -->
 </html>

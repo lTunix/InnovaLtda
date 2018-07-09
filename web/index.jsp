@@ -28,7 +28,7 @@
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
 
         <link rel="stylesheet" href="buscadorinterno/css/estilos.css">
-        
+
         <script src="buscadorinterno/js/jquery.dataTables.min.js"></script>
 
 
@@ -94,90 +94,90 @@
                                 <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
                                 <!-- start search-->
                                 <div class="search-box">
-                                <div id="sb-search" class="sb-search">
-                                    <form action="#" method="post">
-                                        <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="input-search">
-                                        <div class="content-search">
-                                    <div class="content-table">
-                                        <table id="table">
-                                            <thead>
-                                                <tr>
-                                                    <td></td>
-                                                </tr>
-                                            </thead>
+                                    <div id="sb-search" class="sb-search">
+                                        <form action="#" method="post">
+                                            <input class="sb-search-input" placeholder="Ingrese Curso..." type="search" name="search" id="input-search">
+                                            <div class="content-search">
+                                                <div class="content-table">
+                                                    <table id="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <td></td>
+                                                            </tr>
+                                                        </thead>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="cursos.jsp">Cursos</a></td>
-                                                </tr>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="cursos.jsp">Cursos</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="promociones.jsp">Promociones</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="promociones.jsp">Promociones</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="login.jsp">Iniciar sesion</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="login.jsp">Iniciar sesion</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="login.jsp">Iniciar sesion Alumno</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="login.jsp">Iniciar sesion Alumno</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="logindocente.jsp">Iniciar sesion Docente</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="logindocente.jsp">Iniciar sesion Docente</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="logincoordinador.jsp">Iniciar sesion Coordinador</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="logincoordinador.jsp">Iniciar sesion Coordinador</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="login.jsp">Mesa de Ayuda</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="login.jsp">Mesa de Ayuda</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="contacto.jsp">Ayuda</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="contacto.jsp">Ayuda</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="contacto.jsp">Contacto</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="contacto.jsp">Contacto</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="foro.jsp">foro</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="foro.jsp">foro</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="Actualizaciones.jsp">Actualizaciones</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="Actualizaciones.jsp">Actualizaciones</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="cursos.jsp">Carreras</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="cursos.jsp">Carreras</a></td>
+                                                            </tr>
 
-                                                <tr>
-                                                    <td><a href="cursos.jsp">Informatica</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="curso1.jsp">Contabilidad</a></td>
-                                                </tr>
-                                                
-                                                 <tr>
-                                                    <td><a href="FormularioRegistro.jsp">Registro Usuario</a></td>
-                                                </tr>
+                                                            <tr>
+                                                                <td><a href="cursos.jsp">Informatica</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="curso1.jsp">Contabilidad</a></td>
+                                                            </tr>
 
-                                            </tbody>
-                                        </table>
+                                                            <tr>
+                                                                <td><a href="FormularioRegistro.jsp">Registro Usuario</a></td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <input class="sb-search-submit" type="submit" value="">
+                                            <span class="sb-icon-search"> </span>
+                                        </form>
                                     </div>
                                 </div>
-                                        <input class="sb-search-submit" type="submit" value="">
-                                        <span class="sb-icon-search"> </span>
-                                    </form>
-                                </div>
-                            </div>
-                                
-                                
-                           
+
+
+
                                 <!--  FIN BUSCADOR    -->
                             </div>
                             <div class="clearfix"> </div>
@@ -613,7 +613,6 @@
                 clickClose: false
             });
         </script>
-
         <script src="buscadorinterno/js/search.js"></script>
         </body>
         </html>
