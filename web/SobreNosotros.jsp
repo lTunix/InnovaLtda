@@ -25,22 +25,15 @@
         <link type="text/css" rel="stylesheet" href="css/piedepagina.css"/>
         <link type="text/css" rel="stylesheet" href="css/seleccionlogin.css"/>
         <link href="css/estilomenunav.css" rel="stylesheet" type="text/css" media="all" />
-
         <script src="js/jquery-2.2.3.min.js"></script>
-
         <!-- <script type="text/javascript" src="js/numscroller-1.0.js"></script> --> 
-
         <script src="js/bootstrap.js"></script>
-
         <link href="css/font-awesome.css" rel="stylesheet">
-
         <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
         <link rel="stylesheet" href="buscadorinterno/css/estilos.css">
         <script src="buscadorinterno/js/jquery.dataTables.min.js"></script>
     </head>
-
-    <!-- Body -->
     <body>
         <!-- MENU -->
         <!-- CABEZERA -->
@@ -50,7 +43,6 @@
             <div class="container">
                 <div class="cabezeramenucursos-links">
                     <ul>
-
                         <div class="dropdown">
                             <li><a href=""><i class="fa fa-sign-in"></i> Entrar</a></li>
                             <div class="dropdown-content">
