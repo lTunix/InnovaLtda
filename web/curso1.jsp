@@ -231,10 +231,10 @@ Ingeniero Comercial, Licenciado en Ciencias de la Administración, Universidad d
     <footer id="pie">
         <div class="containerpie">
             <ul>
-                <li><a href="index.jps">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
+                <li><a href="index.jsp">Inicio</a></li>
+                <li><a href="SobreNosotros.jsp">Nosotros</a></li>
                 <li><a href="cursos.jsp">Cursos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.jsp">Contacto</a></li>
             </ul>
         <p class="pie-copyright">© 2018 Innova </p>
         </div>
