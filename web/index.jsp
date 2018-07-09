@@ -483,7 +483,7 @@
         </script> -->
         <!-- <script src="js/SmoothScroll.min.js"></script>
            <script src="js/main.js"></script>  -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-md">
                 <div class="modal-content centrartxtperfil">
                     <div class="modal-header">
@@ -502,26 +502,33 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="newsletter">
-                                <form class="form-horizontal" method="post" action="#">
+                                
+                                <form class="form-horizontal" method="post" action="#" onsubmit="return Muchas gracias">
                                     <div class="form-group">
                                         <div class="col-sm-8">
                                             <input type="email" class="form-c" id="email1" placeholder="Ingrese su Email" />
                                         </div>
                                         <div class="col-sm-4">
-                                            <button type="submit" class="btn btn-primary btn-sm">
+                                            <button type="submit" class="btn btn-primary btn-sm" onclick="$('#myModal').modal('hidden');">
                                                 Enviar</button>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
                                 </form>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div-->
+        
         <script>
             $('#myModal').modal('show');
+            $('#myModal').modal({
+                escapeClose: false,
+                clickClose: false
+              });
         </script>
         </body>
         </html>
