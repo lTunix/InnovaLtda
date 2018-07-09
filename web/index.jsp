@@ -502,8 +502,6 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="newsletter">
-                                <h6>TEXTO
-                                </h6>
                                 <form class="form-horizontal" method="post" action="#">
                                     <div class="form-group">
                                         <div class="col-sm-8">
