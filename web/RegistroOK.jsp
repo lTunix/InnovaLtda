@@ -11,14 +11,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <link rel="stylesheet" type="text/css" href="css/errorlogin.css">
 
-        <title>Datos Cargados</title>
+        <title>Cuenta Creada</title>
     </head>
     <body>
-        <h1 style="color:black">Datos Ingresados Correctamente</h1>
+        <h1 style="color:black">Cuenta Creada Correctamente</h1>
         <p class="zoom-area"><b></b> <img src="images/listo.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
-    <a target="_blank" href="PerfilAlumno.jsp"  class="more-link ">Volver</a>
+    <a target="_blank" href="login.jsp"  class="more-link ">Volver</a>
 </div>
 </html>
 

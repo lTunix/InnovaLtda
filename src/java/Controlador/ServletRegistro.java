@@ -52,7 +52,7 @@ public class ServletRegistro extends HttpServlet {
                 hs.setAttribute("Usuario", user.getNombre());
                 hs.setAttribute("Correo", user.getEmail());
                 hs.setAttribute("Tipo", user.getId_tipo_user());
-                response.sendRedirect("RegistroExitoso.jsp");
+                response.sendRedirect("RegistroOK.jsp");
             }else{
                 response.sendRedirect("ErrorRegistro.jsp");
             }
