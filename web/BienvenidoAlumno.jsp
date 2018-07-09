@@ -39,7 +39,7 @@
                         %>
                         <div class="contenedor">
                             <div class="cabezerac">
-                                <a href="cargaCursosPersonales.do?rut_fulano=${sessionScope.user.rut}"><strong></strong>Ver Mis Cursos</a>
+                               
                                 <span class="right">
                                     <a href="">Bienvenido: <p> ${sessionScope.user.nombre} </p> </a>
                                     <a href="index.jsp"><strong>Cerrar Sesion </strong></a>
