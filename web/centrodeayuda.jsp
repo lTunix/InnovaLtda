@@ -76,7 +76,7 @@
                                 <img src="images/t2.jpg" alt="">
                                 <div class="team-caption"> 
                                     <h4>Chat</h4>
-                                    <p>27/4</p>
+                                    <p>24/7</p>
 
                                 </div>
                             </div>
