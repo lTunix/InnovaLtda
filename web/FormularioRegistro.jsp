@@ -58,9 +58,25 @@
          
         <script>
             function CheckUserName(ele) {
+                var rut = document.getElementsByName("rut")[0].value;
             if (/\s/.test(ele.value)) { 
-                alert("Los campos no deben tener espacios en blanco. \n Intente nuevamente"); }
+                //alert("Los campos no deben tener espacios en blanco. \n Intente nuevamente"); 
+                document.getElementById('errIngresoRut').innerHTML="Los campos no deben tener espacios en blanco.";
+                document.getElementById('botonEnviar').disabled=true;
+       
+        }
+        
+        else{
+            document.getElementById('errIngresoRut').innerHTML="";
+             document.getElementById('botonEnviar').disabled=false;
+            
+        }
+       
             }
+            
+            
+		
+		
         </script>
     </head>
     <body>
@@ -71,12 +87,14 @@
                 <div class="header-bottom">
                     <div class="header-right w3agile">
                         <div class="header-left-bottom agileinfo">
-                            <form action="registro.do" method="post" class="form-register" onsubmit="return validar();">
+                            <form action="registro.do" method="post" class="form-register" onsubmit="return validar();" id="miFormulario">
 
                                 <div class="icon1">
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
-                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
+                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" onsubmit="CheckUserName(this);" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
+                                    
                                 </div>
+                                <div id="errIngresoRut" style="color: red; font-style: italic; font-size: 11px"> </div>
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                     <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="20" onkeypress="return soloLetras(event)"  onBlur="CheckUserName(this);" required>
@@ -84,17 +102,17 @@
 
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input type="text" id="ape_pat" name="ape_pat" placeholder="Apellido Paterno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="ape_pat" onblur="CheckUserName(rut);" name="ape_pat" placeholder="Apellido Paterno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input type="text" id="ape_mat" name="ape_mat" placeholder="Apellido Materno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="ape_mat" name="ape_mat" onblur="CheckUserName(rut);" placeholder="Apellido Materno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="icon1">
                                     <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    <input type="text" id="profesion" name="profesion" placeholder="Profesión" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="profesion" name="profesion" placeholder="Profesión" onblur="CheckUserName(rut);" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-check-square" aria-hidden="true"></i>
@@ -110,15 +128,15 @@
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <input type="text" id="telefono" name="telefono" placeholder="Telefono" onKeyPress="return validarTel(event)" maxlength="9" required>
+                                    <input type="text" id="telefono" name="telefono" onblur="CheckUserName(rut);" placeholder="Telefono" onKeyPress="return validarTel(event)" maxlength="9" required>
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
-                                    <input type="password" id="clave" name="clave" placeholder="Contraseña" maxlength="20" onBlur="CheckUserName(this);" required>
+                                    <input type="password" id="clave" name="clave" onblur="CheckUserName(rut);" placeholder="Contraseña" maxlength="20" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="bottom" >
-                                    <input type="submit" value="Crear Cuenta" />
+                                    <input type="submit" id="botonEnviar" onclick="CheckUserName(this);" value="Crear Cuenta" />
                                 </div>
 
                                 <div class="clear"></div>

@@ -21,7 +21,10 @@ function validar() {
     if (rut === "" || nombre === "" || ape_pat === "" || ape_mat === "" || profesion === "" || telefono === "" || correo === "" || clave === "") {
         alert("Todos los campos son obligatorios");
         return false;
-    } else if (nombre.length > 20) {
+    }else if(rut.length > 10 || rut === null || rut.length === 10){ 
+        alert("El campo rut contiene espacios");
+        return false;
+    }else if (nombre.length > 20) {
         alert("El nombre es muy largo");
         return false;
     } else if (ape_pat.length > 20) {
