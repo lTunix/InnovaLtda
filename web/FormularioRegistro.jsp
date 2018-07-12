@@ -75,7 +75,7 @@
 
                                 <div class="icon1">
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
-                                    <input oninput="checkRut(this)" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" required>
+                                    <input oninput="checkRut(this)" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
