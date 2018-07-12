@@ -36,16 +36,21 @@ public class ServletListaAlumnos extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         Usuario us = new Usuario();
         ArrayList<Usuario> ListaAlumnos;
-        //String userPath = request.getServletPath();
-
-        ListaAlumnos = us.listarUsuarios();
+        String userPath = request.getServletPath();
         
+        if (userPath.equals("/buscarAlumno.do")) {
 
-        request.setAttribute("ListaAlumnos", ListaAlumnos);
+            ListaAlumnos = us.listarUsuarios();
 
-        request.getRequestDispatcher("IngresoNotasAlumno.jsp").forward(request, response);
+            request.setAttribute("ListaAlumnos", ListaAlumnos);
 
+            request.getRequestDispatcher("IngresoNotasAlumno.jsp").forward(request, response);
+
+        } else if (userPath.equals("/mostrarCursos.do")){
+            
+            request.getRequestDispatcher("IngresoNotasAlumno.jsp").forward(request, response);
         
+        }
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
