@@ -3,6 +3,7 @@
     Created on : 19-06-2018, 22:02:13
     Author     : Horacio
 --%>
+<%@page import="modelo_intranet_alumnos_curso.Unidad"%>
 <%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -34,6 +35,7 @@
     </head>
     <%
         Usuario usuario = (Usuario) session.getAttribute("user");
+        Unidad unidad = (Unidad) request.getAttribute("unidad");
     %>
     <body>
 
@@ -70,10 +72,13 @@
 
         <div class="container">
             <div>
-                <img src="images/Intranet_Alumno/Cursos/A1.png"/>
-                <h2>Este es el título de la unidad</h2>
-                <p><b>Esta es la descripción de la unidad</b></p>
-                <p><b>Duración:</b> 50 horas</p>
+                <br/>
+                <img style="width: 25%;" src="images/Intranet_Alumno/Cursos/Unidad/<%=unidad.getImagen_unidad()%>.png"/>
+                <br/>
+                <h2><%=unidad.getTitulo_unidad()%></h2>
+                <p><b><%=unidad.getDescripcion()%></b></p>
+                <p><b>Duración: </b><%=unidad.getDuracion()%> minutos</p>
+                <br/>
             </div>
             <br>
 
@@ -93,39 +98,19 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"/></td>
-                            <td class="column100 column2" data-column="column2">Este es el título</td>
-                            <td class="column100 column3" data-column="column3">Esta es la descripción</td>
-
-                            <td><a class="btn-floating red" href="Entrada.jsp"> INGRESAR</a></td>
-
-                        </tr>
-
-
-
+                        <c:forEach items="${requestScope.listaEntradas}" var="e">
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/Entrada/${e.imagen_entrada}.png"/></td>
+                                <td class="column100 column2" data-column="column2">${e.titulo_Entrada}</td>
+                                <td class="column100 column3" data-column="column3">${e.descrpcion_entrada}</td>
+                                <td>
+                                    <a class="btn-floating red" href="entradaSeleccionada.do?id_entrada=${e.id_entrada}">INGRESAR</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
-
-                    <tbody>
-
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1"><img src="images/Intranet_Alumno/Cursos/Unidad/A1.png"/></td>
-                            <td class="column100 column2" data-column="column2">Este es el título</td>
-                            <td class="column100 column3" data-column="column3">Esta es la descripción</td>
-
-                            <td><a class="btn-floating red" href="Entrada.jsp"> INGRESAR</a></td>
-
-                        </tr>
-
-
-
-                    </tbody>
-
-
                 </table>
                 <br>
-
             </div>
 
 
@@ -134,7 +119,7 @@
 
 
             <br>
-            <!--<a href="Curso_Unidades.jsp">Volver</a>-->
+            <a href="cursoSeleccionado.do?id_curso=<%=unidad.getId_curso()%>">Volver</a>
         </div>
         <footer class="footer-distributed">
 

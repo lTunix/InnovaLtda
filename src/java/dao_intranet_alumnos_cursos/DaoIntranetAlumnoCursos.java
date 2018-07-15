@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo_intranet_alumnos_curso.Curso;
+import modelo_intranet_alumnos_curso.Entrada;
+import modelo_intranet_alumnos_curso.Recurso;
 import modelo_intranet_alumnos_curso.Unidad;
 
 /**
@@ -126,4 +128,212 @@ public class DaoIntranetAlumnoCursos extends ConexionBD{
         }
         return lstUnidad;
     }
+    
+    public Unidad obtenerUnidad(int id_unidad) {
+        Unidad unidad = new Unidad();
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "SELECT IDUNIDAD AS ID_UNIDAD, TITULO_UNIDAD AS TITULO, DESCRIPCION_UNIDAD AS DESCRIPCION, IMAGEN_UNIDAD AS IMAGEN, DURACION, `Curso_idCurso` AS ID_CURSO FROM UNIDAD WHERE IDUNIDAD = "+ id_unidad +";" ;
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                unidad.setId_unidad(Integer.parseInt(res.getString("ID_UNIDAD")));
+                unidad.setDescripcion(res.getString("DESCRIPCION"));
+                unidad.setTitulo_unidad(res.getString("TITULO"));
+                unidad.setImagen_unidad(res.getString("IMAGEN"));
+                unidad.setDuracion(Integer.parseInt(res.getString("DURACION")));
+                unidad.setId_curso(Integer.parseInt(res.getString("ID_CURSO")));
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return unidad;
+    }
+    
+    public ArrayList<Entrada> listarEntradas(int id_unidad) {
+        ArrayList<Entrada> lstEntrada = new ArrayList();
+        Entrada entrada;
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "SELECT `idEntrada` AS ID_ENTRADA, titulo_entrada AS TITULO, desc_entrada AS DESCRIPCION, imagen_entrada AS IMAGEN, contenido AS CONTENIDO, `Unidad_idUnidad` AS ID_UNIDAD, `Unidad_Curso_idCurso` AS ID_CURSO FROM ENTRADA WHERE `Unidad_idUnidad` = " + id_unidad + ";";
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                entrada = new Entrada();
+                entrada.setId_entrada(Integer.parseInt(res.getString("ID_ENTRADA")));
+                entrada.setTitulo_Entrada(res.getString("TITULO"));
+                entrada.setDescrpcion_entrada(res.getString("DESCRIPCION"));
+                entrada.setImagen_entrada(res.getString("IMAGEN"));
+                entrada.setContenido(res.getString("CONTENIDO"));
+                entrada.setId_unidad(Integer.parseInt(res.getString("ID_UNIDAD")));
+                entrada.setId_curso(Integer.parseInt(res.getString("ID_CURSO")));
+                //Se agrega el INGRESO a la lista.
+                lstEntrada.add(entrada);
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return lstEntrada;
+    }
+    
+    public Entrada obtenerEntrada(int id_entrada) {
+        Entrada entrada = new Entrada();
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "SELECT `idEntrada` AS ID_ENTRADA, titulo_entrada AS TITULO, desc_entrada AS DESCRIPCION, imagen_entrada AS IMAGEN, contenido AS CONTENIDO, `Unidad_idUnidad` AS ID_UNIDAD, `Unidad_Curso_idCurso` AS ID_CURSO FROM ENTRADA WHERE `idEntrada` = " + id_entrada + ";" ;
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                entrada.setId_entrada(Integer.parseInt(res.getString("ID_ENTRADA")));
+                entrada.setTitulo_Entrada(res.getString("TITULO"));
+                entrada.setDescrpcion_entrada(res.getString("DESCRIPCION"));
+                entrada.setImagen_entrada(res.getString("IMAGEN"));
+                entrada.setContenido(res.getString("CONTENIDO"));
+                entrada.setId_unidad(Integer.parseInt(res.getString("ID_UNIDAD")));
+                entrada.setId_curso(Integer.parseInt(res.getString("ID_CURSO")));
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return entrada;
+    }
+    
+    public ArrayList<Recurso> listarRecursos(int id_entrada) {
+        ArrayList<Recurso> lstRecurso = new ArrayList();
+        Recurso recurso;
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "select * from recurso where `Entrada_idEntrada` = " + id_entrada + ";";
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                recurso = new Recurso();
+                recurso.setId_recurso(Integer.parseInt(res.getString("idRecurso")));
+                recurso.setTitulo_recurso(res.getString("titulo_recurso"));
+                recurso.setAnio_creacion(res.getString("año_creacion"));
+                recurso.setImagen_recurso(res.getString("imagen_recurso"));
+                recurso.setTipo_recurso(res.getString("tipo_recurso"));
+                recurso.setId_entrada(Integer.parseInt(res.getString("Entrada_idEntrada")));
+                recurso.setId_unidad(Integer.parseInt(res.getString("Entrada_Unidad_idUnidad")));
+                recurso.setId_curso(Integer.parseInt(res.getString("Entrada_Unidad_Curso_idCurso")));
+                recurso.setTipo_recurso_num(Integer.parseInt(res.getString("Tiporecurso_idTiporecurso")));
+                recurso.setId_licencia(Integer.parseInt(res.getString("Licencia_idLicencia")));
+                recurso.setAsignatura(Integer.parseInt(res.getString("Asignatura_idAsignatura")));
+                //Se agrega el INGRESO a la lista.
+                lstRecurso.add(recurso);
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return lstRecurso;
+    }
+    
+    public Recurso obtenerRecurso(int id_recurso) {
+        Recurso recurso = new Recurso();
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "select * from recurso where `idRecurso` = " + id_recurso + ";" ;
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                recurso.setId_recurso(Integer.parseInt(res.getString("idRecurso")));
+                recurso.setTitulo_recurso(res.getString("titulo_recurso"));
+                recurso.setAnio_creacion(res.getString("año_creacion"));
+                recurso.setImagen_recurso(res.getString("imagen_recurso"));
+                recurso.setTipo_recurso(res.getString("tipo_recurso"));
+                recurso.setId_entrada(Integer.parseInt(res.getString("Entrada_idEntrada")));
+                recurso.setId_unidad(Integer.parseInt(res.getString("Entrada_Unidad_idUnidad")));
+                recurso.setId_curso(Integer.parseInt(res.getString("Entrada_Unidad_Curso_idCurso")));
+                recurso.setTipo_recurso_num(Integer.parseInt(res.getString("Tiporecurso_idTiporecurso")));
+                recurso.setId_licencia(Integer.parseInt(res.getString("Licencia_idLicencia")));
+                recurso.setAsignatura(Integer.parseInt(res.getString("Asignatura_idAsignatura")));
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return recurso;
+    }
+    
+    public String obtenerPermiso(int id_licencia) {
+        String permiso = "";
+        try {
+            //Recuperar una conexión.
+            Connection con = this.getConexion();
+            
+            //Se genera sentecia select
+            String strSQL = "select titulo_licencia from licencia where idLicencia = " + id_licencia + ";" ;
+            //Se prepara la consulta.
+            PreparedStatement ps = con.prepareStatement(strSQL);
+            //ejecutar la consulta.
+            ResultSet res = ps.executeQuery();
+            //Se recorre el ResultSet.
+            while (res.next()) {
+                permiso = res.getString("titulo_licencia");
+            }
+            con.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en registro del Driver.", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoIntranetAlumnoCursos.class.getName())
+                    .log(Level.SEVERE, "Error en SQL.", ex);
+        }
+        return permiso;
+    }
 }
+

@@ -77,6 +77,7 @@
 
             <div>
                 <img src="images/Intranet_Alumno/Cursos/A1.png"/>
+                <br/>
                 <h2><%=curso.getTitulo()%></h2>
                 <p><b><%=curso.getDescripcion()%></b></p>
                 <p><b>Fecha de Inicio:</b> <%=curso.getFecha_inicio()%></p>
@@ -103,7 +104,7 @@
                                 <td class="column100 column3" data-column="column3">${u.descripcion}</td>
                                 <td class="column100 column4" data-column="column4">${u.duracion}</td>
                                 <td>
-                                    <a class="btn-floating red" href="Unidad_Entradas.jsp">INGRESAR</a>
+                                    <a class="btn-floating red" href="unidadSeleccionada.do?id_unidad=${u.id_unidad}">INGRESAR</a>
                                 </td>
                             </tr>
                         </c:forEach>

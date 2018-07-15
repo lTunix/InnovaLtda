@@ -25,7 +25,7 @@ import Modelo.Usuario;
  *
  * @author Horacio
  */
-@WebServlet(name = "ControladorAlumnoCurso", urlPatterns = {"/cargaCursosPersonales.do", "/cursoSeleccionado.do"})
+@WebServlet(name = "ControladorAlumnoCurso", urlPatterns = {"/cargaCursosPersonales.do", "/cursoSeleccionado.do", "/unidadSeleccionada.do", "/entradaSeleccionada.do", "/recursoSeleccionado.do"})
 public class ControladorAlumnoCurso extends HttpServlet {
 
     /**
@@ -49,6 +49,9 @@ public class ControladorAlumnoCurso extends HttpServlet {
         ArrayList<Unidad> listaUnidades;
         Usuario usuario;
         Curso curso;
+        Unidad unidad;
+        Entrada entrada;
+        Recurso recurso;
         //Variables de mensajes
         String errores = "", msg = "";
         //Se identifica la petición realizada.
@@ -74,6 +77,40 @@ public class ControladorAlumnoCurso extends HttpServlet {
             request.setAttribute("listaUnidades", listaUnidades);
             request.setAttribute("curso", curso);
             request.getRequestDispatcher("Curso_Unidades.jsp").forward(request, response);
+            
+        } else if (userPath.equals("/unidadSeleccionada.do")) {
+            //Se obtiene id del curso jsp de intranet
+            int id_unidad = Integer.parseInt(String.valueOf(request.getParameter("id_unidad")));
+            //Se recupera el registro del curso
+            unidad = dao.obtenerUnidad(id_unidad);
+            //Se obtiene lista de unidades según id del curso
+            listaEntradas = dao.listarEntradas(id_unidad);
+            //Se envía información a jsp de salida.
+            request.setAttribute("listaEntradas", listaEntradas);
+            request.setAttribute("unidad", unidad);
+            request.getRequestDispatcher("Unidad_Entradas.jsp").forward(request, response);
+        } else if (userPath.equals("/entradaSeleccionada.do")) {
+            //Se obtiene id del curso jsp de intranet
+            int id_entrada = Integer.parseInt(String.valueOf(request.getParameter("id_entrada")));
+            //Se recupera el registro del curso
+            entrada = dao.obtenerEntrada(id_entrada);
+            //Se obtiene lista de unidades según id del curso
+            listaRecursos = dao.listarRecursos(id_entrada);
+            //Se envía información a jsp de salida.
+            request.setAttribute("listaRecursos", listaRecursos);
+            request.setAttribute("entrada", entrada);
+            request.getRequestDispatcher("Entrada.jsp").forward(request, response);
+        } else if (userPath.equals("/recursoSeleccionado.do")) {
+            //Se obtiene id del curso jsp de intranet
+            int id_recurso = Integer.parseInt(String.valueOf(request.getParameter("id_recurso")));
+            //Se recupera el registro del curso
+            recurso = dao.obtenerRecurso(id_recurso);
+            //Se obtiene lista de unidades según id del curso
+            String permiso  = dao.obtenerPermiso(recurso.getId_licencia());
+            //Se envía información a jsp de salida.
+            request.setAttribute("recurso", recurso);
+            request.setAttribute("permiso", permiso);
+            request.getRequestDispatcher("Recurso.jsp").forward(request, response);
         }
     }
 
