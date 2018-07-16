@@ -19,65 +19,69 @@
         <script type="text/javascript">
             function validarTel(e) {
                 tecla = (document.all) ? e.keyCode : e.which;
-                if (tecla==8) return true; //Tecla de retroceso (para poder borrar)
-                if (tecla==44) return true; //Coma ( En este caso para diferenciar los decimales )
-                if (tecla==48) return true;
-                if (tecla==49) return true;
-                if (tecla==50) return true;
-                if (tecla==51) return true;
-                if (tecla==52) return true;
-                if (tecla==53) return true;
-                if (tecla==54) return true;
-                if (tecla==55) return true;
-                if (tecla==56) return true;
-                if (tecla==57) return true;
-                patron = /1/; 
+                if (tecla == 8)
+                    return true; //Tecla de retroceso (para poder borrar)
+                if (tecla == 44)
+                    return true; //Coma ( En este caso para diferenciar los decimales )
+                if (tecla == 48)
+                    return true;
+                if (tecla == 49)
+                    return true;
+                if (tecla == 50)
+                    return true;
+                if (tecla == 51)
+                    return true;
+                if (tecla == 52)
+                    return true;
+                if (tecla == 53)
+                    return true;
+                if (tecla == 54)
+                    return true;
+                if (tecla == 55)
+                    return true;
+                if (tecla == 56)
+                    return true;
+                if (tecla == 57)
+                    return true;
+                patron = /1/;
                 te = String.fromCharCode(tecla);
-                return patron.test(te); 
-            } 
+                return patron.test(te);
+            }
         </script>   
         <script>
-            function soloLetras(e){
-               key = e.keyCode || e.which;
-               tecla = String.fromCharCode(key).toLowerCase();
-               letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-               especiales = "8-37-39-46";
+            function soloLetras(e) {
+                key = e.keyCode || e.which;
+                tecla = String.fromCharCode(key).toLowerCase();
+                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                especiales = "8-37-39-46";
 
-               tecla_especial = false
-               for(var i in especiales){
-                    if(key == especiales[i]){
+                tecla_especial = false
+                for (var i in especiales) {
+                    if (key == especiales[i]) {
                         tecla_especial = true;
                         break;
                     }
                 }
 
-                if(letras.indexOf(tecla)==-1 && !tecla_especial){
+                if (letras.indexOf(tecla) == -1 && !tecla_especial) {
                     return false;
                 }
             }
         </script>
-         
+
         <script>
             function CheckUserName(ele) {
                 var rut = document.getElementsByName("rut")[0].value;
-            if (/\s/.test(ele.value)) { 
-                //alert("Los campos no deben tener espacios en blanco. \n Intente nuevamente"); 
-                document.getElementById('errIngresoRut').innerHTML="Los campos no deben tener espacios en blanco.";
-                document.getElementById('botonEnviar').disabled=true;
-       
-        }
-        
-        else{
-            document.getElementById('errIngresoRut').innerHTML="";
-             document.getElementById('botonEnviar').disabled=false;
-            
-        }
-       
+                if (/\s/.test(ele.value)) {
+                    //alert("Los campos no deben tener espacios en blanco. \n Intente nuevamente"); 
+                    document.getElementById('errIngresoRut').innerHTML = "Los campos no deben tener espacios en blanco.";
+                    document.getElementById('botonEnviar').disabled = true;
+                } else {
+                    document.getElementById('errIngresoRut').innerHTML = "";
+                    document.getElementById('botonEnviar').disabled = false;
+                }
+
             }
-            
-            
-		
-		
         </script>
     </head>
     <body>
@@ -92,8 +96,8 @@
 
                                 <div class="icon1">
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
-                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" onsubmit="CheckUserName(this);" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
-                                    
+                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
+
                                 </div>
                                 <div id="errIngresoRut" style="color: red; font-style: italic; font-size: 11px"> </div>
                                 <div class="icon1">
@@ -103,17 +107,17 @@
 
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input type="text" id="ape_pat" onblur="CheckUserName(rut);" name="ape_pat" placeholder="Apellido Paterno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="ape_pat"  name="ape_pat" placeholder="Apellido Paterno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="icon1">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input type="text" id="ape_mat" name="ape_mat" onblur="CheckUserName(rut);" placeholder="Apellido Materno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="ape_mat" name="ape_mat"  placeholder="Apellido Materno" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="icon1">
                                     <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    <input type="text" id="profesion" name="profesion" placeholder="Profesión" onblur="CheckUserName(rut);" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
+                                    <input type="text" id="profesion" name="profesion" placeholder="Profesión" maxlength="20" onkeypress="return soloLetras(event)" onBlur="CheckUserName(this);" required>
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-check-square" aria-hidden="true"></i>
@@ -129,15 +133,15 @@
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <input type="text" id="telefono" name="telefono" onblur="CheckUserName(rut);" placeholder="Telefono" onKeyPress="return validarTel(event)" maxlength="9" required>
+                                    <input type="text" id="telefono" name="telefono"  placeholder="Telefono" onKeyPress="return validarTel(event)" maxlength="9" required>
                                 </div>
                                 <div class="icon1">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
-                                    <input type="password" id="clave" name="clave" onblur="CheckUserName(rut);" placeholder="Contraseña" maxlength="20" onBlur="CheckUserName(this);" required>
+                                    <input type="password" id="clave" name="clave" placeholder="Contraseña" maxlength="20" onBlur="CheckUserName(this);" required>
                                 </div>
 
                                 <div class="bottom" >
-                                    <input type="submit" id="botonEnviar" onclick="CheckUserName(this);" value="Crear Cuenta" />
+                                    <input type="submit" id="botonEnviar" value="Crear Cuenta" />
                                 </div>
 
                                 <div class="clear"></div>
