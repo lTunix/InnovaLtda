@@ -77,6 +77,7 @@
                     document.getElementById('errIngresoRut').innerHTML = "Los campos no deben tener espacios en blanco.";
                     document.getElementById('botonEnviar').disabled = true;
                 } else {
+                    //corregido
                     document.getElementById('errIngresoRut').innerHTML = "";
                     document.getElementById('botonEnviar').disabled = false;
                 }
