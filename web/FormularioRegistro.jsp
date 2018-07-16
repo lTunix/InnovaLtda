@@ -76,10 +76,13 @@
                     //alert("Los campos no deben tener espacios en blanco. \n Intente nuevamente"); 
                     document.getElementById('errIngresoRut').innerHTML = "Los campos no deben tener espacios en blanco.";
                     document.getElementById('botonEnviar').disabled = true;
+                    botonEnviar.style.backgroundColor = "red";
                 } else {
                     //corregido
                     document.getElementById('errIngresoRut').innerHTML = "";
                     document.getElementById('botonEnviar').disabled = false;
+                    botonEnviar.style.backgroundColor = "#1e98d1";
+                   
                 }
 
             }
