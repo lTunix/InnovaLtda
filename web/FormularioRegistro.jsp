@@ -30,6 +30,7 @@
                 if (tecla==54) return true;
                 if (tecla==55) return true;
                 if (tecla==56) return true;
+                if (tecla==57) return true;
                 patron = /1/; 
                 te = String.fromCharCode(tecla);
                 return patron.test(te); 
