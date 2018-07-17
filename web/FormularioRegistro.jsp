@@ -68,6 +68,8 @@
                 }
             }
         </script>
+        
+            
 
         <script>
             function CheckUserName(ele) {
@@ -82,11 +84,43 @@
                     document.getElementById('errIngresoRut').innerHTML = "";
                     document.getElementById('botonEnviar').disabled = false;
                     botonEnviar.style.backgroundColor = "#1e98d1";
-                   
                 }
-
             }
         </script>
+        
+        <script>
+              function validarEspaciosRut(e) {
+                tecla = (document.all) ? e.keyCode : e.which;
+                if (tecla == 8)
+                    return true; //Tecla de retroceso (para poder borrar)
+                if (tecla == 48)
+                    return true;
+                if (tecla == 49)
+                    return true;
+                if (tecla == 50)
+                    return true;
+                if (tecla == 51)
+                    return true;
+                if (tecla == 52)
+                    return true;
+                if (tecla == 53)
+                    return true;
+                if (tecla == 54)
+                    return true;
+                if (tecla == 55)
+                    return true;
+                if (tecla == 56)
+                    return true;
+                if (tecla == 57)
+                    return true;
+                 if (tecla == 75)
+                    return true;//letra K
+                patron = /1/;
+                te = String.fromCharCode(tecla);
+                return patron.test(te);
+            }
+        </script>
+  
     </head>
     <body>
         <!-- main -->
@@ -100,7 +134,7 @@
 
                                 <div class="icon1">
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
-                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
+                                    <input oninput="checkRut(this)" onblur="CheckUserName(this);" onKeyPress="return validarEspaciosRut(event)"   type="text" id="rut" name="rut" placeholder="Ingrese su RUT" class="input-48" maxlength="10" required>
 
                                 </div>
                                 <div id="errIngresoRut" style="color: red; font-style: italic; font-size: 11px"> </div>
@@ -145,7 +179,7 @@
                                 </div>
 
                                 <div class="bottom" >
-                                    <input type="submit" id="botonEnviar" value="Crear Cuenta" />
+                                    <input type="submit" id="botonEnviar" value="Crear Cuenta"/>
                                 </div>
 
                                 <div class="clear"></div>

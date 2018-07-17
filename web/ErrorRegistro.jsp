@@ -18,7 +18,7 @@
 <p class="zoom-area"><b></b> <img src="images/error.png" width="150px;" height="150px;" </p>
 
 <div class="link-container">
-  <a target="_blank" href="login.jsp" class="more-link">Volver</a>
+    <a target="_blank" href="FormularioRegistro.jsp" class="more-link">Volver</a>
 </div>
 </html>
 
