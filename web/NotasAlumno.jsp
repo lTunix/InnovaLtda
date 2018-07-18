@@ -79,7 +79,7 @@
                         </tbody>
                     </table>
                     <br>
-                    <a href="ingreso.do?txt_correoUser=${sessionScope.user.email}&txt_passUser=${sessionScope.user.pass}">Volver</a>
+                    <a href="BienvenidoAlumno.jsp">Volver</a>
                 </div>
             </div>
             <% } else { %>
